@@ -370,3 +370,32 @@
         --vp-home-hero-image-filter: blur(52px);
     }
 }
+
+.off-button, .docs-button {
+    border-radius: 20px;
+    padding: 0 20px;
+    line-height: 38px;
+    font-size: 14px;
+    user-select: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.docs-button {
+    border: 1px solid var(--vp-button-brand-border);
+    transition: color 0.25s, border-color 0.25s, background-color 0.25s;
+    color: var(--vp-button-brand-text) !important;
+    background-color: var(--vp-button-brand-bg);
+}
+
+.off-button {
+    cursor: unset;
+    border: 1px solid var(--vp-c-text-4);
+    color: var(--vp-c-text-3) !important;
+    background-color: var(--vp-c-text-4);
+}
+
+.off-button::after {
+    content: " (Coming Soon)";
+}
+

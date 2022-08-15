@@ -16,9 +16,11 @@ export default defineConfig({
 
     themeConfig: {
         logo: 'https://i.ibb.co/dWTNW8q/bitmapa.png',
+        nav: nav(),
 
         sidebar: {
-            '/documentation/': configureDocumentationSidebar()
+            '/documentation/introduction/': configureIntroductionSidebar(),
+            '/documentation/litecommands/': configureLiteCommandsSidebar()
         },
 
         editLink: {
@@ -38,26 +40,35 @@ export default defineConfig({
     }
 })
 
-function configureDocumentationSidebar() {
+function nav() {
+    return [
+        { text: "LiteCommands", link: "/documentation/litecommands/getting-started" }
+    ]
+}
+
+function configureIntroductionSidebar() {
     return [
         {
             text: 'Introduction',
             collapsible: true,
             items: [
-                { text: 'Home', link: '/documentation/introduction' },
+                { text: 'Home', link: '/documentation/introduction/projects' },
             ]
-        },
+        }
+    ]
+}
+
+function configureLiteCommandsSidebar() {
+    return [
         {
-            text: 'LiteCommands',
+            text: 'Introduction',
             collapsible: true,
             items: [
-                { text: 'Info', link: '/documentation/litecommands/info' },
                 { text: 'Get started', link: '/documentation/litecommands/getting-started' },
-                { text: 'First Steps', link: '/documentation/litecommands/first-steps' },
             ]
         },
         {
-            text: 'LiteCommands - Examples',
+            text: 'Examples',
             collapsible: true,
             items: [
                 { text: 'Examples - Info', link: '/documentation/litecommands/examples/info' },

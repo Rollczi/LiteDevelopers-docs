@@ -1,3 +1,7 @@
+<script setup>
+    import constants from '../../components/Constants';
+</script>
+
 # Get Started
 #### Get Started with LiteCommands framework!
 ---
@@ -6,30 +10,23 @@
 Stable releases are publishing on [Panda Repository ❤](https://repo.panda-lang.org/#/releases/dev/rollczi/litecommands)
 :::
 
+### Supported Platforms
 
-# #1 Dependencies
+| Platform Name      | Compatible with              | Compatible version |
+|--------------------|------------------------------|--------------------|
+| `bukkit`           | Bukkit / Spigot / PaperMc    | 1.8 - 1.19         |
+| `bukkit-adventure` | PaperMc / Adventure Platform | 1.8 - 1.19         |
+| `bungee`           | BungeeCord                   | 1.19               |
+| `velocity`         | Velocity                     | 3.1.2              |
 
-## Available Platforms
-- core
-- bukkit
-- bukkit-adventure
-- bungee
-- velocity
-
-#### psst. get the latest version of litecommands from [Panda Repository ❤](https://repo.panda-lang.org/#/releases/dev/rollczi/litecommands)
-
-### Adding repository:
+### Add panda repository to repositories
 
 ```groovy [repository:Gradle Kotlin]
-maven {
-    url = uri("https://repo.panda-lang.org/releases")
-}
+maven { url = uri("https://repo.panda-lang.org/releases") }
 ```
 
 ```groovy [repository:Gradle Groovy]
-maven {
-    url "https://repo.panda-lang.org/releases"
-}
+maven { url "https://repo.panda-lang.org/releases" }
 ```
 
 ```xml [repository:Maven]
@@ -40,7 +37,7 @@ maven {
 </repository>
 ```
 
-### Adding dependency
+### Add LiteCommands to dependencies
 
 ```groovy [dependency:Gradle Kotlin]
 implementation("dev.rollczi.litecommands:{platform}:{version}")
@@ -57,3 +54,10 @@ implementation "dev.rollczi.litecommands:{platform}:{version}"
   <version>{version}</version>
 </dependency>
 ```
+
+::: warning
+`{version}` Current version of LiteCommands `{{ constants.version }}`  
+`{platform}` Choose the platform you need (for example `bukkit`)
+:::
+
+#### Get the latest version of litecommands from [Panda Repository ❤](https://repo.panda-lang.org/#/releases/dev/rollczi/litecommands)
