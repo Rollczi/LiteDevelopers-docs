@@ -9,5 +9,9 @@
   "devDependencies": {
     "vitepress": "1.0.0-alpha.4",
     "vue": "3.2.37"
+  },
+  "dependencies": {
+    "markdown-it": "13.0.1",
+    "markdown-it-codetabs": "1.2.0"
   }
 }

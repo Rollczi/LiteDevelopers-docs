@@ -18,22 +18,21 @@ Stable releases are publishing on [Panda Repository ❤](https://repo.panda-lang
 
 #### psst. get the latest version of litecommands from [Panda Repository ❤](https://repo.panda-lang.org/#/releases/dev/rollczi/litecommands)
 
-### If Using Gradle (Groovy version):
-```groovy
-repositories {
-    maven { url "https://repo.panda-lang.org/releases" }
+### Adding repository:
+
+```groovy [repository:Gradle Kotlin]
+maven {
+    url = uri("https://repo.panda-lang.org/releases")
 }
 ```
 
-```groovy
-dependencies {
-    implementation "dev.rollczi.litecommands:{platform}:{version}"
+```groovy [repository:Gradle Groovy]
+maven {
+    url "https://repo.panda-lang.org/releases"
 }
 ```
 
-### If Using Maven:
-
-```xml
+```xml [repository:Maven]
 <repository>
   <id>reposilite-repository-releases</id>
   <name>Reposilite Repository</name>
@@ -41,7 +40,17 @@ dependencies {
 </repository>
 ```
 
-```xml
+### Adding dependency
+
+```groovy [dependency:Gradle Kotlin]
+implementation("dev.rollczi.litecommands:{platform}:{version}")
+```
+
+```groovy [dependency:Gradle Groovy]
+implementation "dev.rollczi.litecommands:{platform}:{version}"
+```
+
+```xml [dependency:Maven]
 <dependency>
   <groupId>dev.rollczi.litecommands</groupId>
   <artifactId>{platform}</artifactId>

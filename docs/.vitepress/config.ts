@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-
+import codetabs from "markdown-it-codetabs";
 
 export default defineConfig({
     lang: 'en-US',
@@ -7,6 +7,12 @@ export default defineConfig({
     description: 'LiteDevelopers',
 
     lastUpdated: true,
+
+    markdown: {
+        config: (md) => {
+            md.use(codetabs)
+        }
+    },
 
     themeConfig: {
         logo: 'https://i.ibb.co/dWTNW8q/bitmapa.png',
@@ -16,7 +22,6 @@ export default defineConfig({
         },
 
         editLink: {
-            // If Rollczi merge PR works, currently not work
             pattern: 'https://github.com/Rollczi/LiteCommands-Docs/docs/edit/master/docs/:path',
             text: 'Edit this page on GitHub'
         },
