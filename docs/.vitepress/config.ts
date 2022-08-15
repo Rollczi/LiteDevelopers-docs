@@ -22,7 +22,7 @@ export default defineConfig({
         },
 
         editLink: {
-            pattern: 'https://github.com/Rollczi/LiteCommands-Docs/docs/edit/master/docs/:path',
+            pattern: 'https://github.com/Rollczi/LiteDevelopers-docs/docs/edit/master/docs/:path',
             text: 'Edit this page on GitHub'
         },
 

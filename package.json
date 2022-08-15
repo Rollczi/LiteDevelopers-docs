@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "repository": "https://github.com/Rollczi/LiteCommands-Docs",
+  "repository": "https://github.com/Rollczi/LiteDevelopers-docs",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
