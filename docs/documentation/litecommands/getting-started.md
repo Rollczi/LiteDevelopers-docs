@@ -21,7 +21,7 @@ Stable releases are publishing on [Panda Repository ❤](https://repo.panda-lang
 
 ### Add panda repository to repositories
 
-```groovy [repository:Gradle Kotlin]
+```kotlin [repository:Gradle Kotlin]
 maven { url = uri("https://repo.panda-lang.org/releases") }
 ```
 
@@ -39,7 +39,7 @@ maven { url "https://repo.panda-lang.org/releases" }
 
 ### Add LiteCommands to dependencies
 
-```groovy [dependency:Gradle Kotlin]
+```kotlin [dependency:Gradle Kotlin]
 implementation("dev.rollczi.litecommands:{platform}:{version}")
 ```
 
