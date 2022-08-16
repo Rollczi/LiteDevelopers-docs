@@ -1,5 +1,5 @@
-# All available examples of LiteCommands
+# All examples of LiteCommands
 
-## For Bukkit platform:
+### Bukkit platform
 - [Kick command](/documentation/litecommands/examples/kick.md)
 - [Teleport command](/documentation/litecommands/examples/teleport.md)

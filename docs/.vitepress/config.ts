@@ -68,6 +68,13 @@ function configureLiteCommandsSidebar() {
             ]
         },
         {
+            text: 'Features',
+            collapsible: true,
+            items: [
+                { text: 'Asynchronously', link: '/documentation/litecommands/features/asynchronously' },
+            ]
+        },
+        {
             text: 'Examples',
             collapsible: true,
             items: [
