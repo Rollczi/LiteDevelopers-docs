@@ -4,16 +4,16 @@ A simple example of LiteSkullAPI initialization
 
 ```java
 public class SkullPlugin extends JavaPlugin {
-
+    
     private SkullAPI skullAPI;
-
+    
     @Override
     public void onEnable() {
         this.skullAPI = LiteSkullFactory.builder()
                 .bukkitScheduler(this)
                 .build();
     }
-
+    
     @Override
     public void onDisable() {
         this.skullAPI.shutdown();
