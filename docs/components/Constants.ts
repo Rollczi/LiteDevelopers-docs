@@ -1,3 +1,4 @@
 export default {
-    version: "v2.4.2"
+    liteCommandVersion: "2.4.2",
+    liteSkullAPIVersion: "1.3.0"
 }

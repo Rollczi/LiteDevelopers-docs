@@ -19,8 +19,9 @@ export default defineConfig({
         nav: nav(),
 
         sidebar: {
-            '/documentation/introduction/': configureIntroductionSidebar(),
-            '/documentation/litecommands/': configureLiteCommandsSidebar()
+            '/documentation/introduction/': configureIntroduction(),
+            '/documentation/litecommands/': configureLiteCommands(),
+            '/documentation/liteskullapi/': configureLiteSkullAPI(),
         },
 
         editLink: {
@@ -42,11 +43,12 @@ export default defineConfig({
 
 function nav() {
     return [
-        { text: "LiteCommands", link: "/documentation/litecommands/getting-started" }
+        { text: "LiteCommands", link: "/documentation/litecommands/getting-started" },
+        { text: "LiteSkullAPI", link: "/documentation/liteskullapi/getting-started" }
     ]
 }
 
-function configureIntroductionSidebar() {
+function configureIntroduction() {
     return [
         {
             text: 'Introduction',
@@ -58,29 +60,42 @@ function configureIntroductionSidebar() {
     ]
 }
 
-function configureLiteCommandsSidebar() {
+function configureLiteCommands() {
     return [
         {
-            text: 'Introduction',
-            collapsible: true,
+            text: 'Introduction', collapsible: true,
             items: [
                 { text: 'Get started', link: '/documentation/litecommands/getting-started' },
             ]
         },
+
         {
-            text: 'Features',
-            collapsible: true,
+            text: 'Features', collapsible: true,
             items: [
                 { text: 'Asynchronously', link: '/documentation/litecommands/features/asynchronously' },
             ]
         },
+
         {
-            text: 'Examples',
-            collapsible: true,
+            text: 'Examples', collapsible: true,
             items: [
                 { text: 'Examples - Info', link: '/documentation/litecommands/examples/info' },
                 { text: 'Bukkit - Teleport', link: '/documentation/litecommands/examples/teleport' },
                 { text: 'Bukkit - Kick', link: '/documentation/litecommands/examples/kick' },
+            ]
+        }
+    ]
+}
+
+function configureLiteSkullAPI() {
+    return [
+        {
+            text: 'LiteSkullAPI', collapsible: true,
+            items: [
+                { text: 'Get started', link: '/documentation/liteskullapi/getting-started' },
+                { text: 'Initialize', link: '/documentation/liteskullapi/initialize' },
+                { text: 'Basic API', link: '/documentation/liteskullapi/basic-api' },
+                { text: 'Completable Future API', link: '/documentation/liteskullapi/completable-future-api' },
             ]
         }
     ]

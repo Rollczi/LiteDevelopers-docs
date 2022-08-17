@@ -56,7 +56,7 @@ implementation "dev.rollczi.litecommands:{platform}:{version}"
 ```
 
 ::: warning
-`{version}` Current version of LiteCommands `{{ constants.version }}`  
+`{version}` Current version of LiteCommands `{{ constants.liteCommandVersion }}`  
 `{platform}` Choose the platform you need (for example `bukkit`)
 :::
 
