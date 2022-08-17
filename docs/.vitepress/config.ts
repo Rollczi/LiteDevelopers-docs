@@ -90,12 +90,17 @@ function configureLiteCommands() {
 function configureLiteSkullAPI() {
     return [
         {
-            text: 'LiteSkullAPI', collapsible: true,
+            text: 'Introduction', collapsible: true,
             items: [
                 { text: 'Get started', link: '/documentation/liteskullapi/getting-started' },
+            ]
+        },
+        {
+            text: 'LiteSkullAPI', collapsible: true,
+            items: [
                 { text: 'Initialize', link: '/documentation/liteskullapi/initialize' },
-                { text: 'Basic API', link: '/documentation/liteskullapi/basic-api' },
-                { text: 'Completable Future API', link: '/documentation/liteskullapi/completable-future-api' },
+                { text: 'Basic', link: '/documentation/liteskullapi/basic-api' },
+                { text: 'CompletableFuture', link: '/documentation/liteskullapi/completable-future-api' },
             ]
         }
     ]
