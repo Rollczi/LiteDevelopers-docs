@@ -18,6 +18,7 @@ public class SkullPlugin extends JavaPlugin {
     public void onDisable() {
         this.skullAPI.shutdown();
     }
+    
 }
 ```
 
