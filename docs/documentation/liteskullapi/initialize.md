@@ -27,6 +27,7 @@ public class SkullPlugin extends JavaPlugin {
 You can configure LiteSkullAPI according to your preferences.
 
 ### Basic options
+
 ```java
 /* Set custom logger */
 .logger(Logger)
@@ -35,6 +36,7 @@ You can configure LiteSkullAPI according to your preferences.
 .defaultSkull(SkullData)
 .defaultSkull(SkullDataDefault)
 ```
+
 :::info
 Default skull is used if LiteSkullAPI can't extract texture from database, player or rest api.
 :::
@@ -52,9 +54,10 @@ Default skull is used if LiteSkullAPI can't extract texture from database, playe
 .threadPool(int)
 ```
 
-
 ### Cache
+
 LiteSkullAPI cache skulls to ensure efficiency. Changing these options may have an impact on updating skulls.
+
 ```java
 /* Set expiration of skull cache after write */
 .cacheExpireAfterWrite(Duration)
@@ -63,9 +66,10 @@ LiteSkullAPI cache skulls to ensure efficiency. Changing these options may have 
 .cacheExpireAfterAccess(Duration)
 ```
 
-
 ### Database
+
 LiteSkullAPI can save skulls automatically to your database.
+
 ```java
 /* Set implementation of database for skull */
 .database(SkullDatabase)
@@ -73,17 +77,20 @@ LiteSkullAPI can save skulls automatically to your database.
 /* Set expiration of skull data after saving to database. */
 .dataBaseSaveExpire(Duration)
 ```
+
 :::info
-To use this feature implement the SkullDatabase interface and set it in builder. 
+To use this feature implement the SkullDatabase interface and set it in builder.
+
 ```java
 public class SkullDatabaseImpl implements SkullDatabase {
     // ...
 }
 ```
+
 :::
 
-
 ### Advanced
+
 ```java
 /* Set custom api skull extractor */
 .apiExtractor(SkullDataAPIExtractor)

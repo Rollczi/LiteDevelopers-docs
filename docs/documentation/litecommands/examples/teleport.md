@@ -1,5 +1,6 @@
 # Example teleport command
 ---
+
 ```java
 package dev.rollczi.example.bukkit;
 

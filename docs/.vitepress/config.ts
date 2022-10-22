@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import codetabs from "markdown-it-codetabs";
+import codeTabs from "markdown-it-codetabs";
 
 export default defineConfig({
     lang: 'en-US',
@@ -10,7 +10,7 @@ export default defineConfig({
 
     markdown: {
         config: (md) => {
-            md.use(codetabs)
+            md.use(codeTabs)
         }
     },
 
