@@ -5,7 +5,7 @@
 Run command asynchronously by adding an annotation `@Async`
 
 ```java
-@Section(route = "async-command")
+@Route(name = "async-command")
 public class Example {
     
     @Async
@@ -22,7 +22,7 @@ public class Example {
 You can use CompletableFuture to resolve result after complete asynchronously task.
 
 ```java
-@Section(route = "async-command")
+@Route(name = "async-command")
 public class Example {
     
     @Execute

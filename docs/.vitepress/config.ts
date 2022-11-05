@@ -72,7 +72,8 @@ function configureLiteCommands() {
         {
             text: 'Features', collapsible: true,
             items: [
-                { text: 'Asynchronously', link: '/documentation/litecommands/features/asynchronously' },
+                { text: '@Route & @Execute', link: '/documentation/litecommands/features/route-and-execute' },
+                { text: 'Asynchronously & @Async', link: '/documentation/litecommands/features/asynchronously' },
             ]
         },
 
