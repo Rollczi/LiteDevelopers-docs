@@ -73,6 +73,7 @@ function configureLiteCommands() {
             text: 'Features', collapsible: true,
             items: [
                 { text: '@Route & @Execute', link: '/documentation/litecommands/features/route-and-execute' },
+                { text: '@Joiner', link: '/documentation/litecommands/features/joiner' },
                 { text: 'Asynchronously & @Async', link: '/documentation/litecommands/features/asynchronously' },
             ]
         },
