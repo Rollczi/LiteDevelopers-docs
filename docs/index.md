@@ -72,7 +72,7 @@ const members = [
   <VPTeamMembers :members="members"></VPTeamMembers>
   <VPTeamPageTitle  style='padding: 0'>
     <template #lead>
-      And many more contributors! <a style="color: var(--vp-c-brand)" href="https://github.com/Rollczi/LiteDevelopers/graphs/contributors">See all contributors</a>
+      And many more contributors! <a style="color: var(--vp-c-brand)" href="https://github.com/Rollczi/LiteCommands/graphs/contributors">See all contributors</a>
     </template>
   </VPTeamPageTitle>
 </VPTeamPage>
