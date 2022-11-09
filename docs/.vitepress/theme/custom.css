@@ -52,7 +52,7 @@
 
     --vp-c-blue: #6480e4;
     --vp-c-blue-light: #4769e7;
-    --vp-c-blue-lighter: #6480e4;
+    --vp-c-blue-lighter: #708ae7;
     --vp-c-blue-dark: #4769e7;
     --vp-c-blue-darker: #2a4eea;
     --vp-c-blue-dimm-1: rgb(36, 55, 122);
@@ -201,7 +201,7 @@
     --vp-code-font-size: 0.875em;
 
     --vp-code-block-color: var(--vp-c-text-dark-1);
-    --vp-code-block-bg: #292d3e;
+    --vp-code-block-bg: #2b2b2b !important;
 
     --vp-code-line-highlight-color: rgba(0, 0, 0, 0.5);
     --vp-code-line-number-color: var(--vp-c-text-dark-3);
@@ -399,3 +399,20 @@
     content: " (Coming Soon)";
 }
 
+.docs-button-small {
+    border-radius: 8px;
+    padding: 0 10px;
+    line-height: 30px;
+    font-weight: 500;
+    font-size: 14px;
+    user-select: none;
+    display: inline-block;
+    margin: 0 4px;
+    border: 1px solid var(--vp-button-alt-hover-border);
+    color: var(--vp-button-alt-text) !important;
+    background-color: var(--vp-button-alt-border);
+}
+
+.file {
+    color: var(--vp-c-brand-lighter);
+}

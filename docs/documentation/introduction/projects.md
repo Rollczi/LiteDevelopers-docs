@@ -1,5 +1,6 @@
 <script setup>
     import constants from '../../components/Constants';
+    const liteCommandVersion = constants.liteCommandVersion;
 </script>
 
 # Projects Documentation

@@ -1,0 +1,8 @@
+.custom-block {
+    border-color: unset !important;
+    border-width: 0 0 0 8px !important;
+}
+
+.custom-block.tip {
+    background-color: rgba(48, 83, 210, 0.08) !important;
+}

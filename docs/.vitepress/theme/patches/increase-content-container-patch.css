@@ -1,3 +1,7 @@
 .content-container {
     max-width: 100% !important;
 }
+
+.VPContent.has-sidebar {
+    padding-right: calc((0vw - var(--vp-layout-max-width)) / 2) !important;
+}

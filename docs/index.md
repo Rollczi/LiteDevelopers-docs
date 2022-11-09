@@ -36,5 +36,38 @@ features:
   title: SkyMob
   details: Simple Extension for SuperiorSkyblock2 plugin. After creating the island, a custom mob will spawn.
 ---
+<script setup>
+import {
+  VPTeamPage,
+  VPTeamPageTitle,
+  VPTeamMembers
+} from 'vitepress/theme';
+
+const members = [
+  {
+    avatar: 'https://avatars.githubusercontent.com/u/49173834?v=4',
+    name: 'Rollczi',
+    title: 'Java Developer',
+    links: [
+      { icon: 'github', link: 'https://github.com/Rollczi' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/rollczi/' }
+    ]
+  }
+]
+</script>
+
+
+<VPTeamPage style='padding-bottom: 0'>
+  <VPTeamPageTitle>
+    <template is #title>
+      LiteDevelopers Team
+    </template>
+    <template #lead>
+      The development of VitePress is guided by an international
+      team, some of whom have chosen to be featured below.
+    </template>
+  </VPTeamPageTitle>
+<VPTeamMembers :members="members"></VPTeamMembers>
+</VPTeamPage>
 
 

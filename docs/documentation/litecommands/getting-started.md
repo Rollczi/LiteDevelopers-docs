@@ -6,11 +6,9 @@
 #### Get Started with LiteCommands framework!
 ---
 
-::: info
-Stable releases are publishing on [Panda Repository ❤](https://repo.panda-lang.org/#/releases/dev/rollczi/litecommands)
-:::
-
 ### Supported Platforms
+
+LiteCommands supports many platforms, check out the table below and choose the one you want to use.
 
 | Platform Name      | Compatible with              | Compatible version |
 |--------------------|------------------------------|--------------------|
@@ -19,7 +17,10 @@ Stable releases are publishing on [Panda Repository ❤](https://repo.panda-lang
 | `bungee`           | BungeeCord                   | 1.19               |
 | `velocity`         | Velocity                     | 3.1.2              |
 
-### Add panda repository to repositories
+### Add <u>Panda Repository</u> to repositories & <u>LiteCommands</u> to dependencies
+
+To use LiteCommands you need to add Panda Repository to your repositories and LiteCommands to your dependencies.<br>
+For Maven, Gradle Groovy and Gradle Kotlin you can find the code below.
 
 ```kotlin [repository:Gradle Kotlin]
 maven { url = uri("https://repo.panda-lang.org/releases") }
@@ -37,8 +38,6 @@ maven { url "https://repo.panda-lang.org/releases" }
 </repository>
 ```
 
-### Add LiteCommands to dependencies
-
 ```kotlin [dependency:Gradle Kotlin]
 implementation("dev.rollczi.litecommands:{platform}:{version}")
 ```
@@ -55,9 +54,10 @@ implementation "dev.rollczi.litecommands:{platform}:{version}"
 </dependency>
 ```
 
-::: warning
-`{version}` Current version of LiteCommands `{{ constants.liteCommandVersion }}`  
-`{platform}` Choose the platform you need (for example `bukkit`)
+::: info
+Replace `{platform}` with the platform you want to use. (for example `bukkit`)  
+Replace `{version}` with the version of LiteCommands you want to use.  
+Current version of LiteCommands `{{ constants.liteCommandVersion }}`
 :::
 
 #### Get the latest version of litecommands from [Panda Repository ❤](https://repo.panda-lang.org/#/releases/dev/rollczi/litecommands)

@@ -66,6 +66,7 @@ function configureLiteCommands() {
             text: 'Introduction', collapsible: true,
             items: [
                 { text: 'Get started', link: '/documentation/litecommands/getting-started' },
+                { text: 'Configure Builder', link: '/documentation/litecommands/configure-builder' },
             ]
         },
 
@@ -73,8 +74,12 @@ function configureLiteCommands() {
             text: 'Features', collapsible: true,
             items: [
                 { text: '@Route & @Execute', link: '/documentation/litecommands/features/route-and-execute' },
+                { text: '@Arg', link: '/documentation/litecommands/features/argument' },
+                { text: '@Arg - Basic Types', link: '/documentation/litecommands/features/argument-basic-types' },
+                { text: '@Arg - Time', link: '/documentation/litecommands/features/argument-time-types' },
+                { text: '@Arg - Time Chronology', link: '/documentation/litecommands/features/argument-time-chronology' },
                 { text: '@Joiner', link: '/documentation/litecommands/features/joiner' },
-                { text: 'Asynchronously & @Async', link: '/documentation/litecommands/features/asynchronously' },
+                { text: '@Async & Asynchronously', link: '/documentation/litecommands/features/asynchronously' },
             ]
         },
 
