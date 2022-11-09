@@ -11,7 +11,8 @@ export default defineConfig({
     markdown: {
         config: (md) => {
             md.use(codeTabs)
-        }
+        },
+
     },
 
     themeConfig: {
@@ -51,7 +52,7 @@ export default defineConfig({
                         { text: '@Arg', link: '/documentation/litecommands/features/argument' },
                         { text: '@Arg - Basic Types', link: '/documentation/litecommands/features/argument-basic-types' },
                         { text: '@Arg - Time', link: '/documentation/litecommands/features/argument-time-types' },
-                        { text: '@Arg - Time Chronology', link: '/documentation/litecommands/features/argument-time-chronology' },
+                        { text: '@Arg - no-ISO Chronology', link: '/documentation/litecommands/features/argument-no-iso-chronology' },
                         { text: '@Joiner', link: '/documentation/litecommands/features/joiner' },
                         { text: '@Async & Asynchronously', link: '/documentation/litecommands/features/asynchronously' },
                     ]

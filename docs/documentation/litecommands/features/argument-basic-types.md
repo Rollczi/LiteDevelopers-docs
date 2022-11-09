@@ -1,6 +1,8 @@
-# @Arg - Basic Argument Types
+# Supported Basic Argument Types
+#### @Arg - Use Basic Types to easily validate, parse and get arguments!
 
-LiteCommands supports the following basic types of arguments:
+## Supported Basic Types
+LiteCommands supports the following basic types of arguments:<br>
 You can use them by adding e.g. `@Arg int` for integer
 
 | Supported Basic Types | Allowed input                                                         |
@@ -26,9 +28,8 @@ You can use them by adding e.g. `@Arg int` for integer
 | BigDecimal            | Any decimal number                                                    |
 | Enum (any)            | Any value of corresponding enum                                       |
 
-## Examples:
 
-### Example 1: `boolean`, `int`, `double`, `char`, and `BigInteger` arguments
+## Example 1: `boolean`, `int`, `double`, `char`, and `BigInteger` arguments
 
 ```java Example.java
 @Route(name = "example")
@@ -77,7 +78,7 @@ public class Example {
 > **/example bigInteger-arg 9223372036854775807<br>**
 > 9223372036854775807
 
-### Example 2: Enum argument
+## Example 2: Enum argument
 
 ```java <u>Bit.java</u>
 enum Bit {

@@ -1,4 +1,5 @@
-# @Arg - Japanese Chronology Support
+# Japanese Chronology Support
+#### @Arg - Use Japanese Chronology to handle japanese date formats!
 
 :::warning
 Era `令和` / `Reiwa` is existing on java 13 and later.<br>
@@ -44,3 +45,6 @@ or if you use **iso format**:
 
 > **/japanese-date Reiwa 0004-11-08**<br>
 > Reiwa 0004-11-08
+
+> In game:
+![img.png](argument-no-iso-chronology-japanese-ss.png)

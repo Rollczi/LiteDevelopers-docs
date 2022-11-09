@@ -4,19 +4,20 @@
 
 # Get Started
 #### Get Started with LiteSkullAPI library!
----
 
-::: info
-Stable releases are publishing on [mineCodes Repository ❤](https://repository.minecodes.pl/#/releases/dev/rollczi/liteskullapi)
-:::
+## Supported Platforms
 
-### Supported Platforms
+LiteSkullAPI currently supports only Bukkit / Spigot / PaperMC.
 
-| Platform                  | Version      |
-|---------------------------|--------------|
-| Bukkit / Spigot / PaperMc | 1.8 - 1.19.2 |
+| Platform                  | Version       |
+|---------------------------|---------------|
+| Bukkit / Spigot / PaperMc | 1.8 - 1.19.2  |
+| _MineStom (Coming soon)_  | (Coming soon) |
 
-### Add mineCodes repository to repositories
+## Add <u>mineCodes</u> to repositories & <u>LiteSkullAPI</u> to dependencies
+
+To use LiteSkullAPI you need to add mineCodes to your repositories and LiteSkullAPI to your dependencies.
+For Maven, Gradle Groovy and Gradle Kotlin you can find the code below.
 
 ```kotlin [repository:Gradle Kotlin]
 maven { url = uri("https://repository.minecodes.pl/releases") }
@@ -34,8 +35,6 @@ maven { url "https://repository.minecodes.pl/releases" }
 </repository>
 ```
 
-### Add LiteSkullAPI to dependencies
-
 ```kotlin [dependency:Gradle Kotlin]
 implementation("dev.rollczi:liteskullapi:{version}")
 ```
@@ -52,7 +51,8 @@ implementation "dev.rollczi:liteskullapi:{version}"
 </dependency>
 ```
 
-::: warning
+::: info
+Replace {version} with the version of LiteCommands you want to use.<br>
 `{version}` Current version of LiteSkullAPI `{{ constants.liteSkullAPIVersion }}`  
 :::
 

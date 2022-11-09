@@ -20,9 +20,11 @@ features:
 - icon: ☄️
   title: LiteCommands
   details: Annotation based Command framework for Velocity, Bukkit, Paper, BungeeCord and your other implementations.
+  link: /documentation/litecommands/getting-started
 - icon: 💜
   title: LiteSkullAPI
   details: Fast and extensive skull library for Bukkit/Spigot/Paper plugins.
+  link: /documentation/liteskullapi/getting-started
 - icon: 🌃
   title: LiteChairs
   details: Simple bukkit / spigot plugin for adding chairs to your server.
@@ -40,7 +42,8 @@ features:
 import {
   VPTeamPage,
   VPTeamPageTitle,
-  VPTeamMembers
+  VPTeamMembers,
+  VPDocAsideSponsors,
 } from 'vitepress/theme';
 
 const members = [
@@ -63,11 +66,15 @@ const members = [
       LiteDevelopers Team
     </template>
     <template #lead>
-      The development of VitePress is guided by an international
-      team, some of whom have chosen to be featured below.
+        We are a small team of developers that create open-source projects for the Minecraft community.
     </template>
   </VPTeamPageTitle>
-<VPTeamMembers :members="members"></VPTeamMembers>
+  <VPTeamMembers :members="members"></VPTeamMembers>
+  <VPTeamPageTitle  style='padding: 0'>
+    <template #lead>
+      And many more contributors! <a style="color: var(--vp-c-brand)" href="https://github.com/Rollczi/LiteDevelopers/graphs/contributors">See all contributors</a>
+    </template>
+  </VPTeamPageTitle>
 </VPTeamPage>
 
 

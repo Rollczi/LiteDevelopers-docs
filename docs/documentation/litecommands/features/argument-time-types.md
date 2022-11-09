@@ -1,5 +1,7 @@
-# @Arg - Supported Time Types 
+# Supported Time Arguments Types 
+#### @Arg - Use Time Types to get the argument from the command and convert it to the specified time type!
 
+## List of Supported Time Types
 LiteCommands supports the following time types:
 
 | Supported Date/Time Types | Argument format            | Example input                                          |
@@ -23,7 +25,7 @@ LiteCommands supports the following time types:
 
 Use `@Arg` to parse the argument as a time type.
 
-### Example:
+## Example
 For example, to parse the argument as a `Duration`, `Instant` and `Month`:
 ```java
 @Route(name = "time")

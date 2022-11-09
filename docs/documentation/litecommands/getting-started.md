@@ -4,9 +4,8 @@
 
 # Get Started
 #### Get Started with LiteCommands framework!
----
 
-### Supported Platforms
+## Supported Platforms
 
 LiteCommands supports many platforms, check out the table below and choose the one you want to use.
 
@@ -17,7 +16,7 @@ LiteCommands supports many platforms, check out the table below and choose the o
 | `bungee`           | BungeeCord                   | 1.19               |
 | `velocity`         | Velocity                     | 3.1.2              |
 
-### Add <u>Panda Repository</u> to repositories & <u>LiteCommands</u> to dependencies
+## Add <u>Panda Repository</u> to repositories & <u>LiteCommands</u> to dependencies
 
 To use LiteCommands you need to add Panda Repository to your repositories and LiteCommands to your dependencies.<br>
 For Maven, Gradle Groovy and Gradle Kotlin you can find the code below.

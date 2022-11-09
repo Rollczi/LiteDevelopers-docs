@@ -7,7 +7,7 @@ For example, if you want to get the first, second and third argument from the co
 You can also use `@Arg` annotation to get the argument from the command and convert it to the specified type.<br> 
 For example, if you want to get the first argument from the command and convert it to `int`, you can use `@Arg int` to get it.
 
-### Example 1: Simple `String` argument
+## Example 1: Simple `String` argument
 
 ```java
 @Route(name = "example")
@@ -23,7 +23,7 @@ public class Example {
 > **/example Hello<br>**
 > Hello
 
-### Example 2: Two `int` arguments
+## Example 2: Two `int` arguments
 
 ```java
 @Route(name = "example")
@@ -44,5 +44,5 @@ public class Example {
 You can use `@Arg` annotation on method parameters with other types:
 - [Argument Basic Types](/documentation/litecommands/features/argument-basic-types) <br>
 - [Argument Time Types](/documentation/litecommands/features/argument-time-types) <br>
-- [Argument Time Chronologies Types](/documentation/litecommands/features/argument-time-chronology) <br>
+- [Argument Time Chronologies Types](/documentation/litecommands/features/argument-no-iso-chronology) <br>
 :::
