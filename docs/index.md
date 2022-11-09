@@ -55,7 +55,16 @@ const members = [
       { icon: 'github', link: 'https://github.com/Rollczi' },
       { icon: 'linkedin', link: 'https://www.linkedin.com/in/rollczi/' }
     ]
-  }
+  },
+  {
+    avatar: 'https://avatars.githubusercontent.com/u/65517973?v=4',
+    name: 'vLucky',
+    title: 'Java Developer',
+    links: [
+        { icon: 'github', link: 'https://github.com/vLuckyyy' },
+        { icon: 'linkedin', link: 'https://www.linkedin.com/in/vlucky/' }
+    ]
+  },
 ]
 </script>
 
