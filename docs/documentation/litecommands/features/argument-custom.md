@@ -4,28 +4,27 @@ You can create a custom argument to replace use plain argument and make your cod
 
 For example, replace `String` argument to `User` argument.
 
-### ❌ Before
+### ❌ Executor Before
 ```java
-    @Execute
-    void execute(SENDER sender, @Arg String userName) {
-        User user = userService.getUser(userName);
+@Execute
+void execute(SENDER sender, @Arg String userName) {
+    User user = userService.getUser(userName);
 
-        if (user == null) {
-            sender.sendMessage("User not found!");
-            return;
-        }
-        
-        //...
+    if (user == null) {
+        sender.sendMessage("User not found!");
+        return;
     }
+    
+    //... code
+}
 ```
 
-### ✅ After
+### ✅ Executor After
 ```java
-    @Execute
-    void execute(@Arg User user) {
-
-        //...
-    }
+@Execute
+void execute(@Arg User user) {
+    //... code
+}
 ```
 
 #### Create the custom argument and suggestions:
@@ -56,8 +55,10 @@ public class UserArgument implements OneArgument<User> {
 ```
 #### Register your argument in LiteCommands builder:
 ```java
-            .argument(User.class, new UserArgument(userService))
+    .argument(User.class, new UserArgument(userService))
 ```
+
+Other examples of custom arguments [(github link)](https://github.com/Rollczi/LiteCommands/tree/master/examples/bukkit/src/main/java/dev/rollczi/example/bukkit/argument)
 
 :::tip Tip - See all build-in arguments
 - [Argument Basic Types](/documentation/litecommands/features/argument-basic-types) <br>
