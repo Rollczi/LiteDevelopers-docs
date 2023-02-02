@@ -49,10 +49,12 @@ export default defineConfig({
                     text: 'Features', collapsible: true,
                     items: [
                         { text: '@Route & @Execute', link: '/documentation/litecommands/features/route-and-execute' },
+                        { text: '@RootRoute', link: '/documentation/litecommands/features/root-route' },
                         { text: '@Arg', link: '/documentation/litecommands/features/argument' },
                         { text: '@Arg - Basic Types', link: '/documentation/litecommands/features/argument-basic-types' },
                         { text: '@Arg - Time', link: '/documentation/litecommands/features/argument-time-types' },
-                        { text: '@Arg - no-ISO Chronology', link: '/documentation/litecommands/features/argument-no-iso-chronology' },
+                        { text: '@Arg - no-ISO Time', link: '/documentation/litecommands/features/argument-no-iso-chronology' },
+                        { text: '@Arg - Custom', link: '/documentation/litecommands/features/argument-custom' },
                         { text: '@Joiner', link: '/documentation/litecommands/features/joiner' },
                         { text: '@Async & Asynchronously', link: '/documentation/litecommands/features/asynchronously' },
                     ]
