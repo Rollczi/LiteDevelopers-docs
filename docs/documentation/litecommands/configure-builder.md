@@ -79,7 +79,7 @@ public class ExamplePlugin extends JavaPlugin {
     public void onEnable() {
         this.audiences = BukkitAudiences.create(this);
     
-        this.liteCommands = LiteBukkitAdventurePlatformFactory.builder(this.getServer(), "example-plugin", this.bukkitAudiences)
+        this.liteCommands = LiteBukkitAdventurePlatformFactory.builder(this.getServer(), "example-plugin", this.audiences)
                 .commandInstance(new HelpCommand())
                 .register();
     }
@@ -89,7 +89,7 @@ public class ExamplePlugin extends JavaPlugin {
 ## Configure LiteCommands Builder
 LiteCommands Builder has many methods to configure it to your needs.
 
-:::danger !STOP! - Read this before you continue
+:::danger STOP! - Read this before you continue
 To simplify the documentation, we will use `SENDER` instead of `CommandSender`, `CommandSource` etc. depending on the platform.  
 Use the correct type `SENDER` for your platform!
 :::
