@@ -5,7 +5,8 @@
 
 To create LiteCommands Builder you need to use `LiteCommandsBuilder` class.
 
-```java [platform:Bukkit]
+::: code-group
+```java [Bukkit]
 public class ExamplePlugin extends JavaPlugin {
 
     private LiteCommands<CommandSender> liteCommands;
@@ -19,7 +20,7 @@ public class ExamplePlugin extends JavaPlugin {
 }
 ```
 
-```java [platform:Velocity]
+```java [Velocity]
 @Plugin(id = "example-plugin", name = "Example Plugin", version = "1.0.0")
 public class ExamplePlugin {
 
@@ -40,7 +41,7 @@ public class ExamplePlugin {
 }
 ```
 
-```java [platform:Bungee]
+```java [Bungee]
 public class ExamplePlugin extends Plugin {
 
     private LiteCommands<CommandSender> liteCommands;
@@ -54,7 +55,7 @@ public class ExamplePlugin extends Plugin {
 }
 ```
 
-```java [platform:PaperMc]
+```java [PaperMc]
 public class ExamplePlugin extends JavaPlugin {
 
     private LiteCommands<CommandSender> liteCommands;
@@ -69,7 +70,7 @@ public class ExamplePlugin extends JavaPlugin {
 ```
 
 
-```java [platform:Bukkit Adventure Platform]
+```java [Bukkit Adventure Platform]
 public class ExamplePlugin extends JavaPlugin {
 
     private BukkitAudiences audiences;
@@ -85,6 +86,7 @@ public class ExamplePlugin extends JavaPlugin {
     }
 }
 ```
+:::
 
 ## Configure LiteCommands Builder
 LiteCommands Builder has many methods to configure it to your needs.
