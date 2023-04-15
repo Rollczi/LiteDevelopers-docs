@@ -26,7 +26,7 @@ export default defineConfig({
             '/documentation/introduction/': [
                 {
                     text: 'Introduction',
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: 'Home', link: '/documentation/introduction/projects' },
                     ]
@@ -37,7 +37,7 @@ export default defineConfig({
             '/documentation/litecommands/': [
                 {
                     text: 'Introduction',
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: 'Get started', link: '/documentation/litecommands/getting-started' },
                         { text: 'Configure Builder', link: '/documentation/litecommands/configure-builder' },
@@ -46,7 +46,7 @@ export default defineConfig({
 
                 {
                     text: 'Features',
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: '@Route & @Execute', link: '/documentation/litecommands/features/route-and-execute' },
                         { text: '@RootRoute', link: '/documentation/litecommands/features/root-route' },
@@ -62,7 +62,7 @@ export default defineConfig({
 
                 {
                     text: 'Examples',
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: 'Examples - Info', link: '/documentation/litecommands/examples/info' },
                         { text: 'Bukkit - Teleport', link: '/documentation/litecommands/examples/teleport' },
@@ -75,14 +75,14 @@ export default defineConfig({
             '/documentation/liteskullapi/': [
                 {
                     text: 'Introduction',
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: 'Get started', link: '/documentation/liteskullapi/getting-started' },
                     ]
                 },
                 {
                     text: 'LiteSkullAPI',
-                    collapsed: true,
+                    collapsed: false,
                     items: [
                         { text: 'Initialize', link: '/documentation/liteskullapi/initialize' },
                         { text: 'Basic', link: '/documentation/liteskullapi/basic-api' },
