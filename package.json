@@ -8,8 +8,8 @@
     "docs:install": "yarn install"
   },
   "devDependencies": {
-    "vitepress": "1.0.0-alpha.38",
-    "vue": "3.2.45"
+    "vitepress": "1.0.0-alpha.69",
+    "vue": "3.2.47"
   },
   "dependencies": {
     "markdown-it": "13.0.1",
