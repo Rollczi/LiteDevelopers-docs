@@ -7,12 +7,10 @@ export default defineConfig({
     description: 'LiteDevelopers',
 
     lastUpdated: true,
+    cleanUrls: true,
 
     markdown: {
-        config: (md) => {
-            md.use(codeTabs)
-        },
-
+        lineNumbers: true,
     },
 
     themeConfig: {
@@ -28,7 +26,7 @@ export default defineConfig({
             '/documentation/introduction/': [
                 {
                     text: 'Introduction',
-                    collapsible: true,
+                    collapsed: false,
                     items: [
                         { text: 'Home', link: '/documentation/introduction/projects' },
                     ]
@@ -38,7 +36,8 @@ export default defineConfig({
             // LiteCommands
             '/documentation/litecommands/': [
                 {
-                    text: 'Introduction', collapsible: true,
+                    text: 'Introduction',
+                    collapsed: false,
                     items: [
                         { text: 'Get started', link: '/documentation/litecommands/getting-started' },
                         { text: 'Configure Builder', link: '/documentation/litecommands/configure-builder' },
@@ -46,7 +45,8 @@ export default defineConfig({
                 },
 
                 {
-                    text: 'Features', collapsible: true,
+                    text: 'Features',
+                    collapsed: false,
                     items: [
                         { text: '@Route & @Execute', link: '/documentation/litecommands/features/route-and-execute' },
                         { text: '@RootRoute', link: '/documentation/litecommands/features/root-route' },
@@ -61,7 +61,8 @@ export default defineConfig({
                 },
 
                 {
-                    text: 'Examples', collapsible: true,
+                    text: 'Examples',
+                    collapsed: false,
                     items: [
                         { text: 'Examples - Info', link: '/documentation/litecommands/examples/info' },
                         { text: 'Bukkit - Teleport', link: '/documentation/litecommands/examples/teleport' },
@@ -73,13 +74,15 @@ export default defineConfig({
             // LiteSkullAPI
             '/documentation/liteskullapi/': [
                 {
-                    text: 'Introduction', collapsible: true,
+                    text: 'Introduction',
+                    collapsed: false,
                     items: [
                         { text: 'Get started', link: '/documentation/liteskullapi/getting-started' },
                     ]
                 },
                 {
-                    text: 'LiteSkullAPI', collapsible: true,
+                    text: 'LiteSkullAPI',
+                    collapsed: false,
                     items: [
                         { text: 'Initialize', link: '/documentation/liteskullapi/initialize' },
                         { text: 'Basic', link: '/documentation/liteskullapi/basic-api' },
@@ -95,8 +98,8 @@ export default defineConfig({
         },
 
         footer: {
-            message: 'Made by Martin Sulikowski and Contributors with ❤️',
-            copyright: 'Copyright © 2022'
+            message: 'Made by LiteDevelopers and Contributors with ❤️',
+            copyright: 'Copyright © 2022-present LiteDevelopers'
         },
 
         socialLinks: [

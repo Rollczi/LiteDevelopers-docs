@@ -19,37 +19,41 @@ LiteSkullAPI currently supports only Bukkit / Spigot / PaperMC.
 To use LiteSkullAPI you need to add mineCodes to your repositories and LiteSkullAPI to your dependencies.
 For Maven, Gradle Groovy and Gradle Kotlin you can find the code below.
 
-```kotlin [repository:Gradle Kotlin]
+::: code-group
+```kotlin [Gradle Kotlin]
 maven { url = uri("https://repository.minecodes.pl/releases") }
 ```
 
-```groovy [repository:Gradle Groovy]
+```groovy [Gradle Groovy]
 maven { url "https://repository.minecodes.pl/releases" }
 ```
 
-```xml [repository:Maven]
+```xml [Maven]
 <repository>
   <id>minecodes-repository-releases</id>
   <name>mineCodes Repository</name>
   <url>https://repository.minecodes.pl/releases</url>
 </repository>
 ```
+:::
 
-```kotlin [dependency:Gradle Kotlin]
+::: code-group
+```kotlin [Gradle Kotlin]
 implementation("dev.rollczi:liteskullapi:{version}")
 ```
 
-```groovy [dependency:Gradle Groovy]
+```groovy [Gradle Groovy]
 implementation "dev.rollczi:liteskullapi:{version}"
 ```
 
-```xml [dependency:Maven]
+```xml [Maven]
 <dependency>
   <groupId>dev.rollczi</groupId>
   <artifactId>liteskullapi</artifactId>
   <version>{version}</version>
 </dependency>
 ```
+:::
 
 ::: info
 Replace {version} with the version of LiteCommands you want to use.<br>
