@@ -21,15 +21,17 @@ LiteCommands supports many platforms, check out the table below and choose the o
 To use LiteCommands you need to add Panda Repository to your repositories and LiteCommands to your dependencies.<br>
 For Maven, Gradle Groovy and Gradle Kotlin you can find the code below.
 
-```kotlin [repository:Gradle Kotlin]
+::: code-group
+
+```kotlin [Gradle Kotlin]
 maven { url = uri("https://repo.panda-lang.org/releases") }
 ```
 
-```groovy [repository:Gradle Groovy]
+```groovy [Gradle Groovy]
 maven { url "https://repo.panda-lang.org/releases" }
 ```
 
-```xml [repository:Maven]
+```xml [Maven]
 <repository>
   <id>reposilite-repository-releases</id>
   <name>Reposilite Repository</name>
@@ -37,21 +39,27 @@ maven { url "https://repo.panda-lang.org/releases" }
 </repository>
 ```
 
-```kotlin [dependency:Gradle Kotlin]
+:::
+
+::: code-group
+
+```kotlin [Gradle Kotlin]
 implementation("dev.rollczi.litecommands:{platform}:{version}")
 ```
 
-```groovy [dependency:Gradle Groovy]
+```groovy [Gradle Groovy]
 implementation "dev.rollczi.litecommands:{platform}:{version}"
 ```
 
-```xml [dependency:Maven]
+```xml [Maven]
 <dependency>
   <groupId>dev.rollczi.litecommands</groupId>
   <artifactId>{platform}</artifactId>
   <version>{version}</version>
 </dependency>
 ```
+
+:::
 
 ::: info
 Replace `{platform}` with the platform you want to use. (for example `bukkit`)  

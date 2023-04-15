@@ -7,12 +7,10 @@ export default defineConfig({
     description: 'LiteDevelopers',
 
     lastUpdated: true,
+    cleanUrls: true,
 
     markdown: {
-        config: (md) => {
-            md.use(codeTabs)
-        },
-
+        lineNumbers: true,
     },
 
     themeConfig: {
@@ -28,7 +26,7 @@ export default defineConfig({
             '/documentation/introduction/': [
                 {
                     text: 'Introduction',
-                    collapsible: true,
+                    collapsed: true,
                     items: [
                         { text: 'Home', link: '/documentation/introduction/projects' },
                     ]
@@ -38,7 +36,8 @@ export default defineConfig({
             // LiteCommands
             '/documentation/litecommands/': [
                 {
-                    text: 'Introduction', collapsible: true,
+                    text: 'Introduction',
+                    collapsed: true,
                     items: [
                         { text: 'Get started', link: '/documentation/litecommands/getting-started' },
                         { text: 'Configure Builder', link: '/documentation/litecommands/configure-builder' },
@@ -73,13 +72,15 @@ export default defineConfig({
             // LiteSkullAPI
             '/documentation/liteskullapi/': [
                 {
-                    text: 'Introduction', collapsible: true,
+                    text: 'Introduction',
+                    collapsible: true,
                     items: [
                         { text: 'Get started', link: '/documentation/liteskullapi/getting-started' },
                     ]
                 },
                 {
-                    text: 'LiteSkullAPI', collapsible: true,
+                    text: 'LiteSkullAPI',
+                    collapsible: true,
                     items: [
                         { text: 'Initialize', link: '/documentation/liteskullapi/initialize' },
                         { text: 'Basic', link: '/documentation/liteskullapi/basic-api' },
@@ -95,8 +96,8 @@ export default defineConfig({
         },
 
         footer: {
-            message: 'Made by Martin Sulikowski and Contributors with ❤️',
-            copyright: 'Copyright © 2022'
+            message: 'Made by LiteDevelopers and Contributors with ❤️',
+            copyright: 'Copyright © 2022-present LiteDevelopers'
         },
 
         socialLinks: [
