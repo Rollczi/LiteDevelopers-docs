@@ -45,7 +45,8 @@ export default defineConfig({
                 },
 
                 {
-                    text: 'Features', collapsible: true,
+                    text: 'Features',
+                    collapsed: true,
                     items: [
                         { text: '@Route & @Execute', link: '/documentation/litecommands/features/route-and-execute' },
                         { text: '@RootRoute', link: '/documentation/litecommands/features/root-route' },
@@ -60,7 +61,8 @@ export default defineConfig({
                 },
 
                 {
-                    text: 'Examples', collapsible: true,
+                    text: 'Examples',
+                    collapsed: true,
                     items: [
                         { text: 'Examples - Info', link: '/documentation/litecommands/examples/info' },
                         { text: 'Bukkit - Teleport', link: '/documentation/litecommands/examples/teleport' },
@@ -73,14 +75,14 @@ export default defineConfig({
             '/documentation/liteskullapi/': [
                 {
                     text: 'Introduction',
-                    collapsible: true,
+                    collapsed: true,
                     items: [
                         { text: 'Get started', link: '/documentation/liteskullapi/getting-started' },
                     ]
                 },
                 {
                     text: 'LiteSkullAPI',
-                    collapsible: true,
+                    collapsed: true,
                     items: [
                         { text: 'Initialize', link: '/documentation/liteskullapi/initialize' },
                         { text: 'Basic', link: '/documentation/liteskullapi/basic-api' },
