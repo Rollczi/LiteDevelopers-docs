@@ -97,8 +97,6 @@ Use the correct type `SENDER` for your platform!
 :::
 
 
-
-
 ### Register Commands
 
 To register commands you need to use `commandInstance` method of LiteCommands Builder.<br>

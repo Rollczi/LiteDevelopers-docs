@@ -1,5 +1,4 @@
 import { defineConfig } from "vitepress";
-import codeTabs from "markdown-it-codetabs";
 
 export default defineConfig({
     lang: 'en-US',
@@ -51,12 +50,21 @@ export default defineConfig({
                         { text: '@Route & @Execute', link: '/documentation/litecommands/features/route-and-execute' },
                         { text: '@RootRoute', link: '/documentation/litecommands/features/root-route' },
                         { text: '@Arg', link: '/documentation/litecommands/features/argument' },
-                        { text: '@Arg - Basic Types', link: '/documentation/litecommands/features/argument-basic-types' },
+                        {
+                            text: '@Arg - Basic Types',
+                            link: '/documentation/litecommands/features/argument-basic-types'
+                        },
                         { text: '@Arg - Time', link: '/documentation/litecommands/features/argument-time-types' },
-                        { text: '@Arg - no-ISO Time', link: '/documentation/litecommands/features/argument-no-iso-chronology' },
+                        {
+                            text: '@Arg - no-ISO Time',
+                            link: '/documentation/litecommands/features/argument-no-iso-chronology'
+                        },
                         { text: '@Arg - Custom', link: '/documentation/litecommands/features/argument-custom' },
                         { text: '@Joiner', link: '/documentation/litecommands/features/joiner' },
-                        { text: '@Async & Asynchronously', link: '/documentation/litecommands/features/asynchronously' },
+                        {
+                            text: '@Async & Asynchronously',
+                            link: '/documentation/litecommands/features/asynchronously'
+                        },
                     ]
                 },
 
@@ -67,6 +75,17 @@ export default defineConfig({
                         { text: 'Examples - Info', link: '/documentation/litecommands/examples/info' },
                         { text: 'Bukkit - Teleport', link: '/documentation/litecommands/examples/teleport' },
                         { text: 'Bukkit - Kick', link: '/documentation/litecommands/examples/kick' },
+                    ]
+                },
+
+                {
+                    text: 'Common problems solution',
+                    collapsed: false,
+                    items: [
+                        {
+                            text: 'ContextualBind',
+                            link: '/documentation/litecommands/commonproblems/ContextualBindAdded'
+                        },
                     ]
                 }
             ],
