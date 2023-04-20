@@ -7,7 +7,6 @@ export default defineConfig({
     description: 'LiteDevelopers',
 
     lastUpdated: true,
-    cleanUrls: true,
 
     markdown: {
         lineNumbers: true,
