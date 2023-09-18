@@ -59,7 +59,6 @@ function configureSidebar(currentPath: string) {
             items: [
                 {
                     text: "Introduction",
-                    collapsed: false,
                     items: [
                         { text: "Get started", link: "/documentation/litecommands/getting-started" },
                         { text: "Configure Builder", link: "/documentation/litecommands/configure-builder" },
@@ -67,7 +66,6 @@ function configureSidebar(currentPath: string) {
                 },
                 {
                     text: "Features",
-                    collapsible: true,
                     items: [
                         { text: "@Route & @Execute", link: "/documentation/litecommands/features/route-and-execute" },
                         { text: "@RootRoute", link: "/documentation/litecommands/features/root-route" },
@@ -91,7 +89,6 @@ function configureSidebar(currentPath: string) {
                 },
                 {
                     text: "Examples",
-                    collapsed: false,
                     items: [
                         { text: "Examples - Info", link: "/documentation/litecommands/examples/info" },
                         { text: "Bukkit - Teleport", link: "/documentation/litecommands/examples/teleport" },
@@ -107,14 +104,12 @@ function configureSidebar(currentPath: string) {
             items: [
                 {
                     text: "Introduction",
-                    collapsed: false,
                     items: [
                         { text: "Get started", link: "/documentation/liteskullapi/getting-started" },
                     ]
                 },
                 {
                     text: "LiteSkullAPI",
-                    collapsed: false,
                     items: [
                         { text: "Initialize", link: "/documentation/liteskullapi/initialize" },
                         { text: "Basic", link: "/documentation/liteskullapi/basic-api" },
