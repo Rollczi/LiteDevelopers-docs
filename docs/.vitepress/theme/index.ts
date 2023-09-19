@@ -4,6 +4,7 @@ import DefaultTheme, {VPDocAsideSponsors, VPTeamMembers, VPTeamPageSection} from
 import './patches/custom-block-patch.css'
 import './patches/increase-content-container-patch.css'
 import './patches/table-style-patch.css'
+import './patches/sidebar-devider.css'
 
 import './custom.css'
 import './codetabs.css'
