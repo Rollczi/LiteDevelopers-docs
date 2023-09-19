@@ -28,6 +28,7 @@ features:
 - icon: 🌃
   title: LiteChairs
   details: Simple bukkit / spigot plugin for adding chairs to your server.
+  link: /documentation/litechairs/getting-started
 - icon: 👮🏻
   title: Lite-AntiLegs
   details: Anti-legs plugin for Minecraft spigot server.
@@ -65,6 +66,15 @@ const members = [
         { icon: 'linkedin', link: 'https://www.linkedin.com/in/vlucky/' }
     ]
   },
+  {
+    avatar: 'https://avatars.githubusercontent.com/u/80779749?v=4',
+    name: 'CitralFlo',
+    title: 'BESTO FRIENDO',
+    links: [
+        { icon: 'github', link: 'https://github.com/CitralFlo' },
+        { icon: 'linkedin', link: 'https://www.linkedin.com/in/citralflo/' }
+    ]
+  }
 ]
 </script>
 

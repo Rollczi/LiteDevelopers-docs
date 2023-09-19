@@ -24,6 +24,7 @@ export default defineConfig({
             "/documentation/introduction/": configureSidebar("introduction"),
             "/documentation/litecommands/": configureSidebar("litecommands"),
             "/documentation/liteskullapi/": configureSidebar("liteskullapi"),
+            "/documentation/litechairs/": configureSidebar("litechairs"),
         },
         editLink: {
             pattern: "https://github.com/Rollczi/LiteDevelopers-docs/edit/master/docs/:path",
@@ -117,6 +118,14 @@ function configureSidebar(currentPath: string) {
                     ]
                 }
             ]
+        },
+        {
+            text: "LiteChairs",
+            collapsible: true,
+            collapsed: currentPath != "litechairs",
+            items: [
+                { text: "Showcase", link: "/documentation/litechairs/getting-started" },
+                ]
         }
     ];
 }
