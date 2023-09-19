@@ -65,6 +65,15 @@ const members = [
         { icon: 'linkedin', link: 'https://www.linkedin.com/in/vlucky/' }
     ]
   },
+  {
+    avatar: 'https://avatars.githubusercontent.com/u/80779749?v=4',
+    name: 'CitralFlo',
+    title: 'BESTO FRIENDO',
+    links: [
+        { icon: 'github', link: 'https://github.com/CitralFlo' },
+        { icon: 'linkedin', link: 'https://www.linkedin.com/in/citralflo/' }
+    ]
+  }
 ]
 </script>
 
