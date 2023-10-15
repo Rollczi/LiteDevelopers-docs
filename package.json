@@ -8,7 +8,7 @@
     "docs:install": "yarn install"
   },
   "devDependencies": {
-    "vitepress": "1.0.0-alpha.75",
-    "vue": "3.2.47"
+    "vitepress": "1.0.0-rc.22",
+    "vue": "3.3.4"
   }
 }
