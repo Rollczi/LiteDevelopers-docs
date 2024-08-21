@@ -1,7 +1,3 @@
-<script setup>
-    import constants from '../../components/Constants';
-</script>
-
 # Get Started
 #### Get Started with LiteSkullAPI library!
 
@@ -57,7 +53,6 @@ implementation "dev.rollczi:liteskullapi:{version}"
 
 ::: info
 Replace {version} with the version of LiteCommands you want to use.<br>
-`{version}` Current version of LiteSkullAPI `{{ constants.liteSkullAPIVersion }}`  
 :::
 
 #### Get the latest version of LiteSkullAPI from [mineCodes Repository ❤](https://repository.minecodes.pl/#/releases/dev/rollczi/liteskullapi)

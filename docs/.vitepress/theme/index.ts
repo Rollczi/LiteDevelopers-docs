@@ -1,27 +1,33 @@
-import DefaultTheme, {VPDocAsideSponsors, VPTeamMembers, VPTeamPageSection} from 'vitepress/theme'
+import DefaultTheme, {VPDocAsideSponsors} from 'vitepress/theme'
 
-// css patches
-import './patches/custom-block-patch.css'
-import './patches/increase-content-container-patch.css'
-import './patches/table-style-patch.css'
-import './patches/sidebar-devider.css'
+import {h} from 'vue'
+import type {Theme} from 'vitepress'
+import {
+    NolebaseEnhancedReadabilitiesMenu,
+    NolebaseEnhancedReadabilitiesScreenMenu,
+} from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
+import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
+import {NolebaseInlineLinkPreviewPlugin} from '@nolebase/vitepress-plugin-inline-link-preview/client'
+import '@nolebase/vitepress-plugin-inline-link-preview/client/style.css'
+import 'virtual:group-icons.css'
 
-import './custom.css'
-import './codetabs.css'
-import {h} from "vue";
 import Donation from "../../components/donation/Donation.vue";
-import SideBar from "../../components/side-bar/SideBar.vue";
 
-DefaultTheme.enhanceApp = ({ app }) => {
+DefaultTheme.enhanceApp = ({app}) => {
     app.component('VPDocAside', () => VPDocAsideSponsors)
 }
 
 export default {
-    DefaultTheme,
-    Layout() {
+    extends: DefaultTheme,
+    Layout: () => {
         return h(DefaultTheme.Layout, null, {
             'aside-bottom': () => h(Donation),
-            //'aside-ads-after': () => h(SideBar),
+            'nav-bar-content-after': () => h(NolebaseEnhancedReadabilitiesMenu),
+            // A enhanced readabilities menu for narrower screens (usually smaller than iPad Mini)
+            'nav-screen-content-after': () => h(NolebaseEnhancedReadabilitiesScreenMenu),
         })
-    }
-}
+    },
+    enhanceApp({app}) {
+        app.use(NolebaseInlineLinkPreviewPlugin)
+    },
+} satisfies Theme

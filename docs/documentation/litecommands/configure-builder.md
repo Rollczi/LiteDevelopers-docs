@@ -1,9 +1,14 @@
-# Configure LiteCommands Builder
-#### Configure LiteCommands Builder to your needs!
+# Configure LiteCommands Builder to your needs!
+Create a new instance of LiteCommands using specific factory for your platform.
 
-## Create LiteCommands Builder
+> [!CAUTION]
+> Don't add any commands to `plugin.yml`!
+> If you have declared commands in the `plugin.yml` then LiteCommands will not able to register them.
 
-To create LiteCommands Builder you need to use `LiteCommandsBuilder` class.
+> [!INFO]
+> What is Fallback prefix? 
+> Command has two parts for example: `minecraft:give`, first `minecraft` is fallback prefix.
+> Fallback prefix is always lowercase.
 
 ::: code-group
 ```java [Bukkit]
@@ -13,157 +18,156 @@ public class ExamplePlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        this.liteCommands = LiteBukkitFactory.builder(this.getServer(), "example-plugin")
-                .commandInstance(new HelpCommand())
-                .register();
+        this.liteCommands = LiteBukkitFactory.builder("fallback-prefix", this)
+                .commands(
+                        new FlyCommand(),
+                        new GameModeCommand(),
+                        // your other commands 
+                )
+                .build();
+    }
+    
+    @Override
+    public void onDisable() {
+        if (this.liteCommands != null) {
+            this.liteCommands.unregister();
+        }
     }
 }
 ```
 
 ```java [Velocity]
-@Plugin(id = "example-plugin", name = "Example Plugin", version = "1.0.0")
+@Plugin(id = "example-plugin", name = "ExamplePlugin", version = "1.0.0")
 public class ExamplePlugin {
 
     private final ProxyServer proxyServer;
     private LiteCommands<CommandSource> liteCommands;
 
     @Inject
-    public ExamplePlugin(ProxyServer server) {
-        this.proxyServer = server;
+    public ExamplePlugin(ProxyServer proxyServer) {
+        this.proxyServer = proxyServer;
     }
-    
+
     @Subscribe
     public void onProxyInitialization(ProxyInitializeEvent event) {
         this.liteCommands = LiteVelocityFactory.builder(this.proxyServer)
-                .commandInstance(new HelpCommand())
-                .register();
+                .commands(
+                        new SendCommand(),
+                        new MoveCommand(),
+                        // your other commands
+                )
+                .build();
+
+        // your code ...
+    }
+
+    @Subscribe
+    public void onProxyShutdown(ProxyShutdownEvent event) {
+        if (this.liteCommands != null) {
+            this.liteCommands.unregister();
+        }
     }
 }
 ```
 
-```java [Bungee]
+```java [BungeeCord]
 public class ExamplePlugin extends Plugin {
 
     private LiteCommands<CommandSender> liteCommands;
 
     @Override
     public void onEnable() {
-        this.liteCommands = LiteBungeeFactory.builder(this.getProxy())
-                .commandInstance(new HelpCommand())
-                .register();
-    }
-}
-```
+        this.liteCommands = LiteBungeeFactory.builder(this)
+                .commands(
+                        new SendCommand(),
+                        new MoveCommand(),
+                        // your other commands
+                )
+                .build();
 
-```java [PaperMc]
-public class ExamplePlugin extends JavaPlugin {
-
-    private LiteCommands<CommandSender> liteCommands;
-
-    @Override
-    public void onEnable() {
-        this.liteCommands = LitePaperAdventureFactory.builder(this.getServer(), "example-plugin")
-                .commandInstance(new HelpCommand())
-                .register();
-    }
-}
-```
-
-
-```java [Bukkit Adventure Platform]
-public class ExamplePlugin extends JavaPlugin {
-
-    private BukkitAudiences audiences;
-    private LiteCommands<CommandSender> liteCommands;
-
-    @Override
-    public void onEnable() {
-        this.audiences = BukkitAudiences.create(this);
-    
-        this.liteCommands = LiteBukkitAdventurePlatformFactory.builder(this.getServer(), "example-plugin", this.audiences)
-                .commandInstance(new HelpCommand())
-                .register();
-    }
-}
-```
-:::
-
-## Configure LiteCommands Builder
-LiteCommands Builder has many methods to configure it to your needs.
-
-:::danger STOP! - Read this before you continue
-To simplify the documentation, we will use `SENDER` instead of `CommandSender`, `CommandSource` etc. depending on the platform.  
-Use the correct type `SENDER` for your platform!
-:::
-
-
-
-
-### Register Commands
-
-To register commands you need to use `commandInstance` method of LiteCommands Builder.<br>
-You can register multiple commands at once.
-
-:::details Code - commandInstance()
-
-MyPlugin.java
-
-```java <span class='file'>Plugin.java (builder)</span>
-                // ...
-                .commandInstance(new MyCommand(),  new MyCommand2())
-                // ...
-```
-
-MyCommand.java
-
-```java <span class='file'>MyCommand.java</span>
-@Route(name = "my-command")
-public class MyCommand {
-
-    @Execute
-    void execute(SENDER sender) {
-        sender.sendMessage("Hello World!");
+        // your code ...
     }
     
+    @Override
+    public void onDisable() {
+        if (this.liteCommands != null) {
+            this.liteCommands.unregister();
+        }
+    }
 }
 ```
 
-:::
 
+```java [Minestom]
+public class ExampleMinestom {
 
+    public static void main(String[] args) {
+        LiteMinestomFactory.builder()
+                .commands(
+                        new FlyCommand(),
+                        new GameModeCommand()
+                )
+                .build();
 
-### Register invalid usage handler
-Invalid usage handler is called when command is executed with invalid usage.  <br>
-You can use it to send custom message, title or action bar to player.
-
-:::details Code - invalidUsageHandler()
-
-MyPlugin.java
-
-```java <span class='file'>Plugin.java</span>
-                // ...
-                .invalidUsageHandler(new InvalidUsage())
-                // ...
+        // your code ...
+    }
+}
 ```
 
-InvalidUsage.java
+```java [Sponge]
+@Plugin("sponge-plugin")
+public class SpongePlugin {
 
-```java <span class='file'>InvalidUsage.java</span>
-public class InvalidUsage implements InvalidUsageHandler<SENDER> {
+    @Inject
+    public SpongePlugin(PluginContainer pluginContainer, Game game) {
+        LiteSpongeFactory.builder(pluginContainer, game)
+            .commands(
+                new TeleportCommand(),
+                new KickCommand(),
+                // your other commands    
+                    
+            )
+            .build();
+
+        // your code ...
+    }
+}
+```
+
+```java [Fabric]
+public class ExampleFabric implements ModInitializer {
 
     @Override
-    public void handle(SENDER sender, LiteInvocation invocation, Schematic schematic) {
-        List<String> schematics = schematic.getSchematics();
+    public void onInitialize() {
+        LiteFabricFactory.create()
+                .commands(
+                        new BanCommand(),
+                        new MuteCommand(),
+                        // your other commands
+                )
+                .build();
 
-        if (schematics.size() == 1) {
-            sender.sendMessage("Invalid usage! Correct usage: " + schematics.get(0));
-            return;
-        }
+        // your code ...
+    }
+}
+```
 
-        sender.sendMessage("Invalid usage! Correct usages: ");
-        for (String sch : schematics) {
-            sender.sendMessage(" - " + sch);
-        }
+```java [JDA]
+public class ExampleJDA {
+
+    public static void main(String[] args) {
+        JDA jda = JDABuilder.createDefault("token")
+                .build();
+
+        LiteJDAFactory.builder(jda)
+                .commands(
+                        new EmbedCommand(),
+                        new MessageCommand(),
+                        // your other commands
+                )
+                .build();
+
+        // your code ...
     }
 }
 ```
