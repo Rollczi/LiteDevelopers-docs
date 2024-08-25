@@ -9,7 +9,7 @@ import {
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
 import {NolebaseInlineLinkPreviewPlugin} from '@nolebase/vitepress-plugin-inline-link-preview/client'
 import '@nolebase/vitepress-plugin-inline-link-preview/client/style.css'
-import '@iconify-json/logos'
+import 'virtual:group-icons.css'
 
 import Donation from "../../components/donation/Donation.vue";
 
