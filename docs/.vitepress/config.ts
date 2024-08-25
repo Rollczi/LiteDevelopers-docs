@@ -27,12 +27,16 @@ export default defineConfig({
         ],
         optimizeDeps: {
             exclude: [
-                '@nolebase/vitepress-plugin-enhanced-readabilities/client'
+                '@nolebase/vitepress-plugin-enhanced-readabilities/client',
+                '@nolebase/client',
+                '@nolebase/vitepress-plugin-inline-link-preview/client'
             ],
         },
         ssr: {
             noExternal: [
-                '@nolebase/vitepress-plugin-enhanced-readabilities'
+                '@nolebase/vitepress-plugin-enhanced-readabilities',
+                '@nolebase/ui',
+                '@nolebase/vitepress-plugin-inline-link-preview'
             ],
         },
     },
