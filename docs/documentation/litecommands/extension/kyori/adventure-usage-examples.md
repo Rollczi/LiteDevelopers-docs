@@ -32,24 +32,21 @@ Colorizer is a feature that allows you to colorize the `Component` object in the
 
 If you want to use the default colorizer, you need to enable it in the `LiteCommands` builder:
 
-<tabs>
-<tab title="Adventure">
+::: code-group
 
-```java
+
+```java [Adventure]
 .extension(new LiteAdventureExtension<SENDER>()
     .colorizeArgument(true)
 )
 ```
-</tab>
-<tab title="Adventure Platform">
 
-```java
+```java [Adventure Platform]
 .extension(new LiteAdventurePlatformExtension<SENDER>(this.audienceProvider)
     .colorizeArgument(true)
 )
 ```
-</tab>
-</tabs>
+:::
 
 You can force **enable** the colorizer for the specific argument:
 
@@ -75,26 +72,23 @@ Serializer is used to colorize the `Component` object in the `@Arg` argument and
 
 You can modify the default serializer by using the `miniMessage()` and `legacyColor()` methods in the `LiteCommands` builder:
 
-<tabs>
-<tab title="Adventure">
+::: code-group
 
-```java
+```java [Adventure]
 .extension(new LiteAdventureExtension<SENDER>()
     .miniMessage(true)
     .legacyColor(true)
 )
 ```
-</tab>
-<tab title="Adventure Platform">
 
-```java
+
+```java [Adventure Platform]
 .extension(new LiteAdventurePlatformExtension<SENDER>(this.audienceProvider)
     .miniMessage(true)
     .legacyColor(true)
 )
 ```
-</tab>
-</tabs>
+:::
 
 The `miniMessage()` method enables the MiniMessage support. Read more about it [here](https://docs.advntr.dev/minimessage/).
 The `legacyColor()` method enables the legacy color support. `&c`, `&a`, etc.
@@ -102,21 +96,17 @@ The `legacyColor()` method enables the legacy color support. `&c`, `&a`, etc.
 
 If you want to use the custom serializer, you need to set it in the `LiteCommands` builder:
 
-<tabs>
-<tab title="Adventure">
+::: code-group
 
-```java
+```java [Adventure]
 .extension(new LiteAdventureExtension<SENDER>()
     .serializer(this.miniMessage)
 )
 ```
-</tab>
-<tab title="Adventure Platform">
 
-```java
+```java [Adventure Platform]
 .extension(new LiteAdventurePlatformExtension<SENDER>(this.audienceProvider)
     .serializer(this.miniMessage)
 )
 ```
-</tab>
-</tabs>
+:::
