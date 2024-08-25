@@ -4,10 +4,10 @@ LiteCommands Adventure is an extension for supporting Kyori Adventure features
 for platforms that are have **native support for it. E.g. Paper, Purpur, Velocity, Minestom**, etc.
 
 But some platforms have built-in support for Adventure Kyori, so you don't need to add any additional dependencies to your project.
-See the [Adventure Kyori Extensions](Adventure-Kyori.md) page to check if your platform has built-in support for Adventure Kyori.
+See the [Adventure Kyori Extensions](https://docs.advntr.dev/getting-started.html) page to check if your platform has built-in support for Adventure Kyori.
 
 > [!TIP]
-> Make sure you have read the [Adventure Kyori](Adventure-Kyori.md) page before using this extension.
+> Make sure you have read the [Adventure Kyori](https://docs.advntr.dev/getting-started.html) page before using this extension.
 
 > [!CAUTION]
 > Replace `{version}` with the version of LiteCommands you want to use.
