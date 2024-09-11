@@ -82,5 +82,4 @@ Other examples of custom arguments can be found on [GitHub](https://github.com/R
 - [Argument Basic Types](/documentation/litecommands/features/types/supported-basic-types.md) <br>
 - [Argument Minestom Types](/documentation/litecommands/features/types/supported-types-minestom-extension.md) <br>
 - [Argument Adventure Types](/documentation/litecommands/features/types/supported-types-adventure-extension.md) <br>
-- [Argument Annotation](/documentation/litecommands/features/arguments-annotation.md) <br>
 :::
