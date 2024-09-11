@@ -10,39 +10,34 @@ For example, if you want to get the first argument from the command and convert 
 ## Example 1: Simple `String` argument
 
 ```java
-@Route(name = "example")
+@Command(name = "example")
 public class Example {
 
     @Execute
-    public void execute(@Arg String text) {
+    public void execute(@Context SENDER sender, @Arg String text) {
         System.out.println(text);
     }
     
 }
 ```
-> **/example Hello<br>**
-> Hello
 
 ## Example 2: Two `int` arguments
 
 ```java
-@Route(name = "example")
+@Command(name = "example")
 public class Example {
 
     @Execute
-    public void execute(@Arg int a, @Arg int b) {
+    public void execute(@Context SENDER sender, @Arg int a, @Arg int b) {
         System.out.println(a + b);
     }
 
 }
 ```
 
-> **/example 1 2<br>**
-> 3
-
-:::tip Tip - Other types of arguments
-You can use `@Arg` annotation on method parameters with other types:
-- [Argument Basic Types](/documentation/litecommands/features/argument-basic-types) <br>
-- [Argument Time Types](/documentation/litecommands/features/argument-time-types) <br>
-- [Argument Time Chronologies Types](/documentation/litecommands/features/argument-no-iso-chronology) <br>
-:::
+:::tip Argument types **built-in** LiteCommands!
+- [Argument Basic Types](/docs/documentation/litecommands/features/types/supported-basic-types.md) <br>
+- [Argument Minestom Types](/docs/documentation/litecommands/features/types/supported-types-minestom-extension.md) <br>
+- [Argument Adventure Types](/docs/documentation/litecommands/features/types/supported-types-adventure-extension.md) <br>
+- [Argument Annotation](/docs/documentation/litecommands/features/arguments-annotation.md) <br>
+  :::

@@ -2,66 +2,85 @@
 
 You can create a custom argument to replace use plain argument and make your code more clean.
 
-For example, replace `String` argument to `User` argument.
+For example, replace `String` argument to `Account` argument.
 
 ### ❌ Executor Before
-```java
-@Execute
-void execute(SENDER sender, @Arg String userName) {
-    User user = userService.getUser(userName);
 
-    if (user == null) {
-        sender.sendMessage("User not found!");
-        return;
+```java
+
+@Execute
+void execute(@Context SENDER sender, @Arg String accountName) {
+    Account account = this.accountService.getUser(accountName);
+
+    if (account == null) {
+        sender.sendMessage("OH NO, this account is null");
     }
-    
+
     //... code
 }
 ```
 
 ### ✅ Executor After
+
 ```java
+
 @Execute
-void execute(@Arg User user) {
+void execute(@Context SENDER sender, @Arg Account account) {
     //... code
 }
 ```
 
 #### Create the custom argument and suggestions:
+
+:::tip TIP - More Practical Example
+This code is a simplified version of the code from the **EternalEconomy** Plugin.  
+See the full code of the EternalEconomy Plugin on [GitHub](https://github.com/EternalCodeTeam/EternalEconomy).
+:::
+
+
 ```java
-@ArgumentName("user")
-public class UserArgument implements OneArgument<User> {
+public class AccountArgument extends ArgumentResolver<CommandSender, Account> {
+    
+    // ...
+    
+    @Override
+    protected ParseResult<Account> parse(
+            Invocation<CommandSender> invocation,
+            Argument<Account> argument,
+            String string) {
+        Account account = this.accountManager.getAccount(string);
 
-    private final UserService userService;
+        if (account == null) {
+            return ParseResult.failure("account not found :(");
+        }
 
-    public UserArgument(UserService userService) {
-        this.userService = userService;
+        return ParseResult.success(account);
     }
 
     @Override
-    public Result<User, Object> parse(LiteInvocation invocation, String argument) {
-        return Option.of(this.userService.getUser(argument))
-                .toResult("User not found!");
-    }
-
-    @Override
-    public List<Suggestion> suggest(LiteInvocation invocation) {
-        return this.userService.getOnlineUsers().stream()
-                .map(user -> user.getName())
-                .map(Suggestion::of)
-                .collect(Collectors.toList());
+    public SuggestionResult suggest(
+            Invocation<CommandSender> invocation,
+            Argument<Account> argument,
+            SuggestionContext context
+    ) {
+        return this.server.getOnlinePlayers().stream()
+                .map(Player::getName)
+                .collect(SuggestionResult.collector());
     }
 }
 ```
+
 #### Register your argument in LiteCommands builder:
+
 ```java
-    .argument(User.class, new UserArgument(userService))
+.argument(Account.class, new AccountArgument(...))
 ```
 
-Other examples of custom arguments [(github link)](https://github.com/Rollczi/LiteCommands/tree/master/examples/bukkit/src/main/java/dev/rollczi/example/bukkit/argument)
+Other examples of custom arguments can be found on [GitHub](https://github.com/Rollczi/LiteCommands/tree/master/examples/bukkit/src/main/java/dev/rollczi/example/bukkit/argument).
 
-:::tip Tip - See all build-in arguments
-- [Argument Basic Types](/documentation/litecommands/features/argument-basic-types) <br>
-- [Argument Time Types](/documentation/litecommands/features/argument-time-types) <br>
-- [Argument Time Chronologies Types](/documentation/litecommands/features/argument-no-iso-chronology) <br>
-  :::
+:::tip Argument types **built-in** LiteCommands!
+- [Argument Basic Types](/docs/documentation/litecommands/features/types/supported-basic-types.md) <br>
+- [Argument Minestom Types](/docs/documentation/litecommands/features/types/supported-types-minestom-extension.md) <br>
+- [Argument Adventure Types](/docs/documentation/litecommands/features/types/supported-types-adventure-extension.md) <br>
+- [Argument Annotation](/docs/documentation/litecommands/features/arguments-annotation.md) <br>
+:::
