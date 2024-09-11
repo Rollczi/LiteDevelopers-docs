@@ -36,8 +36,8 @@ public class Example {
 ```
 
 :::tip Argument types **built-in** LiteCommands!
-- [Argument Basic Types](/docs/documentation/litecommands/features/types/supported-basic-types.md) <br>
-- [Argument Minestom Types](/docs/documentation/litecommands/features/types/supported-types-minestom-extension.md) <br>
-- [Argument Adventure Types](/docs/documentation/litecommands/features/types/supported-types-adventure-extension.md) <br>
-- [Argument Annotation](/docs/documentation/litecommands/features/arguments-annotation.md) <br>
+- [Argument Basic Types](/documentation/litecommands/features/types/supported-basic-types.md) <br>
+- [Argument Minestom Types](/documentation/litecommands/features/types/supported-types-minestom-extension.md) <br>
+- [Argument Adventure Types](/documentation/litecommands/features/types/supported-types-adventure-extension.md) <br>
+- [Argument Annotation](/documentation/litecommands/features/arguments-annotation.md) <br>
   :::
