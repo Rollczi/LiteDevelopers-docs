@@ -1,4 +1,4 @@
-# @Join Argument
+# @Join Annotation
 
 The `@Join` annotation in the LiteCommands framework is used to concatenate
 multiple arguments into a single string. This annotation is particularly
