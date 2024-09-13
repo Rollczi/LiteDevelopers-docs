@@ -1,0 +1,23 @@
+.custom-block {
+    border-width: 0 0 0 8px !important;
+}
+
+.custom-block.caution {
+    border-color: var(--vp-c-caution-2) !important;
+}
+
+.custom-block.danger {
+    border-color: var(--vp-c-danger-2) !important;
+}
+
+.custom-block.tip {
+    border-color: var(--vp-c-tip-3) !important;
+}
+
+.custom-block.note {
+    border-color: var(--vp-c-note-2) !important;
+}
+
+.custom-block.success {
+    border-color: var(--vp-c-success-2) !important;
+}

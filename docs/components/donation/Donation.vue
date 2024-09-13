@@ -10,9 +10,7 @@
             Hey there! If you like my work, you can support me by buying me a coffee. Thanks! ❤
         </p>
 
-        <DonationBuyMeCaffe />
-
-        <DonationPayPal/>
+        <DonationSponsor />
 
     </div>
 

@@ -1,16 +1,18 @@
 import {defineConfig} from 'vitepress'
 
 import {InlineLinkPreviewElementTransform} from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
-import {generateSidebar} from "vitepress-sidebar";
+import {generateSidebar, VitePressSidebarOptions} from "vitepress-sidebar";
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 
-const vitepressSidebarOptions = {
+const vitepressSidebarOptions: VitePressSidebarOptions = {
     documentRootPath: "docs",
     scanStartPath: "/documentation",
     keepMarkdownSyntaxFromTitle: true,
     useTitleFromFileHeading: true,
     sortMenusOrderByDescending: true,
     capitalizeFirst: true,
+    collapsed: true,
+    collapseDepth: 1,
     manualSortFileNameByPriority: ['what-is-litecommands.md', 'getting-started.md', 'platforms.md', 'configure-builder.md', 'intellij-idea-plugin.md'],
 };
 
@@ -19,9 +21,9 @@ export default defineConfig({
         plugins: [
             groupIconVitePlugin({
                 customIcon: {
-                    maven: "skill-icons:maven-dark",
-                    groovy: "skill-icons:gradle-dark",
-                    kotlin: "skill-icons:kotlin-dark"
+                    maven: "vscode-icons:file-type-maven",
+                    groovy: "logos:gradle",
+                    kotlin: "logos:kotlin-icon"
                 }
             })
         ],
@@ -49,6 +51,11 @@ export default defineConfig({
 
     markdown: {
         lineNumbers: true,
+        theme: {
+            light: 'github-light',
+            dark: 'catppuccin-macchiato'
+
+        },
         config(md) {
             md.use(InlineLinkPreviewElementTransform)
             md.use(groupIconMdPlugin)

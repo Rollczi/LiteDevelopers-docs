@@ -1,5 +1,13 @@
 import DefaultTheme, {VPDocAsideSponsors} from 'vitepress/theme'
 
+import './patches/custom-block-patch.css'
+import './patches/increase-content-container-patch.css'
+import './patches/table-style-patch.css'
+import './patches/sidebar-style-path.css'
+//
+import './custom.css'
+import './codetabs.css'
+
 import {h} from 'vue'
 import type {Theme} from 'vitepress'
 import {
