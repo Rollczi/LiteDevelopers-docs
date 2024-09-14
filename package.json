@@ -15,7 +15,8 @@
     "vitepress-sidebar": "^1.24.2"
   },
   "dependencies": {
-    "@iconify-json/skill-icons": "^1.1.10",
+    "@iconify-json/logos": "^1.2.0",
+    "@iconify-json/vscode-icons": "^1.2.1",
     "vitepress-plugin-group-icons": "^1.0.0"
   }
 }
