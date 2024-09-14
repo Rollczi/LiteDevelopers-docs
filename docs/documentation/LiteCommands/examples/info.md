@@ -16,6 +16,6 @@ LiteCommands is a powerful library that allows you to create commands in a simpl
 
 ### Bukkit platform
 
-- [EternalCombat](https://github.com/EternalCodeTeam/EternalCore) - ⚔ Combat Logging system for Minecraft!
-- [EternalCore](https://github.com/EternalCodeTeam/EternalCombat) - ♾️ All the most important server functions in one!
+- [EternalCombat](https://github.com/EternalCodeTeam/EternalCombat) - ⚔ Combat Logging system for Minecraft!
+- [EternalCore](https://github.com/EternalCodeTeam/EternalCore) - ♾️ All the most important server functions in one!
 - Add your plugin here!
