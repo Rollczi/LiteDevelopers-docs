@@ -2,7 +2,6 @@
 
 This page will guide you through the process of adding LiteCommands to your project.
 
-
 > [!NOTE]
 > LiteCommands requires **Java 8** or higer.
 
@@ -53,9 +52,11 @@ implementation "dev.rollczi:{platform}:{version}"
 :::
 
 > [!CAUTION]
-> Replace **`{platform}`** with the platform you want to use (See [platforms](platforms.md)).                    
+> Replace **`{platform}`** with the platform you want to use (See [platforms](platforms.md)).  
 > Replace `{version}` with the version of LiteCommands you want to use.
+
 #### Get the latest version of litecommands from [Panda Repository ❤](https://repo.panda-lang.org/#/releases/dev/rollczi/litecommands)
+
 ---
 
 # Parameters compile flag
@@ -91,7 +92,7 @@ tasks.withType(JavaCompile) {
 ```
 
 > [!NOTE]
-> Parameters are used to get the name of the parameter in the method. Without this 
+> Parameters are used to get the name of the parameter in the method. Without this
 > flag, the name of the command arguments will be `arg0`, `arg1`, etc.
-> 
+>
 > Also you can define the name of the parameter in the `@Arg("name")` annotation.

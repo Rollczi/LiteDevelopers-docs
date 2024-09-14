@@ -1,28 +1,30 @@
 .group {
-    border-color: var(--vp-c-bg) !important;
-    user-select: none;
+  border-color: var(--vp-c-bg) !important;
+  user-select: none;
 }
 
 .group > .level-0 > .item h2 {
-    font-size: 1rem;
-    font-weight: 500 !important;
-    margin-left: -5px;
+  font-size: 1rem;
+  font-weight: 500 !important;
+  margin-left: -5px;
 }
 
 .group > .level-0 > .item .caret {
-    background-color: var(--vp-c-bg-mute);
-    color: var(--vp-c-text-1);
-    border-radius: 15px;
-    transition: background-color 0.3s, color 0.3s;
+  background-color: var(--vp-c-bg-mute);
+  color: var(--vp-c-text-1);
+  border-radius: 15px;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .group > .level-0.collapsed > .item .caret {
-    background-color: var(--vp-c-bg);
-    color: var(--vp-c-text-4);
+  background-color: var(--vp-c-bg);
+  color: var(--vp-c-text-4);
 }
 
 .title {
-    border-bottom: 0 !important;
+  border-bottom: 0 !important;
 }
 
 /* SideBar - scroll */
@@ -31,23 +33,23 @@
 }
 
 .VPSidebar::-webkit-scrollbar-track {
-    background-color: var(--vp-c-bg-alt);
+  background-color: var(--vp-c-bg-alt);
 }
 
 .VPSidebar::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: var(--vp-c-bg-mute);
-    border: 2px solid var(--vp-c-bg-alt);
+  border-radius: 4px;
+  background-color: var(--vp-c-bg-mute);
+  border: 2px solid var(--vp-c-bg-alt);
 }
 
 .VPSidebar::-webkit-scrollbar-thumb:hover {
-    background-color: var(--vp-c-bg-soft);
+  background-color: var(--vp-c-bg-soft);
 }
 
 .VPSidebar::-webkit-scrollbar-thumb:active {
-    background-color: var(--vp-c-bg);
+  background-color: var(--vp-c-bg);
 }
 
 .VPSidebar::-webkit-scrollbar {
-    scrollbar-width: thin;
+  scrollbar-width: thin;
 }

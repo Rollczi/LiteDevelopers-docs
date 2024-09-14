@@ -1,4 +1,5 @@
 # Supported Basic Argument Types
+
 `@Arg` - Use Basic Types to easily validate, parse, and get arguments!
 
 ## Supported Types
@@ -6,7 +7,7 @@
 LiteCommands supports multiple argument types. You can find all of them in the table below.
 
 | Argument Type     | Values                                         | Example             |
-|-------------------|------------------------------------------------|---------------------|
+| ----------------- | ---------------------------------------------- | ------------------- |
 | `Boolean`         | `true`, `false`                                | `true`              |
 | `Byte`            | `-128` - `127`                                 | `10`                |
 | `Short`           | `-32768` - `32767`                             | `1000`              |
@@ -24,6 +25,7 @@ LiteCommands supports multiple argument types. You can find all of them in the t
 ## Example:
 
 ::: code-group
+
 ```java [Boolean Argument]
 @Execute(route = "boolean-arg")
 public void executeBoolean(@Context SENDER sender, @Arg boolean value) {

@@ -5,12 +5,16 @@ It allows you to use Jakarta EE Bean Validation annotations in the command argum
 
 > [!CAUTION]
 > Replace `{version}` with the version of LiteCommands you want to use.
+
 #### Get the latest version of litecommands from [Panda Repository ❤](https://repo.panda-lang.org/#/releases/dev/rollczi/litecommands)
+
 > [!CAUTION]
 > Make sure that you don't exclude `META-INF` from your project, jakarata doesn't work without it.
+
 ---
 
 ::: code-group
+
 ```kotlin [Gradle Kotlin]
 implementation("dev.rollczi:litecommands-jakarta:{version}")
 ```
@@ -26,6 +30,7 @@ implementation "dev.rollczi:litecommands-jakarta:{version}"
     <version>{version}</version>
 </dependency>
 ```
+
 :::
 
 ```Java
@@ -40,6 +45,7 @@ void ban(@Arg @Size(min = 3, max = 16) String nick) {
 Register the extension in the `LiteCommands` builder:
 
 ::: code-group
+
 ```java [Jakarta Extension]
 .extension(new LiteJakartaExtension<>(), config -> config
     // jakarta config ...
@@ -49,8 +55,8 @@ Register the extension in the `LiteCommands` builder:
 ```java [Jakarta Extension (without config)]
 .extension(new LiteJakartaExtension<>())
 ```
-:::
 
+:::
 
 Before configuration, it is worth knowing how the Jakarta Validation works in LiteCommands.
 
@@ -58,13 +64,13 @@ Suppose we have a command with a `nick` argument annotated with `@Size` and `@Pa
 
 ![litecommands jakarta](/litecommands-jakarta.png)
 
-**1*** - Argument `nick` (String)  
-**2*** - `@Size` jakarta annotation (between 3 and 16 characters)  
-**3*** - `@Pattern` jakarta annotation (only letters)  
-**4*** - Jakarta Validation (`org.hibernate.validator:hibernate-validator` implementation)  
-**5*** - Result of the validation (contains all violations)  
-**6*** - Constraint violations message (joined header with all violation messages)  
-**7*** - Violation message (specific message for each violation type)
+**1\*** - Argument `nick` (String)  
+**2\*** - `@Size` jakarta annotation (between 3 and 16 characters)  
+**3\*** - `@Pattern` jakarta annotation (only letters)  
+**4\*** - Jakarta Validation (`org.hibernate.validator:hibernate-validator` implementation)  
+**5\*** - Result of the validation (contains all violations)  
+**6\*** - Constraint violations message (joined header with all violation messages)  
+**7\*** - Violation message (specific message for each violation type)
 
 See documentation for [Jakarta EE Bean Validation](https://jakarta.ee/specifications/bean-validation/3.0/apidocs/jakarta/validation/constraints/package-summary) to learn more about jakarta validation annotations.
 
@@ -78,7 +84,7 @@ For example, we can define a message for all violations, which will contain the 
 The `result.asJoinedString()` method joins all violation messages into one string.
 
 ```Java
-.constraintViolationsMessage((invocation, result) -> 
+.constraintViolationsMessage((invocation, result) ->
     "[!] Custom constraint violations: \n" + result.asJoinedString("\n")
 )
 ```
@@ -98,7 +104,7 @@ The `.violationMessage()` method allows you to define a message for all violatio
 For example, we can define a message for all violations, which will contain the parameter name and the violation message.
 
 ```Java
-.violationMessage((invocation, violation) -> 
+.violationMessage((invocation, violation) ->
     " - " + violation.getParameterName() + ": " + violation.getMessage()
 )
 ```
@@ -124,7 +130,7 @@ The `violation.getAnnotation()` returns `@Size` annotation instance and allows y
     int min = size.min();
     int max = size.max();
     String name = violation.getParameterName();
-    
+
     return " - " + name + ": between " + min + " and " + max;
 })
 ```
@@ -143,8 +149,8 @@ First, we need to define how to get the locale for a command invocation.
 
 ```Java
 .locale(invocation -> {
-    Locale locale = invocation.sender().getLocale(); 
-    
+    Locale locale = invocation.sender().getLocale();
+
     return locale != null ? locale : Locale.ENGLISH;
 })
 ```
@@ -157,7 +163,7 @@ For example, we can define a message for the `@Pattern` annotation in the Englis
 .violationMessage(Pattern.class, (invocation, violation) -> {
     Pattern pattern = violation.getAnnotation();
     String name = violation.getParameterName();
-    
+
     return Locale.ENGLISH.equals(violation.getLocale())
         ? " - " + name + ": [English] must match " + pattern.regexp()
         : " - " + name + ": [Polish] musi pasować do " + pattern.regexp();
@@ -186,35 +192,35 @@ Result for the other locale will be:
 .extension(new LiteJakartaExtension<>(), config -> config
     // locale
     .locale(invocation -> {
-        Locale locale = invocation.sender().getLocale(); 
-        
+        Locale locale = invocation.sender().getLocale();
+
         return locale != null ? locale : Locale.ENGLISH;
     })
-    
+
     // constraint violations message
-    .constraintViolationsMessage((invocation, result) -> 
+    .constraintViolationsMessage((invocation, result) ->
         "[!] Custom constraint violations: \n" + result.asJoinedString("\n")
     )
-    
+
     // global violation message
-    .violationMessage((invocation, violation) -> 
+    .violationMessage((invocation, violation) ->
         " - " + violation.getParameterName() + ": " + violation.getMessage()
     )
-    
+
     // violation message for specific annotations
     .violationMessage(Size.class, (invocation, violation) -> {
         Size size = violation.getAnnotation();
         int min = size.min();
         int max = size.max();
         String name = violation.getParameterName();
-        
+
         return " - " + name + ": between " + min + " and " + max;
     })
-    
+
     .violationMessage(Pattern.class, (invocation, violation) -> {
         Pattern pattern = violation.getAnnotation();
         String name = violation.getParameterName();
-        
+
         return Locale.ENGLISH.equals(violation.getLocale())
             ? " - " + name + ": [English] must match " + pattern.regexp()
             : " - " + name + ": [Polish] musi pasować do " + pattern.regexp();
@@ -293,5 +299,6 @@ public class CreditCommand {
 ```
 
 See also:
+
 - [Jakarta EE Bean Validation annotations](https://jakarta.ee/specifications/bean-validation/3.0/apidocs/jakarta/validation/constraints/package-summary)
 - [Hibernate Validator](https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/)

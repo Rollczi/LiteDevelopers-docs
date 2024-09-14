@@ -15,6 +15,7 @@ See the [Platforms](platforms.md) page for more information.
 LiteCommands offers a more intuitive and clear approach to handling commands when compared to traditional methods.
 
 ::: code-group
+
 ```java [LiteCommands]
 @Command(name = "chat")
 @Permission("command.chat")

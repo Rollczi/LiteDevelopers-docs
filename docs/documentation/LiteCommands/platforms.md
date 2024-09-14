@@ -3,7 +3,7 @@
 LiteCommands supports multiple platforms and extensions for them. You can find all of them in the table below.
 
 | Platform Name             | Compatible with                  | Compatible version  |
-|---------------------------|----------------------------------|---------------------|
+| ------------------------- | -------------------------------- | ------------------- |
 | `litecommands-bukkit`     | Bukkit / Spigot / Paper / Purpur | 1.8.8 - 1.21.1      |
 | `litecommands-velocity`   | Velocity                         | 3.2.0               |
 | `litecommands-bungeecord` | BungeeCord / Waterfall           | 1.20-R0.1           |

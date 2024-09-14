@@ -2,12 +2,15 @@
 
 The litecommands-chatgpt is a extension for supporting ChatGPT suggestions.
 
-> [!CAUTION] 
+> [!CAUTION]
 > Replace `{version}` with the version of LiteCommands you want to use.
+
 #### Get the latest version of litecommands from [Panda Repository ❤](https://repo.panda-lang.org/#/releases/dev/rollczi/litecommands)
+
 ---
 
 ::: code-group
+
 ```kotlin [Gradle Kotlin]
 implementation("dev.rollczi:litecommands-chatgpt:{version}")
 ```
@@ -23,6 +26,7 @@ implementation "dev.rollczi:litecommands-chatgpt:{version}"
     <version>{version}</version>
 </dependency>
 ```
+
 :::
 
 ## Register the extension
@@ -40,6 +44,7 @@ Register the extension in the `LiteCommands` builder:
 ```
 
 ## Example Command
+
 ```java
 @Command(name = "ban")
 public class BanCommand {

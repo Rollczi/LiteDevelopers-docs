@@ -1,4 +1,5 @@
 # Configure LiteCommands Builder to your needs!
+
 Create a new instance of LiteCommands using specific factory for your platform.
 
 > [!CAUTION]
@@ -6,11 +7,12 @@ Create a new instance of LiteCommands using specific factory for your platform.
 > If you have declared commands in the `plugin.yml` then LiteCommands will not able to register them.
 
 > [!INFO]
-> What is Fallback prefix? 
+> What is Fallback prefix?
 > Command has two parts for example: `minecraft:give`, first `minecraft` is fallback prefix.
 > Fallback prefix is always lowercase.
 
 ::: code-group
+
 ```java [Bukkit]
 public class ExamplePlugin extends JavaPlugin {
 
@@ -22,11 +24,11 @@ public class ExamplePlugin extends JavaPlugin {
                 .commands(
                         new FlyCommand(),
                         new GameModeCommand(),
-                        // your other commands 
+                        // your other commands
                 )
                 .build();
     }
-    
+
     @Override
     public void onDisable() {
         if (this.liteCommands != null) {
@@ -87,7 +89,7 @@ public class ExamplePlugin extends Plugin {
 
         // your code ...
     }
-    
+
     @Override
     public void onDisable() {
         if (this.liteCommands != null) {
@@ -96,7 +98,6 @@ public class ExamplePlugin extends Plugin {
     }
 }
 ```
-
 
 ```java [Minestom]
 public class ExampleMinestom {
@@ -124,8 +125,8 @@ public class SpongePlugin {
             .commands(
                 new TeleportCommand(),
                 new KickCommand(),
-                // your other commands    
-                    
+                // your other commands
+
             )
             .build();
 

@@ -1,4 +1,5 @@
 # Projects Documentation
+
 #### LiteDevelopers
 
 ## Welcome to LiteDevelopers Documentation Site!
@@ -17,7 +18,7 @@ You can also use the menu on the top to switch between the documentation pages o
 ## What is LiteDevelopers?
 
 LiteDevelopers is a group of developers that create open-source projects for the Minecraft community.<br>
-We are currently working on the following projects: 
+We are currently working on the following projects:
 
 - [LiteCommands](https://github.com/Rollczi/LiteCommands)
 - [LiteSkullAPI](https://github.com/Rollczi/LiteSkullAPI)

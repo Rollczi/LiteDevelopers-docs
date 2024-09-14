@@ -6,6 +6,7 @@ useful when you want to combine several input parameters into a cohesive
 text representation, such as creating a reason for a ban command.
 
 ## Usage
+
 Here is an example of how to use the `@Join` annotation:
 
 ```Java
@@ -31,11 +32,13 @@ reason: Offensive language and behavior
 ## Additional Options
 
 Sometimes you may want to limit the number of arguments that will be joined.
+
 ```java
 @Join(limit = 2)
 ```
 
 Or you may want to join arguments with a different separator.
+
 ```java
 @Join(separator = ", ")
 ```

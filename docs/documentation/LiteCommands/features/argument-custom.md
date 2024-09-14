@@ -37,12 +37,11 @@ This code is a simplified version of the code from the **EternalEconomy** Plugin
 See the full code of the EternalEconomy Plugin on [GitHub](https://github.com/EternalCodeTeam/EternalEconomy).
 :::
 
-
 ```java
 public class AccountArgument extends ArgumentResolver<CommandSender, Account> {
-    
+
     // ...
-    
+
     @Override
     protected ParseResult<Account> parse(
             Invocation<CommandSender> invocation,
@@ -79,7 +78,8 @@ public class AccountArgument extends ArgumentResolver<CommandSender, Account> {
 Other examples of custom arguments can be found on [GitHub](https://github.com/Rollczi/LiteCommands/tree/master/examples/bukkit/src/main/java/dev/rollczi/example/bukkit/argument).
 
 :::tip Argument types **built-in** LiteCommands!
+
 - [Argument Basic Types](/documentation/litecommands/features/types/supported-basic-types.md) <br>
 - [Argument Minestom Types](/documentation/litecommands/features/types/supported-types-minestom-extension.md) <br>
 - [Argument Adventure Types](/documentation/litecommands/features/types/supported-types-adventure-extension.md) <br>
-:::
+  :::

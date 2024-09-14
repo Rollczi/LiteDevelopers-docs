@@ -5,7 +5,7 @@
 # Supported Types Adventure
 
 | Argument Type | Values     | Example |
-|---------------|------------|---------|
+| ------------- | ---------- | ------- |
 | `Component`   | Any string | `text`  |
 
 ## Example:
@@ -15,5 +15,5 @@
 public void executeBoolean(@Contenxt Player player, @Arg Component component) {
     // ...
 }
-    
+
 ```
