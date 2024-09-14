@@ -1,7 +1,6 @@
 import DefaultTheme, {VPDocAsideSponsors} from 'vitepress/theme'
 
 import './patches/custom-block-patch.css'
-import './patches/increase-content-container-patch.css'
 import './patches/table-style-patch.css'
 import './patches/sidebar-style-path.css'
 //
@@ -10,7 +9,10 @@ import './codetabs.css'
 
 import {h} from 'vue'
 import type {Theme} from 'vitepress'
+import type {Options} from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import {
+    InjectionKey,
+    LayoutMode,
     NolebaseEnhancedReadabilitiesMenu,
     NolebaseEnhancedReadabilitiesScreenMenu,
 } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
@@ -37,5 +39,11 @@ export default {
     },
     enhanceApp({app}) {
         app.use(NolebaseInlineLinkPreviewPlugin)
+
+        app.provide(InjectionKey, {
+            layoutSwitch: {
+                defaultMode: LayoutMode.FullWidth
+            }
+        } as Options)
     },
 } satisfies Theme
