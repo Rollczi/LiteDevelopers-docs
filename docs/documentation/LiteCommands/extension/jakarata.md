@@ -300,5 +300,5 @@ public class CreditCommand {
 
 See also:
 
-- [Jakarta EE Bean Validation annotations](https://jakarta.ee/specifications/bean-validation/3.0/apidocs/jakarta/validation/constraints/package-summary)
-- [Hibernate Validator](https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/)
+-   [Jakarta EE Bean Validation annotations](https://jakarta.ee/specifications/bean-validation/3.0/apidocs/jakarta/validation/constraints/package-summary)
+-   [Hibernate Validator](https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/)

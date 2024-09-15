@@ -4,3 +4,4 @@ dist
 docs/.vitepress/cache
 bun.lockb
 yarn.lock
+package-lock.json

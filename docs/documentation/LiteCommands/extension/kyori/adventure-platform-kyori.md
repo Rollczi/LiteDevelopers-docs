@@ -46,12 +46,12 @@ Register the extension in the `LiteCommands` builder:
 )
 ```
 
-- `audienceProvider` - the provider for the `Audience` object. If you don't have it, read the [Adventure Platform](https://docs.advntr.dev/platform/index.html) page for more information.
+-   `audienceProvider` - the provider for the `Audience` object. If you don't have it, read the [Adventure Platform](https://docs.advntr.dev/platform/index.html) page for more information.
 
-- `miniMessage()` - enables the MiniMessage support. (`<red>`, `<gradient:red:blue>`, `<#ff0000>`, etc.)
-- `legacyColor()` - enables the legacy color support. `&c`, `&a`, etc.
-- `colorizeArgument()` - enables the default colorizer for the `@Arg Component` argument.
-- `serializer()` - sets the custom serializer (colorizer) for the `@Arg Component` argument. (if replaced, the `miniMessage()` and `legacyColor()` will be ignored)
+-   `miniMessage()` - enables the MiniMessage support. (`<red>`, `<gradient:red:blue>`, `<#ff0000>`, etc.)
+-   `legacyColor()` - enables the legacy color support. `&c`, `&a`, etc.
+-   `colorizeArgument()` - enables the default colorizer for the `@Arg Component` argument.
+-   `serializer()` - sets the custom serializer (colorizer) for the `@Arg Component` argument. (if replaced, the `miniMessage()` and `legacyColor()` will be ignored)
 
 ## Full Example
 
