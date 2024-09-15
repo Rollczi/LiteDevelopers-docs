@@ -14,6 +14,8 @@ const vitepressSidebarOptions: VitePressSidebarOptions = {
   useTitleFromFileHeading: true,
   sortMenusOrderByDescending: true,
   capitalizeFirst: true,
+  collapsed: true,
+  collapseDepth: 1,
   manualSortFileNameByPriority: [
     "what-is-litecommands.md",
     "getting-started.md",
