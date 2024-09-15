@@ -62,7 +62,7 @@ public class BanCommand {
 
 ## ChatGPT Extension in action!
 
-<video width="1920" height="1080" controls>
-  <source src="/chat-gpt.mp4" type="video/mp4">
+<video width="1280" height="720" controls>
+  <source src="/chat-gpt.webm" type="video/webm">
   Your browser does not support the video tag.
 </video>
