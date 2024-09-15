@@ -1,14 +1,10 @@
 # Invalid Usage Handler
 
-LiteCommands offers a robust mechanism to manage invalid command usage, allowing developers to provide informative feedback to players when they enter commands incorrectly. This feature enhances user experience by displaying a message that outlines the correct usage of the command.
-
-## Overview
-
-When a player uses a command incorrectly, LiteCommands generates a message that includes the correct syntax for the command. This helps users understand how to properly use commands without confusion.
+LiteCommands provides a mechanism to manage invalid command usage, allowing developers to give feedback to players when they enter commands incorrectly. This feature enhances user experience by displaying messages that outline the correct command usage.
 
 ## Example Implementation
 
-Below is an example of how to implement an invalid usage handler in Java:
+Here’s a concise example of how to implement an invalid usage handler in Java:
 
 ```java
 // ExampleInvalidUsageHandler.java
@@ -56,8 +52,6 @@ public class YourPlugin extends Plugin {
     }
 }
 ```
-
-The code above dynamically generates an invalid usage message that represents the correct usage of the command.
 
 > [!CAUTION]
 > Ensure that you use the `-parameters` compiler flag to retrieve the parameter names in the method. For further details, refer to the [More info](../../getting-started.md#parameters-compile-flag).
