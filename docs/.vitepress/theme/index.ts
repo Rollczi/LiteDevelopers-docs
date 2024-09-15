@@ -5,7 +5,8 @@ import "./patches/table-style-patch.css";
 import "./patches/sidebar-style-path.css";
 //
 import "./custom.css";
-import "./codetabs.css";
+import "./custom.css";
+import "./sidebar.css";
 
 import { h } from "vue";
 import type { Theme } from "vitepress";
