@@ -4,7 +4,7 @@ You can create a custom argument to replace use plain argument and make your cod
 
 For example, replace `String` argument to `Account` argument.
 
-### ❌ Executor Before
+## ❌ Executor Before
 
 ```java
 
@@ -20,7 +20,7 @@ void execute(@Context SENDER sender, @Arg String accountName) {
 }
 ```
 
-### ✅ Executor After
+## ✅ Executor After
 
 ```java
 
@@ -30,9 +30,9 @@ void execute(@Context SENDER sender, @Arg Account account) {
 }
 ```
 
-#### Create the custom argument and suggestions:
+### Create the custom argument and suggestions:
 
-:::tip TIP - More Practical Example
+:::tip More Practical Example
 This code is a simplified version of the code from the **EternalEconomy** Plugin.  
 See the full code of the EternalEconomy Plugin on [GitHub](https://github.com/EternalCodeTeam/EternalEconomy).
 :::
@@ -69,7 +69,7 @@ public class AccountArgument extends ArgumentResolver<CommandSender, Account> {
 }
 ```
 
-#### Register your argument in LiteCommands builder:
+### Register your argument in LiteCommands builder:
 
 ```java
 .argument(Account.class, new AccountArgument(...))
@@ -82,4 +82,4 @@ Other examples of custom arguments can be found on [GitHub](https://github.com/R
 -   [Argument Basic Types](../types/supported-basic-types.md) <br>
 -   [Argument Minestom Types](../types/supported-types-minestom-extension.md) <br>
 -   [Argument Adventure Types](../types/supported-types-adventure-extension.md) <br>
-    :::
+:::
