@@ -1,6 +1,6 @@
-# @Arg Optional<T> Annotation (Optional way)
+# @Arg Optional Annotation (Optional way)
 
-The `@Arg Optional<T>` annotation is used to denote parameters within a command method that represent optional arguments. When an optional argument is not provided, the corresponding parameter will be set to `Optional.empty()` by default.
+The `@Arg Optional` annotation is used to denote parameters within a command method that represent optional arguments. When an optional argument is not provided, the corresponding parameter will be set to `Optional.empty()` by default.
 
 ## Usage
 
