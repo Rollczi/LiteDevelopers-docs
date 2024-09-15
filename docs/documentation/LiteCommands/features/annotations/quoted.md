@@ -6,7 +6,6 @@ include spaces and special characters within an argument by enclosing the conten
 ## Example Implementation
 
 ```java
-
 @Command(name = "mute")
 public class MuteCommand {
 
