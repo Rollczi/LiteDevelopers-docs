@@ -21,8 +21,6 @@ import { NolebaseInlineLinkPreviewPlugin } from "@nolebase/vitepress-plugin-inli
 import "@nolebase/vitepress-plugin-inline-link-preview/client/style.css";
 import "virtual:group-icons.css";
 
-import Donation from "../../components/donation/Donation.vue";
-
 DefaultTheme.enhanceApp = ({ app }) => {
     app.component("VPDocAside", () => VPDocAsideSponsors);
 };
@@ -31,7 +29,7 @@ export default {
     extends: DefaultTheme,
     Layout: () => {
         return h(DefaultTheme.Layout, null, {
-            "aside-bottom": () => h(Donation),
+            // "aside-bottom": () => h(Donation),
             "nav-bar-content-after": () => h(NolebaseEnhancedReadabilitiesMenu),
             // A enhanced readabilities menu for narrower screens (usually smaller than iPad Mini)
             "nav-screen-content-after": () =>
