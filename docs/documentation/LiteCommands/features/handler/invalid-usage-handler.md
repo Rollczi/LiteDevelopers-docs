@@ -2,6 +2,8 @@
 
 LiteCommands provides a mechanism to manage invalid command usage, allowing developers to give feedback to players when they enter commands incorrectly. This feature enhances user experience by displaying messages that outline the correct command usage.
 
+![](/invalid-usage.png)
+
 ## Example Implementation
 
 Here’s a concise example of how to implement an invalid usage handler in Java:

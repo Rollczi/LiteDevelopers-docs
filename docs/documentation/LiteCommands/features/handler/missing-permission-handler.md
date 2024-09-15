@@ -2,6 +2,8 @@
 
 LiteCommands provides a feature for handling missing permissions, enabling developers to notify players when they attempt to execute a command without the necessary permissions. This enhances security and improves user experience by delivering clear feedback on permission requirements.
 
+![](/missing-permission.png)
+
 ## Example Implementation
 
 Here's a concise example of how to implement a missing permissions handler in Java:
