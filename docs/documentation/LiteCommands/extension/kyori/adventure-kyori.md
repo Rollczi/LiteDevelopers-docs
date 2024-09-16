@@ -6,7 +6,7 @@ for platforms that are have **native support for it. E.g. Paper, Purpur, Velocit
 But some platforms have built-in support for Adventure Kyori, so you don't need to add any additional dependencies to your project.
 See the [Adventure Kyori Extensions](https://docs.advntr.dev/getting-started.html) page to check if your platform has built-in support for Adventure Kyori.
 
-> [!TIP]
+> [!IMPORTANT]
 > Make sure you have read the [Adventure Kyori](https://docs.advntr.dev/getting-started.html) page before using this extension.
 
 > [!CAUTION]

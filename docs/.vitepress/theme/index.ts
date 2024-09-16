@@ -1,6 +1,5 @@
 import DefaultTheme, { VPDocAsideSponsors } from "vitepress/theme";
 
-import "./patches/custom-block-patch.css";
 import "./patches/table-style-patch.css";
 import "./patches/sidebar-style-path.css";
 //

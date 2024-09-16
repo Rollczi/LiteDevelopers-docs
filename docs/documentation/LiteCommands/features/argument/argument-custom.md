@@ -32,10 +32,10 @@ void execute(@Context SENDER sender, @Arg Account account) {
 
 ### Create the custom argument and suggestions:
 
-:::tip More Practical Example
-This code is a simplified version of the code from the **EternalEconomy** Plugin.  
-See the full code of the EternalEconomy Plugin on [GitHub](https://github.com/EternalCodeTeam/EternalEconomy).
-:::
+> [!IMPORTANT] 
+> More Practical Example
+> This code is a simplified version of the code from the **EternalEconomy** Plugin.  
+> See the full code of the EternalEconomy Plugin on [GitHub](https://github.com/EternalCodeTeam/EternalEconomy).
 
 ```java
 public class AccountArgument extends ArgumentResolver<CommandSender, Account> {
@@ -76,10 +76,9 @@ public class AccountArgument extends ArgumentResolver<CommandSender, Account> {
 ```
 
 Other examples of custom arguments can be found on [GitHub](https://github.com/Rollczi/LiteCommands/tree/master/examples/bukkit/src/main/java/dev/rollczi/example/bukkit/argument).
-
-:::tip Argument types **built-in** LiteCommands!
-
--   [Argument Basic Types](../types/supported-basic-types.md) <br>
--   [Argument Minestom Types](../types/supported-types-minestom-extension.md) <br>
--   [Argument Adventure Types](../types/supported-types-adventure-extension.md) <br>
-:::
+ 
+> [!IMPORTANT]
+Argument types **built-in** LiteCommands!
+> -   [Argument Basic Types](../types/supported-basic-types.md) 
+> -   [Argument Minestom Types](../types/supported-types-minestom-extension.md) 
+> -   [Argument Adventure Types](../types/supported-types-adventure-extension.md) 

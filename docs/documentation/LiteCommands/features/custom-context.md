@@ -18,10 +18,10 @@ can directly access the required object within your command, resulting in more c
 
 Here's an example of how to create a custom context provider for an `Account` object:
 
-:::tip More Practical Example
-This code is a simplified version of the code from the **EternalEconomy** Plugin.  
-See the full code of the EternalEconomy Plugin on [GitHub](https://github.com/EternalCodeTeam/EternalEconomy).
-:::
+> [!IMPORTANT] 
+> More Practical Example
+> This code is a simplified version of the code from the **EternalEconomy** Plugin.  
+> See the full code of the EternalEconomy Plugin on [GitHub](https://github.com/EternalCodeTeam/EternalEconomy).
 
 ```java
 // AccountContext.java

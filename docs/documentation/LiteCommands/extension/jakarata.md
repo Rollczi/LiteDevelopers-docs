@@ -8,7 +8,7 @@ It allows you to use Jakarta EE Bean Validation annotations in the command argum
 
 #### Get the latest version of litecommands from [Panda Repository ❤](https://repo.panda-lang.org/#/releases/dev/rollczi/litecommands)
 
-> [!CAUTION]
+> [!IMPORTANT]
 > Make sure that you don't exclude `META-INF` from your project, jakarata doesn't work without it.
 
 ---
