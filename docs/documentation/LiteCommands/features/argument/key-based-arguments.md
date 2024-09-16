@@ -151,8 +151,8 @@ public class YourPlugin extends Plugin {
                 .commands(
                         new CalculateCommand()
                 )
-                .argument(Integer.class, ArgumentKey.of(FirstArgument.KEY, new FirstArgument())) // [!code focus]
-                .argument(Integer.class, ArgumentKey.of(SecondArgument.KEY, new SecondArgument())) // [!code focus]
+                .argument(Integer.class, ArgumentKey.of(FirstArgument.KEY), new FirstArgument()) // [!code focus]
+                .argument(Integer.class, ArgumentKey.of(SecondArgument.KEY), new SecondArgument()) // [!code focus]
                 .build();
     }
 
