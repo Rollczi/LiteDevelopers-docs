@@ -23,6 +23,8 @@ const vitepressSidebarOptions: VitePressSidebarOptions = {
         "platforms.md",
         "configure-builder.md",
         "intellij-idea-plugin.md",
+        "types",
+        "handler"
     ],
 };
 

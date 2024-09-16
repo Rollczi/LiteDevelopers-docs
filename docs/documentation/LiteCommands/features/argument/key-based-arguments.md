@@ -82,7 +82,7 @@ public class SecondArgument extends ArgumentResolver<CommandSender, Integer> {
 
 > [!IMPORTANT]
 > The `@Key` annotation allows us to specify which argument we want to use in the command. We can also directly input the
-> key. The difference is that when using the [Invalid Usage Handler](handler/invalid-usage-handler.md), if we do not
+> key. The difference is that when using the [Invalid Usage Handler](../handler/invalid-usage-handler.md), if we do not
 > use the `@Key` annotation, the key of the argument will be displayed instead of its name in case of incorrect command
 > usage.
 
