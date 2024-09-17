@@ -8,7 +8,7 @@ import {
 } from "vitepress-plugin-group-icons";
 
 const vitepressSidebarOptions: VitePressSidebarOptions[] = [
-    createSidebar("documentation/litecommands", [
+    createSidebar("documentation/LiteCommands", [
         "what-is-litecommands.md",
         "getting-started.md",
         "platforms.md",
