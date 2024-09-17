@@ -89,7 +89,7 @@ export default defineConfig({
         nav: [
             {
                 text: "LiteCommands",
-                link: "/documentation/litecommands/what-is-litecommands",
+                link: "/documentation/LiteCommands/what-is-litecommands",
             },
             {
                 text: "LiteSkullAPI",
@@ -127,7 +127,7 @@ function appendSidebarIntroduction(sidebar: SidebarMulti): SidebarMulti {
         base: "/documentation/",
         items: [
             { text: "Projects", link: "/introduction/projects", items: [
-                { text: "LiteCommands", link: "/litecommands/what-is-litecommands" },
+                { text: "LiteCommands", link: "/LiteCommands/what-is-litecommands" },
                 { text: "LiteSkullAPI", link: "/liteskullapi/getting-started" },
                 { text: "LiteChairs", link: "/litechairs/getting-started" },
             ] },
