@@ -1,36 +1,11 @@
+/* Disable user-select and change color of a group in the sidebar to more unvisible */
+
 .group {
     border-color: var(--vp-c-bg) !important;
     user-select: none;
 }
 
-.group > .level-0 > .item h2 {
-    font-size: 1rem;
-    font-weight: 500 !important;
-    margin-left: -5px;
-}
-
-.group > .level-0 > .item .caret {
-    background-color: var(--vp-c-bg-mute);
-    color: var(--vp-c-text-1);
-    border-radius: 15px;
-    transition:
-        background-color 0.3s,
-        color 0.3s;
-}
-
-.group > .level-0.collapsed > .item .caret {
-    background-color: var(--vp-c-bg);
-    color: var(--vp-c-text-4);
-}
-
-.title {
-    border-bottom: 0 !important;
-}
-
-/* SideBar - scroll */
-
-.VPSidebar {
-}
+/* Change scrollbar style in the sidebar */
 
 .VPSidebar::-webkit-scrollbar-track {
     background-color: var(--vp-c-bg-alt);

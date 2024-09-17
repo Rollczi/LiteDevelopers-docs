@@ -2,10 +2,11 @@ import DefaultTheme, { VPDocAsideSponsors } from "vitepress/theme";
 
 import "./patches/table-style-patch.css";
 import "./patches/sidebar-style-path.css";
-//
+import "./patches/custom-block-patch.css";
+import "./patches/logo-background-path.css";
+import "./patches/codetabs-highlight-path.css";
+
 import "./custom.css";
-import "./custom.css";
-import "./sidebar.css";
 
 import { h } from "vue";
 import type { Theme } from "vitepress";

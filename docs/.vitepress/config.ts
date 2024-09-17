@@ -1,23 +1,14 @@
 import { defineConfig } from "vitepress";
 
 import { InlineLinkPreviewElementTransform } from "@nolebase/vitepress-plugin-inline-link-preview/markdown-it";
-import { generateSidebar, VitePressSidebarOptions } from "vitepress-sidebar";
+import { generateSidebar, Sidebar, SidebarMulti, VitePressSidebarOptions } from "vitepress-sidebar";
 import {
     groupIconMdPlugin,
     groupIconVitePlugin,
 } from "vitepress-plugin-group-icons";
 
-const vitepressSidebarOptions: VitePressSidebarOptions = {
-    documentRootPath: "docs",
-    scanStartPath: "/documentation",
-    keepMarkdownSyntaxFromTitle: true,
-    useTitleFromFileHeading: true,
-    sortMenusOrderByDescending: true,
-    capitalizeFirst: true,
-    collapsed: true,
-    collapseDepth: 1,
-    hyphenToSpace: true,
-    manualSortFileNameByPriority: [
+const vitepressSidebarOptions: VitePressSidebarOptions[] = [
+    createSidebar("/documentation/litecommands/", [
         "what-is-litecommands.md",
         "getting-started.md",
         "platforms.md",
@@ -25,8 +16,28 @@ const vitepressSidebarOptions: VitePressSidebarOptions = {
         "intellij-idea-plugin.md",
         "types",
         "handler"
-    ],
-};
+    ]),
+    createSidebar("/documentation/liteskullapi/", [
+        "getting-started.md",
+        "initialize.md",
+    ]),
+    createSidebar("/documentation/litechairs/", []),
+];
+
+function createSidebar(path: string, sort: string[]): VitePressSidebarOptions {
+    return {
+        documentRootPath: "docs",
+        basePath: "/",
+        scanStartPath: path,
+        resolvePath: path,
+        keepMarkdownSyntaxFromTitle: true,
+        useTitleFromFileHeading: true,
+        sortMenusOrderByDescending: true,
+        capitalizeFirst: true,
+        hyphenToSpace: true,
+        manualSortFileNameByPriority: sort,
+    }
+}
 
 export default defineConfig({
     vite: {
@@ -84,9 +95,13 @@ export default defineConfig({
                 text: "LiteSkullAPI",
                 link: "/documentation/liteskullapi/getting-started",
             },
+            {
+                text: "Projects",
+                link: "/documentation/introduction/projects",
+            },
         ],
 
-        sidebar: generateSidebar(vitepressSidebarOptions),
+        sidebar: appendSidebarIntroduction(generateSidebar(vitepressSidebarOptions)),
 
         editLink: {
             pattern:
@@ -105,3 +120,19 @@ export default defineConfig({
         ],
     },
 });
+
+
+function appendSidebarIntroduction(sidebar: SidebarMulti): SidebarMulti {
+    sidebar["/documentation/introduction/"] = {
+        base: "/documentation/",
+        items: [
+            { text: "Projects", link: "/introduction/projects", items: [
+                { text: "LiteCommands", link: "/litecommands/what-is-litecommands" },
+                { text: "LiteSkullAPI", link: "/liteskullapi/getting-started" },
+                { text: "LiteChairs", link: "/litechairs/getting-started" },
+            ] },
+        ],
+    }
+
+    return sidebar;
+}
