@@ -5,6 +5,7 @@ import "./patches/sidebar-style-path.css";
 import "./patches/custom-block-patch.css";
 import "./patches/logo-background-path.css";
 import "./patches/codetabs-highlight-path.css";
+import "./patches/docs-button-patch.css";
 
 import "./custom.css";
 
