@@ -13,7 +13,7 @@
 
 .VPSidebar::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: var(--vp-c-bg-mute);
+    background-color: var(--vp-c-bg-elv);
     border: 2px solid var(--vp-c-bg-alt);
 }
 
