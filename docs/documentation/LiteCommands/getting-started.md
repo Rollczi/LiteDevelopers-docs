@@ -1,4 +1,6 @@
-# Get Started with LiteCommands framework!
+# Get Started!
+
+with LiteCommands framework!
 
 This page will guide you through the process of adding LiteCommands to your project.
 

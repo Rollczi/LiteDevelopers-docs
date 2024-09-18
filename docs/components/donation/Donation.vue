@@ -1,13 +1,11 @@
 <script setup>
-import DonationPayPal from "./DonationPayPal.vue";
-import DonationBuyMeCaffe from "../donation/DonationBuyMeCaffe.vue";
+import DonationSponsor from "./DonationSponsor.vue";
 </script>
 
 <template>
     <div class="donation">
         <p class="donation-info">
-            Hey there! If you like my work, you can support me by buying me a
-            coffee. Thanks! ❤
+            Hey there! If you like my work, you can support me by sponsoring me on GitHub. Thanks! ❤
         </p>
 
         <DonationSponsor />
