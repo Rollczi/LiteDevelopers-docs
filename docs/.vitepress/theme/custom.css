@@ -263,7 +263,6 @@
     --vp-c-caution-soft: var(--vp-c-red-soft);
 }
 
-
 /**
  * Typography
  * -------------------------------------------------------------------------- */
@@ -335,8 +334,8 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-    --vp-code-line-height: 1.6;
-    --vp-code-font-size: 0.975em;
+    --vp-code-line-height: 1.6;/*--vp-code-line-height: 1.7;*/
+    --vp-code-font-size: 0.975em;/*--vp-code-font-size: 0.875em;*/
     --vp-code-color: var(--vp-c-brand-1);
     --vp-code-link-color: var(--vp-c-brand-1);
     --vp-code-link-hover-color: var(--vp-c-brand-2);
@@ -365,7 +364,7 @@
     --vp-code-copy-code-hover-border-color: var(--vp-c-divider);
     --vp-code-copy-code-hover-bg: var(--vp-c-bg);
     --vp-code-copy-code-active-text: var(--vp-c-text-2);
-    --vp-code-copy-copied-text-content: "Copied";
+    --vp-code-copy-copied-text-content: 'Copied';
 
     --vp-code-tab-divider: var(--vp-code-block-divider-color);
     --vp-code-tab-text-color: var(--vp-c-text-2);
@@ -410,7 +409,6 @@
     --vp-button-sponsor-active-text: var(--vp-c-sponsor);
     --vp-button-sponsor-active-bg: transparent;
 }
-
 
 /**
  * Component: Custom Block
@@ -460,7 +458,6 @@
     --vp-custom-block-details-bg: var(--vp-custom-block-info-bg);
     --vp-custom-block-details-code-bg: var(--vp-custom-block-info-code-bg);
 }
-
 
 /**
  * Component: Input
