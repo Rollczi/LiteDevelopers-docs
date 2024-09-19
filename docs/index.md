@@ -20,7 +20,7 @@ features:
     - icon: ☄️
       title: LiteCommands
       details: Annotation based Command framework for Velocity, Bukkit, Paper, BungeeCord and your other implementations.
-      link: /documentation/litecommands/getting-started
+      link: /documentation/LiteCommands/getting-started
     - icon: 💜
       title: LiteSkullAPI
       details: Fast and extensive skull library for Bukkit/Spigot/Paper plugins.
