@@ -2,10 +2,8 @@ import { defineConfig } from "vitepress";
 
 import { InlineLinkPreviewElementTransform } from "@nolebase/vitepress-plugin-inline-link-preview/markdown-it";
 import { generateSidebar, SidebarMulti, VitePressSidebarOptions } from "vitepress-sidebar";
-import {
-    groupIconMdPlugin,
-    groupIconVitePlugin,
-} from "vitepress-plugin-group-icons";
+import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-icons";
+import { CodeTabsServerPlugin } from "./codetabs-plugin/CodeTabsServerPlugin";
 
 const vitepressSidebarOptions: VitePressSidebarOptions[] = [
     createSidebar("/documentation/LiteCommands/", [
@@ -49,6 +47,7 @@ export default defineConfig({
                     kotlin: "logos:kotlin-icon",
                 },
             }),
+            CodeTabsServerPlugin(),
         ],
         optimizeDeps: {
             exclude: [

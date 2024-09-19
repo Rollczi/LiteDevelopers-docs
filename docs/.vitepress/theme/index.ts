@@ -18,6 +18,7 @@ import { NolebaseInlineLinkPreviewPlugin } from "@nolebase/vitepress-plugin-inli
 import "@nolebase/vitepress-plugin-inline-link-preview/client/style.css";
 import "virtual:group-icons.css";
 import Donation from "../../components/donation/Donation.vue";
+import { CodeTabsClientPlugin } from "../codetabs-plugin/CodeTabsClientPlugin";
 
 DefaultTheme.enhanceApp = ({ app }) => {
     app.component("VPDocAside", () => VPDocAsideSponsors);
@@ -36,6 +37,7 @@ export default {
     },
     enhanceApp({ app }) {
         app.use(NolebaseInlineLinkPreviewPlugin);
+        app.use(CodeTabsClientPlugin());
 
         app.provide(InjectionKey, {
             layoutSwitch: {

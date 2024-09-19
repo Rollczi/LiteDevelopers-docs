@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import DonationSponsor from "./DonationSponsor.vue";
 </script>
 
@@ -12,7 +12,7 @@ import DonationSponsor from "./DonationSponsor.vue";
     </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
     name: "Donation",
 };
