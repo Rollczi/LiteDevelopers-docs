@@ -9,7 +9,7 @@ Create a new instance of LiteCommands using specific factory for your platform.
 > [!INFO]
 > What is Fallback prefix?
 > Command has two parts for example: `minecraft:give`, first `minecraft` is fallback prefix.
-> Fallback prefix is always lowercase.
+> Fallback prefix is always lowercase e.g. `myplugin` or `my-plugin`.
 
 ::: code-group
 
@@ -21,12 +21,12 @@ public class ExamplePlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         this.liteCommands = LiteBukkitFactory.builder("fallback-prefix", this)
-                .commands(
-                        new FlyCommand(),
-                        new GameModeCommand(),
-                        // your other commands
-                )
-                .build();
+            .commands(
+                new FlyCommand(),
+                new GameModeCommand()
+                // your other commands
+            )
+            .build();
     }
 
     @Override
@@ -53,12 +53,12 @@ public class ExamplePlugin {
     @Subscribe
     public void onProxyInitialization(ProxyInitializeEvent event) {
         this.liteCommands = LiteVelocityFactory.builder(this.proxyServer)
-                .commands(
-                        new SendCommand(),
-                        new MoveCommand(),
-                        // your other commands
-                )
-                .build();
+            .commands(
+                new SendCommand(),
+                new MoveCommand(),
+                // your other commands
+            )
+            .build();
 
         // your code ...
     }
@@ -80,12 +80,12 @@ public class ExamplePlugin extends Plugin {
     @Override
     public void onEnable() {
         this.liteCommands = LiteBungeeFactory.builder(this)
-                .commands(
-                        new SendCommand(),
-                        new MoveCommand(),
-                        // your other commands
-                )
-                .build();
+            .commands(
+                new SendCommand(),
+                new MoveCommand(),
+                // your other commands
+            )
+            .build();
 
         // your code ...
     }
@@ -104,11 +104,11 @@ public class ExampleMinestom {
 
     public static void main(String[] args) {
         LiteMinestomFactory.builder()
-                .commands(
-                        new FlyCommand(),
-                        new GameModeCommand()
-                )
-                .build();
+            .commands(
+                new FlyCommand(),
+                new GameModeCommand()
+            )
+            .build();
 
         // your code ...
     }
@@ -141,12 +141,12 @@ public class ExampleFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         LiteFabricFactory.create()
-                .commands(
-                        new BanCommand(),
-                        new MuteCommand(),
-                        // your other commands
-                )
-                .build();
+            .commands(
+                new BanCommand(),
+                new MuteCommand(),
+                // your other commands
+            )
+            .build();
 
         // your code ...
     }
@@ -158,15 +158,15 @@ public class ExampleJDA {
 
     public static void main(String[] args) {
         JDA jda = JDABuilder.createDefault("token")
-                .build();
+            .build();
 
         LiteJDAFactory.builder(jda)
-                .commands(
-                        new EmbedCommand(),
-                        new MessageCommand(),
-                        // your other commands
-                )
-                .build();
+            .commands(
+                new EmbedCommand(),
+                new MessageCommand(),
+                // your other commands
+            )
+            .build();
 
         // your code ...
     }

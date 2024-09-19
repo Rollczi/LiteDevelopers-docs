@@ -49,8 +49,27 @@ export default defineConfig({
                 },
             }),
             CodeTabsServerPlugin(),
-            GitChangelog({ repoURL: () => 'https://github.com/Rollczi/LiteDevelopers-docs', }),
-            GitChangelogMarkdownSection(),
+            GitChangelog({
+                repoURL: () => 'https://github.com/Rollczi/LiteDevelopers-docs',
+                mapAuthors: [
+                    {
+                        name: 'Martin Sulikowski',
+                        username: 'vLuckyyy',
+                    },
+                    {
+                        name: 'Norbert Dejlich',
+                        username: 'Rollczi',
+                    }
+                ],
+                hideContributorsHeader: true,
+            }),
+            GitChangelogMarkdownSection({
+                hideContributorsHeader: true,
+                sections: {/*
+                    disableChangelog: true,
+                    disableContributors: true,*/
+                },
+            }),
         ],
         optimizeDeps: {
             exclude: [

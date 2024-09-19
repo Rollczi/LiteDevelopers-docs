@@ -9,7 +9,7 @@ for platforms that are doesn't have native support for it. E.g. Bukkit, BungeeCo
 > [!CAUTION]
 > Replace `{version}` with the version of LiteCommands you want to use.
 
-#### Get the latest version of litecommands from [Panda Repository ❤](https://repo.panda-lang.org/#/releases/dev/rollczi/litecommands)
+#### Get the latest version of LiteCommands from [Panda Repository ❤](https://repo.panda-lang.org/#/releases/dev/rollczi/litecommands)
 
 ---
 
