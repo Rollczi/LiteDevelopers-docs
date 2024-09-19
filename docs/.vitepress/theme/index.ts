@@ -1,5 +1,9 @@
-import DefaultTheme, { VPDocAsideSponsors } from "vitepress/theme";
+/** vue & vitepress */
+import { h } from "vue";
+import DefaultTheme from "vitepress/theme";
+import type { Theme } from "vitepress";
 
+/** patches & theme */
 import "./patches/table-style-patch.css";
 import "./patches/sidebar-style-path.css";
 import "./patches/custom-block-patch.css";
@@ -9,20 +13,27 @@ import "./patches/docs-button-patch.css";
 
 import "./custom.css";
 
-import { h } from "vue";
-import type { Theme } from "vitepress";
+/** enhanced-readabilities */
 import type { Options } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
-import { InjectionKey, LayoutMode, NolebaseEnhancedReadabilitiesMenu, NolebaseEnhancedReadabilitiesScreenMenu, NolebaseEnhancedReadabilitiesPlugin } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
+import { InjectionKey, LayoutMode, NolebaseEnhancedReadabilitiesMenu, NolebaseEnhancedReadabilitiesScreenMenu } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
 import "@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css";
+
+/** inline-link-preview */
 import { NolebaseInlineLinkPreviewPlugin } from "@nolebase/vitepress-plugin-inline-link-preview/client";
 import "@nolebase/vitepress-plugin-inline-link-preview/client/style.css";
-import "virtual:group-icons.css";
-import Donation from "../../components/donation/Donation.vue";
+
+/** git-changelog */
+import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-changelog/client'
+import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
+
+/** codetabs */
 import { CodeTabsClientPlugin } from "../codetabs-plugin/CodeTabsClientPlugin";
 
-DefaultTheme.enhanceApp = ({ app }) => {
-    app.component("VPDocAside", () => VPDocAsideSponsors);
-};
+/** donation */
+import Donation from "../../components/donation/Donation.vue";
+
+/** group-icons */
+import "virtual:group-icons.css";
 
 export default {
     extends: DefaultTheme,
@@ -30,13 +41,12 @@ export default {
         return h(DefaultTheme.Layout, null, {
             "aside-bottom": () => h(Donation),
             "nav-bar-content-after": () => h(NolebaseEnhancedReadabilitiesMenu),
-            // A enhanced readabilities menu for narrower screens (usually smaller than iPad Mini)
-            "nav-screen-content-after": () =>
-                h(NolebaseEnhancedReadabilitiesScreenMenu),
+            "nav-screen-content-after": () => h(NolebaseEnhancedReadabilitiesScreenMenu),
         });
     },
     enhanceApp({ app }) {
         app.use(NolebaseInlineLinkPreviewPlugin);
+        app.use(NolebaseGitChangelogPlugin)
         app.use(CodeTabsClientPlugin());
 
         app.provide(InjectionKey, {

@@ -4,6 +4,7 @@ import { InlineLinkPreviewElementTransform } from "@nolebase/vitepress-plugin-in
 import { generateSidebar, SidebarMulti, VitePressSidebarOptions } from "vitepress-sidebar";
 import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-icons";
 import { CodeTabsServerPlugin } from "./codetabs-plugin/CodeTabsServerPlugin";
+import { GitChangelog, GitChangelogMarkdownSection, } from '@nolebase/vitepress-plugin-git-changelog/vite'
 
 const vitepressSidebarOptions: VitePressSidebarOptions[] = [
     createSidebar("/documentation/litecommands/", [
@@ -48,6 +49,8 @@ export default defineConfig({
                 },
             }),
             CodeTabsServerPlugin(),
+            GitChangelog({ repoURL: () => 'https://github.com/Rollczi/LiteDevelopers-docs', }),
+            GitChangelogMarkdownSection(),
         ],
         optimizeDeps: {
             exclude: [
