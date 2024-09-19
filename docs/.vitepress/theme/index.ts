@@ -12,7 +12,7 @@ import "./custom.css";
 import { h } from "vue";
 import type { Theme } from "vitepress";
 import type { Options } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
-import { InjectionKey, LayoutMode, NolebaseEnhancedReadabilitiesMenu, NolebaseEnhancedReadabilitiesScreenMenu, } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
+import { InjectionKey, LayoutMode, NolebaseEnhancedReadabilitiesMenu, NolebaseEnhancedReadabilitiesScreenMenu, NolebaseEnhancedReadabilitiesPlugin } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
 import "@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css";
 import { NolebaseInlineLinkPreviewPlugin } from "@nolebase/vitepress-plugin-inline-link-preview/client";
 import "@nolebase/vitepress-plugin-inline-link-preview/client/style.css";
@@ -41,7 +41,13 @@ export default {
 
         app.provide(InjectionKey, {
             layoutSwitch: {
-                defaultMode: LayoutMode.FullWidth,
+                defaultMode: LayoutMode.BothWidthAdjustable,
+                pageLayoutMaxWidth: {
+                    defaultMaxWidth: 90,
+                },
+                contentLayoutMaxWidth: {
+                    defaultMaxWidth: 95,
+                },
             },
         } as Options);
     },

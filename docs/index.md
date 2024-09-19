@@ -5,7 +5,7 @@ title: LiteDevelopers
 titleTemplate: Docs
 
 hero:
-    image: https://i.ibb.co/dWTNW8q/bitmapa.png
+    image: litedevelopers.svg
     name: LiteDevelopers
     text: projects documentation
     actions:

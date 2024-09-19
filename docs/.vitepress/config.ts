@@ -84,7 +84,7 @@ export default defineConfig({
     },
 
     themeConfig: {
-        logo: "https://i.ibb.co/dWTNW8q/bitmapa.png",
+        logo: "litedevelopers.svg",
         nav: [
             {
                 text: "LiteCommands",
