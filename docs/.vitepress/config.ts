@@ -6,7 +6,7 @@ import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-i
 import { CodeTabsServerPlugin } from "./codetabs-plugin/CodeTabsServerPlugin";
 
 const vitepressSidebarOptions: VitePressSidebarOptions[] = [
-    createSidebar("/documentation/LiteCommands/", [
+    createSidebar("/documentation/litecommands/", [
         "what-is-litecommands.md",
         "getting-started.md",
         "platforms.md",
@@ -88,7 +88,7 @@ export default defineConfig({
         nav: [
             {
                 text: "LiteCommands",
-                link: "/documentation/LiteCommands/what-is-litecommands",
+                link: "/documentation/litecommands/what-is-litecommands",
             },
             {
                 text: "LiteSkullAPI",
@@ -126,7 +126,7 @@ function appendSidebarIntroduction(sidebar: SidebarMulti): SidebarMulti {
         base: "/documentation/",
         items: [
             { text: "Projects", link: "/introduction/projects", items: [
-                { text: "LiteCommands", link: "/LiteCommands/what-is-litecommands" },
+                { text: "LiteCommands", link: "/litecommands/what-is-litecommands" },
                 { text: "LiteSkullAPI", link: "/liteskullapi/getting-started" },
                 { text: "LiteChairs", link: "/litechairs/getting-started" },
             ] },
