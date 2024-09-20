@@ -1,6 +1,10 @@
+<script setup>
+import LiteCommandsLogo from "../../components/logo/LiteCommandsLogo.vue";
+</script>
+
 # What is LiteCommands?
 
-![litecommands](/litecommands.png)
+<LiteCommandsLogo/>
 
 LiteCommands is a versatile and feature-rich command framework designed to simplify command handling for a wide range of platforms and implementations. Providing a simple and intuitive API, LiteCommands makes it easy to create and manage commands for your Minecraft plugin, mod, or Discord bot.
 
