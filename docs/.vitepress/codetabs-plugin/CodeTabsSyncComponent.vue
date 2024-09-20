@@ -3,7 +3,7 @@
 import { CodeTabsGroup, CodeTabsManager } from "./CodeTabsManager";
 
 export default {
-    name: "SyncComponent",
+    name: "CodeTabsSyncComponent",
     data() {
         return {
             codeTabsManager: new CodeTabsManager()

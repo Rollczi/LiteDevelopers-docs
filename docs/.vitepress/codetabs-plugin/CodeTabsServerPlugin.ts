@@ -14,7 +14,7 @@ export function CodeTabsServerPlugin(): Plugin {
                 return null
             }
 
-            const targetComponent = `<SyncComponent/>`
+            const targetComponent = `<CodeTabsSyncComponent/>`
             const parsedMarkdownContent = GrayMatter(code)
             const hasFrontMatter = Object.keys(parsedMarkdownContent.data).length > 0
 
