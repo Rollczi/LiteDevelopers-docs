@@ -1,8 +1,8 @@
 /* Add transparency and blur to the logo background */
 
 .curtain {
-    background-color: rgb(from var(--vp-c-bg-alt) r g b / 0.6) !important;
-    backdrop-filter: blur(1px) blur(2px) blur(3px);
+    background-color: transparent !important;
+    backdrop-filter: blur(3px);
 }
 
 /* Remove bottom line under the logo */
