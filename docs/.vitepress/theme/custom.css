@@ -521,7 +521,7 @@
             rgb(119, 139, 253, 0.7) 58%,
             rgb(179, 192, 253, 0.9) 91%
     ); /*--vp-home-hero-image-background-image: none;*/
-    --vp-homehero-image-filter: blur(40px); /*--vp-home-hero-image-filter: none;*/
+    --vp-home-hero-image-filter: blur(40px); /*--vp-home-hero-image-filter: none;*/
 }
 
 @media (min-width: 640px) {
