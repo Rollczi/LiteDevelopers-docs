@@ -16,18 +16,22 @@ const vitepressSidebarOptions: VitePressSidebarOptions[] = [
         "configure-builder.md",
 
         "argument",
-        "argument.md",
-        "supported-types",
-        "argument-optional.md",
+
+        "arg",
+        "java-types.md",
+        "bukkit-types.md",
+        "adventure-types.md",
+        "minestom-types.md",
+        "arg-optional.md",
+        "quoted.md",
+        "flag.md",
         "join.md",
-        "quoted.md",
-        "quoted.md",
-        "argument-with-key.md",
 
         "handler",
         "extensions",
         "examples",
         "advanced",
+        "argument-with-key.md",
     ]),
     createSidebarOptions("/documentation/liteskullapi/", [
         "dependencies.md",

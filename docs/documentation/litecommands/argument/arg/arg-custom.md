@@ -1,4 +1,4 @@
-# @Arg (Custom)
+# Custom Types
 
 You can create a custom argument to replace use plain argument and make your code cleaner.
 
@@ -80,6 +80,6 @@ That's it! Now you can use the `@Arg Account` argument in your commands!
 Other examples of custom arguments can be found on [GitHub](https://github.com/Rollczi/LiteCommands/tree/master/examples/bukkit/src/main/java/dev/rollczi/example/bukkit/argument).
  
 > [!INFO] Argument types built-in LiteCommands
-> -   [Argument Basic Types](argument/supported-basic-types.md) 
-> -   [Argument Minestom Types](argument/supported-types-minestom-extension.md) 
-> -   [Argument Adventure Types](argument/supported-types-adventure-extension.md) 
+> -   [Argument Basic Types](java-types) 
+> -   [Argument Minestom Types](minestom-types) 
+> -   [Argument Adventure Types](adventure-types) 

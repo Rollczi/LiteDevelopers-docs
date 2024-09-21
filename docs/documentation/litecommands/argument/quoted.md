@@ -1,4 +1,4 @@
-# @Quoted String
+# @Arg @Quoted String
 
 If you want to parse an argument with quoted content including <mark>spaces</mark> and <mark>special characters</mark>, use the `@Quoted` annotation.
 

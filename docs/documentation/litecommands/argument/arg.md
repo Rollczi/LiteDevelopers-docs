@@ -15,7 +15,7 @@ public class SayCommand {
 ### Types
 
 If you want to automatically parse the argument to a specific type,
-then change the type of the argument to one of the [supported types](argument/supported-basic-types.md) or [create your own](argument-custom.md).
+then change the type of the argument to one of the [supported types](arg/java-types) or [create your own](arg/arg-custom.md).
 
 
 ```java {4}
@@ -30,6 +30,6 @@ public class TimeSetCommand {
 
 > [!IMPORTANT]
 > Argument types **built-in** LiteCommands!
-> -   [Argument Basic Types](argument/supported-basic-types.md) 
-> -   [Argument Minestom Types](argument/supported-types-minestom-extension.md) 
-> -   [Argument Adventure Types](argument/supported-types-adventure-extension.md) 
+> -   [Argument Basic Types](arg/java-types) 
+> -   [Argument Minestom Types](arg/minestom-types) 
+> -   [Argument Adventure Types](arg/adventure-types) 
