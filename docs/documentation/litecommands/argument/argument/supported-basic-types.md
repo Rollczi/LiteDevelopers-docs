@@ -1,6 +1,6 @@
 # Java Types
 
-To use t
+To use Java types like `int`, `double`, `Duration`, `BigInteger`, `Enum`, and more, you need to use the `@Arg` annotation and specify the type of the argument.
 
 | Argument Type     | Values                                         | Example                                |
 |-------------------|------------------------------------------------|----------------------------------------|
@@ -23,59 +23,61 @@ To use t
 | `BigDecimal`      | Any number                                     | `100000000000.0`                       |
 | `Char`            | Any character                                  | `a`                                    |
 
-## Example:
+Here is an example of how to use the `@Arg` annotation with different types:
 
 ::: code-group
 
-```java [Boolean Argument]
-
-@Execute(route = "boolean-arg")
-public void executeBoolean(@Context SENDER sender, @Arg boolean value) {
-    System.out.println(value);
+```java [int]
+@Command(name = "time set")
+public class TimeCommand {
+    @Execute
+    void time(@Arg int time) { // [!code focus]
+        // /time set <time>
+    }
 }
 ```
 
-```java [Int Argument]
-
-@Execute(route = "int-arg")
-public void executeInt(@Context SENDER sender, @Arg int value) {
-    System.out.println(value);
+```java [BigDecimal]
+@Command(name = "balance set")
+public class BalanceCommand {
+    @Execute
+    void balance(@Context SENDER sender, @Arg BigDecimal amount) { // [!code focus]
+        // /balance set <amount>
+    }
 }
 ```
 
-```java [Double Argument]
-
-@Execute(route = "double-arg")
-public void executeDouble(@Context SENDER sender, @Arg double value) {
-    System.out.println(value);
+```java [Duration]
+@Command(name = "ban")
+public class BanCommand {
+    @Execute
+    void ban(@Arg Player player, @Arg Duration duration) { // [!code focus]
+        // /ban <player> <duration>
+    }
 }
 ```
 
-```java [Char Argument]
-
-@Execute(route = "char-arg")
-public void executeChar(@Context SENDER sender, @Arg char value) {
-    System.out.println(value);
+```java [BigInteger]
+@Command(name = "give")
+public class GiveCommand {
+    @Execute
+    void give(@Arg BigInteger amount) { // [!code focus]
+        // /give <amount>
+    }
 }
 ```
 
-```java [BigInteger Argument]
-
-@Execute(route = "bigInteger-arg")
-public void executeBigInteger(@Context SENDER sender, @Arg BigInteger value) {
-    System.out.println(value);
-}
-```
-
-```java [Enum Argument]
-
-@Execute(route = "enum-argument")
-public void executeEnum(@Context SENDER sender, @Arg Bit bit) {
-    System.out.println(bit);
+```java [Enum]
+@Command(name = "alert")
+public class AlertCommand {
+    @Execute
+    void alert(@Arg AlertType type, @Join String message) { // [!code focus]
+        // /alert <type> <message...>
+    }
 }
 
-enum Bit {
-    ONE,
-    TWO
+// AlertType.java
+public enum Action {
+    CHAT, ACTIONBAR, TITLE, SUBTITLE, BOSSBAR
 }
 ```
