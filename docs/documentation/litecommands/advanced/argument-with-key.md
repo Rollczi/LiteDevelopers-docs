@@ -1,4 +1,4 @@
-# Argument with Key
+# @Arg with @Key
 
 LiteCommands allows defining arguments with keys, enabling flexible and readable command definitions. We can use
 the `@Key` annotation to mark arguments, but it is also possible to use arguments without this annotation, which allows

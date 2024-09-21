@@ -1,5 +1,4 @@
 import type { Plugin } from 'vite'
-import GrayMatter from 'gray-matter'
 
 export function CodeTabsServerPlugin(): Plugin {
 
@@ -14,15 +13,7 @@ export function CodeTabsServerPlugin(): Plugin {
                 return null
             }
 
-            const targetComponent = `<CodeTabsSyncComponent/>`
-            const parsedMarkdownContent = GrayMatter(code)
-            const hasFrontMatter = Object.keys(parsedMarkdownContent.data).length > 0
-
-            if (hasFrontMatter) {
-                return `${GrayMatter.stringify(`${parsedMarkdownContent.content}\n\n${targetComponent}`, parsedMarkdownContent.data)}`;
-            }
-
-            return `${code}\n\n${targetComponent}`;
+            return `${code}\n\n<CodeTabsSyncComponent/>`
         },
     }
 }

@@ -1,4 +1,4 @@
-# Adventure Usage Example
+# Usage of Adventure
 
 > [!CAUTION]
 > Remember to replace `SENDER` with your sender type that corresponds to the platform you are using.  

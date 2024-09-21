@@ -1,4 +1,4 @@
-# Supported Bukkit Types
+# Bukkit Types
 
 `@Arg` - Use Basic Types to easily validate, parse, and get arguments!
 

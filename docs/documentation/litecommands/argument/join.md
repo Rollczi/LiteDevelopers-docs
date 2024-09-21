@@ -1,22 +1,12 @@
-# @Join Annotation
+# @Join
 
-The `@Join` annotation in the LiteCommands framework is used to concatenate
-multiple arguments into a single string. This annotation is particularly
-useful when you want to combine several input parameters into a cohesive
-text representation, such as creating a reason for a ban command.
+To <mark>concatenate multiple arguments</mark> into a single string, use the `@Join` annotation.
 
-## Usage
-
-Here is an example of how to use the `@Join` annotation:
-
-```Java
+```java
 @Command(name = "ban")
 public class BanCommand {
     @Execute
-    public void ban(
-        @Arg Player target,
-        @Join String reason
-    ) {
+    void ban(@Arg Player target, @Join String reason) { // [!code focus]
         // Command implementation
     }
 }
@@ -24,7 +14,7 @@ public class BanCommand {
 
 Let's consider the following command usage:
 
-```
+```yaml
 input: /ban JohnDoe Offensive language and behavior
 reason: Offensive language and behavior
 ```
@@ -51,16 +41,16 @@ public class BanCommand {
     @Execute
     public void ban(
         @Arg Player target,
-        @Join(limit = 10, separator = "-") String reason
+        @Join(limit = 10, separator = "-") String reason // [!code focus]
     ) {
         // Command implementation
     }
 }
 ```
 
-Let's consider the following command usage:
+Now, our result will be:
 
-```
-/ban JohnDoe Offensive language and behavior
+```yaml
+input: /ban JohnDoe Offensive language and behavior
 reason: Offensive-language-and-behavior
 ```

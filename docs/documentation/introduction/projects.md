@@ -9,7 +9,7 @@
 Click on the button below to get started.<br>
 You can also use the menu on the top to switch between the documentation pages of the different projects.
 
-<a href="/documentation/litecommands/getting-started" class="docs-button">LiteCommands</a>
+<a href="/documentation/litecommands/what-is-litecommands" class="docs-button">LiteCommands</a>
 <a href="/documentation/liteskullapi/getting-started" class="docs-button">LiteSkullAPI</a>
 <a href="/documentation/litechairs/getting-started" class="docs-button">LiteChairs</a>
 <a class="off-button">LiteSandBoy</a>

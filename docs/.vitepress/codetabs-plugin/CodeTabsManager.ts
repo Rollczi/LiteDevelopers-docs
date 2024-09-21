@@ -1,6 +1,7 @@
 
 export class CodeTabsManager {
-    groupsByTypeByNamespace: { [key: string]: { [key: string]: CodeTabsGroup[] } } = {};
+
+    private groupsByTypeByNamespace: { [key: string]: { [key: string]: CodeTabsGroup[] } } = {};
 
     registerGroup(group: CodeTabsGroup) {
         if (!this.groupsByTypeByNamespace[group.namespace]) {

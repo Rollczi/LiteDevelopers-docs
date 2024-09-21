@@ -1,4 +1,4 @@
-# Install Adventure (Non-native supported platforms)
+# Adventure Platform
 
 LiteCommands Adventure Platform is an extension for supporting Kyori Adventure features
 for platforms that are doesn't have native support for it. E.g. Bukkit, BungeeCord, etc.
@@ -6,28 +6,23 @@ for platforms that are doesn't have native support for it. E.g. Bukkit, BungeeCo
 > [!IMPORTANT]
 > Make sure you have read the [Adventure Kyori](https://docs.advntr.dev/getting-started.html) page before using this extension.
 
-> [!CAUTION]
-> Replace `{version}` with the version of LiteCommands you want to use.
-
-#### Get the latest version of LiteCommands from [Panda Repository ❤](https://repo.panda-lang.org/#/releases/dev/rollczi/litecommands)
-
----
+## Add Dependency
 
 ::: code-group
 
 ```kotlin [Gradle Kotlin]
-implementation("dev.rollczi:litecommands-adventure-platform:{version}")
+implementation("dev.rollczi:litecommands-adventure-platform:{version:litecommands}")
 ```
 
 ```groovy [Gradle Groovy]
-implementation "dev.rollczi:litecommands-adventure-platform:{version}"
+implementation "dev.rollczi:litecommands-adventure-platform:{version:litecommands}"
 ```
 
 ```xml [Maven]
 <dependency>
     <groupId>dev.rollczi</groupId>
     <artifactId>litecommands-adventure-platform</artifactId>
-    <version>{version}</version>
+    <version>{version:litecommands}</version>
 </dependency>
 ```
 

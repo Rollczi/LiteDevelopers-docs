@@ -1,4 +1,4 @@
-# @Async Annotation
+# @Async
 
 The `@Async` annotation in the LiteCommands framework is used to mark a command as asynchronous. This annotation is
 particularly useful when you want to execute a command in a separate thread.

@@ -1,12 +1,7 @@
-# Jakarta Extension
+# Jakarta
 
 The `litecommands-jakarta` is a extension for supporting Jakarta EE annotation validation.  
 It allows you to use Jakarta EE Bean Validation annotations in the command arguments:
-
-> [!CAUTION]
-> Replace `{version}` with the version of LiteCommands you want to use.
-
-#### Get the latest version of LiteCommands from [Panda Repository ❤](https://repo.panda-lang.org/#/releases/dev/rollczi/litecommands)
 
 > [!IMPORTANT]
 > Make sure that you don't exclude `META-INF` from your project, jakarata doesn't work without it.
@@ -16,18 +11,18 @@ It allows you to use Jakarta EE Bean Validation annotations in the command argum
 ::: code-group
 
 ```kotlin [Gradle Kotlin]
-implementation("dev.rollczi:litecommands-jakarta:{version}")
+implementation("dev.rollczi:litecommands-jakarta:{version:litecommands}")
 ```
 
 ```groovy [Gradle Groovy]
-implementation "dev.rollczi:litecommands-jakarta:{version}"
+implementation "dev.rollczi:litecommands-jakarta:{version:litecommands}"
 ```
 
 ```xml [Maven]
 <dependency>
     <groupId>dev.rollczi</groupId>
     <artifactId>litecommands-jakarta</artifactId>
-    <version>{version}</version>
+    <version>{version:litecommands}</version>
 </dependency>
 ```
 

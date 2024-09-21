@@ -1,4 +1,4 @@
-# Supported Minestom Types
+# Minestom Types
 
 `@Arg` - Use Basic Types to easily validate, parse, and get arguments!
 

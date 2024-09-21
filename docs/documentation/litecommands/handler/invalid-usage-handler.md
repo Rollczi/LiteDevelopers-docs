@@ -56,4 +56,4 @@ public class YourPlugin extends Plugin {
 ```
 
 > [!CAUTION]
-> Ensure that you use the `-parameters` compiler flag to retrieve the parameter names in the method. For further details, refer to the [More info](../../getting-started.md#parameters-compile-flag).
+> Ensure that you use the `-parameters` compiler flag to retrieve the parameter names in the method. For further details, refer to the [More info](../../getting-started/dependencies#parameters-compile-flag).

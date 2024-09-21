@@ -1,4 +1,4 @@
-# Install Adventure (Native supported platforms)
+# Adventure (Native)
 
 LiteCommands Adventure is an extension for supporting Kyori Adventure features
 for platforms that are have **native support for it. E.g. Paper, Purpur, Velocity, Minestom**, etc.
@@ -9,28 +9,23 @@ See the [Adventure Kyori Extensions](https://docs.advntr.dev/getting-started.htm
 > [!IMPORTANT]
 > Make sure you have read the [Adventure Kyori](https://docs.advntr.dev/getting-started.html) page before using this extension.
 
-> [!CAUTION]
-> Replace `{version}` with the version of LiteCommands you want to use.
-
-#### Get the <mark>latest version</mark> of LiteCommands from [Panda Repository ❤](https://repo.panda-lang.org/#/releases/dev/rollczi/litecommands)
-
 ---
 
 ::: code-group
 
 ```kotlin [Gradle Kotlin]
-implementation("dev.rollczi:litecommands-adventure:{version}")
+implementation("dev.rollczi:litecommands-adventure:{version:litecommands}")
 ```
 
 ```groovy [Gradle Groovy]
-implementation "dev.rollczi:litecommands-adventure:{version}"
+implementation "dev.rollczi:litecommands-adventure:{version:litecommands}"
 ```
 
 ```xml [Maven]
 <dependency>
     <groupId>dev.rollczi</groupId>
     <artifactId>litecommands-adventure</artifactId>
-    <version>{version}</version>
+    <version>{version:litecommands}</version>
 </dependency>
 ```
 

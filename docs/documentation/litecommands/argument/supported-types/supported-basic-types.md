@@ -1,4 +1,4 @@
-# Supported Basic Argument Types
+# Java Types
 
 `@Arg` - Use Basic Types to easily validate, parse, and get arguments!
 

@@ -1,23 +1,39 @@
 import { defineConfig } from "vitepress";
 
 import { InlineLinkPreviewElementTransform } from "@nolebase/vitepress-plugin-inline-link-preview/markdown-it";
-import { generateSidebar, SidebarMulti, VitePressSidebarOptions } from "vitepress-sidebar";
+import { generateSidebar, Sidebar, SidebarMulti, VitePressSidebarOptions } from "vitepress-sidebar";
 import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-icons";
 import { CodeTabsServerPlugin } from "./codetabs-plugin/CodeTabsServerPlugin";
 import { GitChangelog, GitChangelogMarkdownSection, } from '@nolebase/vitepress-plugin-git-changelog/vite'
+import { GitVersionServerPlugin } from "./git-version-plugin/GitVersionServerPlugin";
+import { GitVersionReposliteProvider } from "./git-version-plugin/GitVersionProvider";
 
 const vitepressSidebarOptions: VitePressSidebarOptions[] = [
     createSidebar("/documentation/litecommands/", [
+
         "what-is-litecommands.md",
-        "getting-started.md",
         "platforms.md",
-        "configure-builder.md",
         "intellij-idea-plugin.md",
-        "types",
-        "handler"
+        "getting-started",
+        "dependencies.md",
+        "configure-builder.md",
+
+        "argument",
+        "argument.md",
+        "supported-types",
+        "argument-optional.md",
+        "join.md",
+        "quoted.md",
+        "quoted.md",
+        "argument-with-key.md",
+
+        "handler",
+        "extensions",
+        "examples",
+        "advanced",
     ]),
     createSidebar("/documentation/liteskullapi/", [
-        "getting-started.md",
+        "dependencies.md",
         "initialize.md",
     ]),
     createSidebar("/documentation/litechairs/", []),
@@ -49,6 +65,12 @@ export default defineConfig({
                 },
             }),
             CodeTabsServerPlugin(),
+            GitVersionServerPlugin({
+                versionProviders: {
+                    "litecommands": new GitVersionReposliteProvider("https://maven.reposilite.com/", "releases", "dev/rollczi/litecommands-core"),
+                    "liteskullapi": new GitVersionReposliteProvider("https://repo.eternalcode.pl/", "releases", "dev/rollczi/liteskullapi"),
+                }
+            }),
             GitChangelog({
                 repoURL: () => 'https://github.com/Rollczi/LiteDevelopers-docs',
                 mapAuthors: [
@@ -61,15 +83,8 @@ export default defineConfig({
                         username: 'Rollczi',
                     }
                 ],
-                hideContributorsHeader: true,
             }),
-            GitChangelogMarkdownSection({
-                hideContributorsHeader: true,
-                sections: {/*
-                    disableChangelog: true,
-                    disableContributors: true,*/
-                },
-            }),
+            GitChangelogMarkdownSection(),
         ],
         optimizeDeps: {
             exclude: [
@@ -143,7 +158,7 @@ export default defineConfig({
 });
 
 
-function appendSidebarIntroduction(sidebar: SidebarMulti): SidebarMulti {
+function appendSidebarIntroduction(sidebar: Sidebar): SidebarMulti {
     sidebar["/documentation/introduction/"] = {
         base: "/documentation/",
         items: [

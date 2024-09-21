@@ -1,15 +1,12 @@
-# Configure LiteCommands Builder to your needs!
+# 2. Configure Builder
 
-Create a new instance of LiteCommands using specific factory for your platform.
+To start using LiteCommands create a new instance of `LiteCommands` using the builder.
 
 > [!CAUTION]
 > Don't add any commands to `plugin.yml`!
 > If you have declared commands in the `plugin.yml` then LiteCommands will not able to register them.
 
-> [!INFO]
-> What is Fallback prefix?
-> Command has two parts for example: `minecraft:give`, first `minecraft` is fallback prefix.
-> Fallback prefix is always lowercase e.g. `myplugin` or `my-plugin`.
+Depending on the platform you are using, <mark>choose</mark> the appropriate builder:
 
 ::: code-group
 
@@ -174,3 +171,8 @@ public class ExampleJDA {
 ```
 
 :::
+
+> [!INFO]
+> What is Fallback prefix?
+> Command has two parts for example: `minecraft:give`, first `minecraft` is fallback prefix.
+> Fallback prefix is always lowercase e.g. `myplugin` or `my-plugin`.

@@ -1,4 +1,4 @@
-# Supported Adventure Types
+# Adventure Types
 
 `@Arg` - Use Basic Types to easily validate, parse, and get arguments!
 
