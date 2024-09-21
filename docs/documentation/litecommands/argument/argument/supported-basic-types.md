@@ -1,10 +1,6 @@
 # Java Types
 
-`@Arg` - Use Basic Types to easily validate, parse, and get arguments!
-
-## Supported Types
-
-LiteCommands supports multiple argument types. You can find all of them in the table below.
+To use t
 
 | Argument Type     | Values                                         | Example                                |
 |-------------------|------------------------------------------------|----------------------------------------|

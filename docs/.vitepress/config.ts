@@ -1,58 +1,12 @@
 import { defineConfig } from "vitepress";
 
 import { InlineLinkPreviewElementTransform } from "@nolebase/vitepress-plugin-inline-link-preview/markdown-it";
-import { generateSidebar, Sidebar, SidebarMulti, VitePressSidebarOptions } from "vitepress-sidebar";
 import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-icons";
 import { CodeTabsServerPlugin } from "./codetabs-plugin/CodeTabsServerPlugin";
 import { GitChangelog, GitChangelogMarkdownSection, } from '@nolebase/vitepress-plugin-git-changelog/vite'
 import { GitVersionServerPlugin } from "./git-version-plugin/GitVersionServerPlugin";
 import { GitVersionReposliteProvider } from "./git-version-plugin/GitVersionProvider";
-
-const vitepressSidebarOptions: VitePressSidebarOptions[] = [
-    createSidebar("/documentation/litecommands/", [
-
-        "what-is-litecommands.md",
-        "platforms.md",
-        "intellij-idea-plugin.md",
-        "getting-started",
-        "dependencies.md",
-        "configure-builder.md",
-
-        "argument",
-        "argument.md",
-        "supported-types",
-        "argument-optional.md",
-        "join.md",
-        "quoted.md",
-        "quoted.md",
-        "argument-with-key.md",
-
-        "handler",
-        "extensions",
-        "examples",
-        "advanced",
-    ]),
-    createSidebar("/documentation/liteskullapi/", [
-        "dependencies.md",
-        "initialize.md",
-    ]),
-    createSidebar("/documentation/litechairs/", []),
-];
-
-function createSidebar(path: string, sort: string[]): VitePressSidebarOptions {
-    return {
-        documentRootPath: "docs",
-        basePath: "/",
-        scanStartPath: path,
-        resolvePath: path,
-        keepMarkdownSyntaxFromTitle: true,
-        useTitleFromFileHeading: true,
-        sortMenusOrderByDescending: true,
-        capitalizeFirst: true,
-        hyphenToSpace: true,
-        manualSortFileNameByPriority: sort,
-    }
-}
+import { createSidebar } from "./sidebar-config";
 
 export default defineConfig({
     vite: {
@@ -137,8 +91,7 @@ export default defineConfig({
             },
         ],
 
-        sidebar: appendSidebarIntroduction(generateSidebar(vitepressSidebarOptions)),
-
+        sidebar: createSidebar(),
         editLink: {
             pattern:
                 "https://github.com/Rollczi/LiteDevelopers-docs/edit/master/docs/:path",
@@ -158,17 +111,3 @@ export default defineConfig({
 });
 
 
-function appendSidebarIntroduction(sidebar: Sidebar): SidebarMulti {
-    sidebar["/documentation/introduction/"] = {
-        base: "/documentation/",
-        items: [
-            { text: "Projects", link: "/introduction/projects", items: [
-                { text: "LiteCommands", link: "/litecommands/what-is-litecommands" },
-                { text: "LiteSkullAPI", link: "/liteskullapi/getting-started" },
-                { text: "LiteChairs", link: "/litechairs/getting-started" },
-            ] },
-        ],
-    }
-
-    return sidebar;
-}
