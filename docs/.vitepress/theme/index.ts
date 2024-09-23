@@ -33,8 +33,9 @@ import "./patches/enhanced-mark-path.css";
 /** codetabs */
 import { CodeTabsClientPlugin } from "../codetabs-plugin/CodeTabsClientPlugin";
 
-/** donation */
+/** internal components */
 import Donation from "../../components/donation/Donation.vue";
+import Console from "../../components/console/Console.vue";
 
 /** group-icons */
 import "virtual:group-icons.css";
@@ -52,6 +53,7 @@ export default {
         app.use(NolebaseInlineLinkPreviewPlugin);
         app.use(NolebaseGitChangelogPlugin);
         app.use(CodeTabsClientPlugin());
+        app.component("Console", Console);
 
         app.provide(InjectEnhancedReadabilities, {
             layoutSwitch: {

@@ -36,9 +36,14 @@ export class GitVersionService {
             throw new Error(`No version provider for project: ${project}`);
         }
 
-        let version = await provider.provide();
-        this.latestVersions.set(project, version);
-        return version;
+        try {
+            let version = await provider.provide();
+            this.latestVersions.set(project, version);
+            return version;
+        }
+        catch (error) {
+            return "{version}"
+        }
     }
 
 }

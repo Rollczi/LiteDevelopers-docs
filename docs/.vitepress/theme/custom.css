@@ -126,9 +126,9 @@
 
 :root {
     --vp-c-bg: #ffffff;
-    --vp-c-bg-alt: #f6f6f7;
-    --vp-c-bg-elv: #ffffff;
-    --vp-c-bg-soft: #f6f6f7;
+    --vp-c-bg-alt: #f5f5f5;/*--vp-c-bg-alt: #f6f6f7;*/
+    --vp-c-bg-elv: #dddddd;/*--vp-c-bg-elv: #ffffff;*/
+    --vp-c-bg-soft: #e4e4e4;/*--vp-c-bg-soft: #f6f6f7;*/
 }
 
 .dark {
