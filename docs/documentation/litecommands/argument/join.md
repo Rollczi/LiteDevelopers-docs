@@ -14,10 +14,11 @@ public class BanCommand {
 
 Let's consider the following command usage:
 
-```yaml
-input: /ban JohnDoe Offensive language and behavior
-reason: Offensive language and behavior
-```
+<Console
+scheme="/ban <player> <reason...>"
+input="/ban JohnDoe Offensive language and behavior"
+:variables="{target: 'JohnDoe', reason: 'Offensive language and behavior'}"
+/>
 
 ## Additional Options
 
@@ -50,7 +51,8 @@ public class BanCommand {
 
 Now, our result will be:
 
-```yaml
-input: /ban JohnDoe Offensive language and behavior
-reason: Offensive-language-and-behavior
-```
+<Console
+scheme="/ban <player> <reason...>"
+input="/ban JohnDoe Offensive language and behavior"
+:variables="{target: 'JohnDoe', reason: 'Offensive-language-and-behavior'}"
+/>

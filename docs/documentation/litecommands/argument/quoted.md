@@ -19,10 +19,11 @@ public class MuteCommand {
 
 Here is an example of the `/mute` command usage:
 
-```yaml
-input: /mute Rollczi "Spamming and harassment"
-reason: Spamming and harassment
-```
+<Console
+scheme="/mute <player> <reason...>"
+input="/mute Rollczi &quot;Spamming and harassment&quot;"
+output="Player Rollczi has been muted! Reason: Spamming and harassment"
+/>
 
 <video width="1280" height="720" controls>
   <source src="/quoted.webm" type="video/webm">

@@ -14,6 +14,10 @@ export default defineComponent({
       type: String,
       default: ''
     },
+    variables: {
+      type: Object,
+      default: () => ({})
+    },
     scheme: {
       type: String,
       default: 'Console >/'
@@ -40,9 +44,13 @@ export default defineComponent({
       <div class="input-label">Input</div>
       <span class="input-text">{{ input }}</span>
     </div>
-    <div class="console-line">
+    <div v-if="output !== ''" class="console-line">
       <div class="output-label">Output</div>
       <span class="output-text">{{ output }}</span>
+    </div>
+    <div v-for="(value, key) in variables" :key="key" class="console-line variable">
+      <div class="output-label">{{ key }}</div>
+      <span class="output-text">{{ value }}</span>
     </div>
   </div>
 </template>
@@ -62,6 +70,7 @@ export default defineComponent({
   background-color: var(--vp-c-bg-alt)
   color: var(--vp-c-text-1)
   font-family: monospace
+  margin: 15px 0
 
   *
     transition: 0.2s
@@ -108,6 +117,11 @@ export default defineComponent({
       display: inline-block
       color: var(--vp-c-warning-2)
       margin-left: 10px
+  .variable
+    .output-label
+      background-color: rgb(from var(--vp-c-success-1) r g b / 0.7)
+    .output-text
+      color: var(--vp-c-success-1)
 
 .console[run="false"]
   .output-text, .output-label
@@ -124,20 +138,20 @@ export default defineComponent({
     animation: 0.4s pulse-text, 3s infinite pulse-box
   .input-label
     background-color: rgb(from var(--vp-c-important-2) r g b / 0.7)
-    transition: 0.3s 0.4s
+    transition: 0.3s 0.3s
     color: white
   .input-text
     color: var(--vp-c-important-2)
     opacity: 1
-    transition: 0.4s 0.7s
+    transition: 0.4s 0.6s
     margin-left: 15px
   .output-label
     color: white
     opacity: 1
-    transition: 0.4s 1.2s
+    transition: 0.4s 1.1s
   .output-text
     opacity: 1
-    transition: 0.3s 1.5s
+    transition: 0.3s 1.4s
     margin-left: 15px
 
 @keyframes pulse-text

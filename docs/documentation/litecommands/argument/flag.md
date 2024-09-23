@@ -16,10 +16,11 @@ public class MuteCommand {
 
 Here is an example of the `/mute` command usage:
 
-```yaml
-input: /mute Rollczi -s
-isSilent: true
-```
+<Console
+scheme="/mute <player> -s"
+input="/mute Rollczi -s"
+:variables="{player: 'Rollczi', isSilent: true}"
+/>
 
 <video width="1280" height="720" controls>
   <source src="/flag.webm" type="video/webm">

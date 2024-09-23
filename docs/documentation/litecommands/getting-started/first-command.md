@@ -30,7 +30,7 @@ Now, register the command in a LiteCommands builder:
 Now, you can use the `/hello` command in your server:
 
 <Console
-scheme="/hello <username>"
-input="/hello Rollczi" 
-output="Hello, Rollczi!"
+    scheme="/hello <username>"
+    input="/hello Rollczi" 
+    output="Hello, Rollczi!"
 />
