@@ -1,4 +1,4 @@
-# Invalid Usage Handler
+# Invalid Usage
 
 LiteCommands provides a mechanism to manage invalid command usage, allowing developers to give feedback to players when they enter commands incorrectly. This feature enhances user experience by displaying messages that outline the correct command usage.
 
@@ -6,14 +6,17 @@ LiteCommands provides a mechanism to manage invalid command usage, allowing deve
 
 ## Example Implementation
 
-Here’s a concise example of how to implement an invalid usage handler in Java:
+Here’s a concise example of how to implement an invalid usage handler:
 
 ```java
 // ExampleInvalidUsageHandler.java
 public class ExampleInvalidUsageHandler implements InvalidUsageHandler<CommandSender> {
-
     @Override
-    public void handle(Invocation<CommandSender> invocation, InvalidUsage<CommandSender> result, ResultHandlerChain<CommandSender> chain) {
+    public void handle(
+            Invocation<CommandSender> invocation, 
+            InvalidUsage<CommandSender> result,
+            ResultHandlerChain<CommandSender> chain
+    ) {
         CommandSender sender = invocation.sender();
         Schematic schematic = result.getSchematic();
 
@@ -30,29 +33,15 @@ public class ExampleInvalidUsageHandler implements InvalidUsageHandler<CommandSe
 }
 ```
 
+Register the handler in LiteCommands:
+
 ```java
-// YourPlugin.java
-public class YourPlugin extends Plugin {
-
-    private LiteCommands<CommandSender> liteCommands;
-
-    @Override
-    public void onEnable() {
-        this.liteCommands = LiteBukkitFactory.builder(this)
-                .commands(
-                        new ExampleCommand()
-                )
-                .invalidUsageHandler(new ExampleInvalidUsageHandler()) // [!code focus]
-                .build();
-    }
-
-    @Override
-    public void onDisable() {
-        if (this.liteCommands != null) {
-            this.liteCommands.unregister();
-        }
-    }
-}
+this.liteCommands = LiteBukkitFactory.builder(this)
+    .commands(
+        new ExampleCommand()
+    )
+    .invalidUsageHandler(new ExampleInvalidUsageHandler()) // [!code focus]
+    .build();
 ```
 
 > [!CAUTION]

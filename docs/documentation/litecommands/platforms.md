@@ -13,7 +13,24 @@ LiteCommands supports multiple platforms. You can find all of them in the table 
 | `litecommands-jda`        | JDA                              | 5.0.2               |
 | -                         | Folia                            | -                   |
 
-::: IMPORTANT
+::: tip How to use it?
 To use LiteCommands with a specific platform, you need to add the platform dependency to your project.
 See the [Dependencies](getting-started/dependencies.md) page for more information.
-::: 
+:::
+
+## What is SENDER?
+
+When you see `SENDER` in the documentation, it means a platform-specific sender type.
+You can find the sender type for each platform in the table below:
+
+| Compatible with                  | Base Senders          |
+|----------------------------------|-----------------------|
+| Bukkit / Spigot / Paper / Purpur | `CommandSender`       |
+| Velocity                         | `CommandSource`       |
+| BungeeCord / Waterfall           | `CommandSender`       |
+| Minestom                         | `CommandSender`       |
+| Sponge                           | `CommandCause`        |
+| Fabric                           | `ServerCommandSource` |
+| JDA                              | `User`                |
+| Folia                            | `CommandSender`       |
+

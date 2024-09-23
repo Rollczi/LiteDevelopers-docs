@@ -7,16 +7,21 @@ export function createSidebar(): Sidebar {
 
 const vitepressSidebarOptions: VitePressSidebarOptions[] = [
     createSidebarOptions("/documentation/litecommands/", [
-
         "what-is-litecommands.md",
         "platforms.md",
         "intellij-idea-plugin.md",
+        "examples.md",
+
         "getting-started",
         "dependencies.md",
         "configure-builder.md",
+        "first-command.md",
 
-        "argument",
+        "command-and-executor.md",
+        "context",
+        "permission",
 
+        "arguments",
         "arg",
         "java-types.md",
         "bukkit-types.md",
@@ -27,10 +32,15 @@ const vitepressSidebarOptions: VitePressSidebarOptions[] = [
         "flag.md",
         "join.md",
 
-        "handler",
+        "features",
+        "async.md",
+        "root-command.md",
+        "shortcut.md",
+
         "extensions",
-        "examples",
+
         "advanced",
+        "nightly.md",
         "argument-with-key.md",
     ]),
     createSidebarOptions("/documentation/liteskullapi/", [
@@ -72,9 +82,7 @@ function postProcessSidebar(sidebar: Sidebar): Sidebar {
     }
 
     for (const [, sidebarMultiItem] of Object.entries(sidebar)) {
-        for (const sidebarItem of sidebarMultiItem.items) {
-            processItem(sidebarItem);
-        }
+        processItem(sidebarMultiItem);
     }
 
     return sidebar;

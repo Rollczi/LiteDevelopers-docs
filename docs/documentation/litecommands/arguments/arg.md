@@ -27,9 +27,3 @@ public class TimeSetCommand {
     }
 }
 ```
-
-> [!IMPORTANT]
-> Argument types **built-in** LiteCommands!
-> -   [Argument Basic Types](arg/java-types) 
-> -   [Argument Minestom Types](arg/minestom-types) 
-> -   [Argument Adventure Types](arg/adventure-types) 

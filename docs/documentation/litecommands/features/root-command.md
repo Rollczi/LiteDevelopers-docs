@@ -1,4 +1,4 @@
-# @RootCommand - Annotation
+# @RootCommand
 
 This annotation is used to define various commands in one class.<br>
 Helpful if multiple commands have common goals in same domain (for example, when 3 commands use one service/manager).

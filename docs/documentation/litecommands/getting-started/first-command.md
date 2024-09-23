@@ -1,15 +1,15 @@
 
 # 3. First command
 
-Create a new class `FirstCommand` and annotate it with <mark>`@Command`</mark>:
+To create your <mark>first command</mark>, you need to create a class with the `@Command` annotation and a method with the `@Execute` annotation.
 
 ```java
 @Command(name = "hello")
 public class HelloCommand {
 
     @Execute
-    void hello(@Context CommandSender sender, @Arg String text) {
-        sender.sendMessage("Hello, " + text + "!");
+    void hello(@Context CommandSender sender, @Arg String username) {
+        sender.sendMessage("Hello, " + username + "!");
     }
 
 }

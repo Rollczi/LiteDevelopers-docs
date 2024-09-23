@@ -1,4 +1,4 @@
-# Custom Types
+# Custom @Arg
 
 You can create a custom argument to replace use plain argument and make your code cleaner.
 

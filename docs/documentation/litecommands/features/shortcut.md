@@ -1,4 +1,4 @@
-# @Shortcut Annotation
+# @Shortcut
 
 The `@Shortcut` annotation in LiteCommands allows you to create shortcuts for entire commands, enabling users to execute
 commands more efficiently. For example, instead of typing `/gamemode creative`, a player can simply type `/gmc`.

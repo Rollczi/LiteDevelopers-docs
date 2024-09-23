@@ -10,9 +10,8 @@ export class GitVersionService {
     }
 
     public async replaceGitVersionPlaceholder(code: string): Promise<string> {
-        for (let regExpExecArray of Array.from(code.matchAll(/\{version:(\w+)}/g))) {
+        for (let regExpExecArray of Array.from(code.matchAll(/\{version:([\w-]+)}/g))) {
             const project = regExpExecArray[1];
-            console.log(`Replacing version for project: ${project}`);
             code = code.replace(regExpExecArray[0], `${await this.getLatestVersion(project)}`);
         }
 
@@ -42,6 +41,7 @@ export class GitVersionService {
             return version;
         }
         catch (error) {
+            console.error(`Failed to fetch version for project: ${project}`, error);
             return "{version}"
         }
     }

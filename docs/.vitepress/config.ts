@@ -22,6 +22,7 @@ export default defineConfig({
             GitVersionServerPlugin({
                 versionProviders: {
                     "litecommands": new GitVersionReposliteProvider("https://maven.reposilite.com/", "releases", "dev/rollczi/litecommands-core"),
+                    "litecommands-nightly": new GitVersionReposliteProvider("https://repo.eternalcode.pl/", "snapshots", "dev/rollczi/litecommands-core"),
                     "liteskullapi": new GitVersionReposliteProvider("https://repo.eternalcode.pl/", "releases", "dev/rollczi/liteskullapi"),
                 }
             }),

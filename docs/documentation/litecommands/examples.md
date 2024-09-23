@@ -1,4 +1,6 @@
-# LiteCommands Examples!
+# Examples
+
+Below you can find examples of how to use LiteCommands in different platforms.
 
 ## Official Examples
 
@@ -12,10 +14,10 @@
 
 # Plugins that uses LiteCommands
 
-LiteCommands is a powerful library that allows you to create commands in a simple and efficient way. Below you can find examples of plugins that use LiteCommands.
+Third-party plugins that uses LiteCommands. 
 
 ### Bukkit platform
 
 -   [EternalCombat](https://github.com/EternalCodeTeam/EternalCombat) - ⚔ Combat Logging system for Minecraft!
 -   [EternalCore](https://github.com/EternalCodeTeam/EternalCore) - ♾️ All the most important server functions in one!
--   Add your plugin here!
+-   Add your plugin here! [Create a pull request!](https://github.com/Rollczi/LiteDevelopers-docs)
