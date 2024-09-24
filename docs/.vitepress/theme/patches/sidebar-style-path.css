@@ -28,3 +28,52 @@
 .VPSidebar::-webkit-scrollbar {
     scrollbar-width: thin;
 }
+
+/* Change animation */
+
+/* with sidebar */
+.VPNavBar.has-sidebar > .wrapper > .container > .title {
+    transition: none !important;
+}
+/* without sidebar */
+.VPNavBar > .wrapper > .container > .title {
+    transition: none !important;
+}
+
+.VPNavBar > .wrapper > .container {
+    transition: none !important;
+}
+
+/* with sidebar */
+.VPNavBar.has-sidebar > .wrapper > .container > .content, .VPNavBar > .wrapper > .container > .content {
+    transition: none !important;
+}
+
+/* line below the nav */
+.VPNavBar.has-sidebar > .divider {
+    transition: none !important;
+}
+
+.VPSidebar {
+    transition: none !important;
+}
+
+.VPContent.has-sidebar {
+    transition: none !important;
+}
+
+.VPDoc .container {
+    transition: none !important;
+}
+
+.VPDoc.has-aside .content-container {
+    transition: none !important;
+}
+
+.VPDoc:not(.has-sidebar) .container {
+    transition: none !important;
+}
+
+.VPDoc:not(.has-sidebar) .container > .content {
+    transition: none !important;
+}

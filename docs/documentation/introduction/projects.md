@@ -12,8 +12,8 @@ You can also use the menu on the top to switch between the documentation pages o
 <a href="/documentation/litecommands/what-is-litecommands" class="docs-button">LiteCommands</a>
 <a href="/documentation/liteskullapi/getting-started" class="docs-button">LiteSkullAPI</a>
 <a href="/documentation/litechairs/getting-started" class="docs-button">LiteChairs</a>
-<a class="off-button">LiteSandBoy</a>
-<a class="off-button">Lite-AntiLegs</a>
+<div class="off-button">LiteSandBoy</div>
+<div class="off-button">Lite-AntiLegs</div>
 
 ## What is LiteDevelopers?
 
