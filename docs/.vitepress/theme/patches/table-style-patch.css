@@ -1,3 +1,5 @@
+/* Make tables more compact */
+
 .vp-doc td {
-    padding: 8px 16px !important;
+    padding: 4px 12px !important;
 }

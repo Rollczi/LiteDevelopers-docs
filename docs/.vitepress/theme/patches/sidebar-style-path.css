@@ -1,0 +1,79 @@
+/* Disable user-select and change color of a group in the sidebar to more unvisible */
+
+.group {
+    border-color: var(--vp-c-bg) !important;
+    user-select: none;
+}
+
+/* Change scrollbar style in the sidebar */
+
+.VPSidebar::-webkit-scrollbar-track {
+    background-color: var(--vp-c-bg-alt);
+}
+
+.VPSidebar::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: var(--vp-c-bg-elv);
+    border: 2px solid var(--vp-c-bg-alt);
+}
+
+.VPSidebar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--vp-c-bg-soft);
+}
+
+.VPSidebar::-webkit-scrollbar-thumb:active {
+    background-color: var(--vp-c-bg);
+}
+
+.VPSidebar::-webkit-scrollbar {
+    scrollbar-width: thin;
+}
+
+/* Change animation */
+
+/* with sidebar */
+.VPNavBar.has-sidebar > .wrapper > .container > .title {
+    transition: none !important;
+}
+/* without sidebar */
+.VPNavBar > .wrapper > .container > .title {
+    transition: none !important;
+}
+
+.VPNavBar > .wrapper > .container {
+    transition: none !important;
+}
+
+/* with sidebar */
+.VPNavBar.has-sidebar > .wrapper > .container > .content, .VPNavBar > .wrapper > .container > .content {
+    transition: none !important;
+}
+
+/* line below the nav */
+.VPNavBar.has-sidebar > .divider {
+    transition: none !important;
+}
+
+.VPSidebar {
+    transition: none !important;
+}
+
+.VPContent.has-sidebar {
+    transition: none !important;
+}
+
+.VPDoc .container {
+    transition: none !important;
+}
+
+.VPDoc.has-aside .content-container {
+    transition: none !important;
+}
+
+.VPDoc:not(.has-sidebar) .container {
+    transition: none !important;
+}
+
+.VPDoc:not(.has-sidebar) .container > .content {
+    transition: none !important;
+}

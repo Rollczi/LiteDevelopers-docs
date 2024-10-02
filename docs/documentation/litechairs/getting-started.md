@@ -1,7 +1,8 @@
 # Project description
 
 Simple bukkit and spigot plugin for minecraft servers that let's people create their own custom "chairs" and sit on them.
-![image](/public/litechairs-showcase.png)
+
+[//]: # "![image](/public/litechairs-showcase.png)"
 
 # How it works
 

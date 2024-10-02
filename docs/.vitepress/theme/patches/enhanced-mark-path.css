@@ -1,0 +1,4 @@
+.vp-doc mark {
+    --vp-nolebase-mark-bg-shift: 0.5lh !important;
+    --vp-nolebase-mark-bg-color: rgba(159, 99, 255, 0.5) !important;
+}

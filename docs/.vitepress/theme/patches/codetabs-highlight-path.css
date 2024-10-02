@@ -1,0 +1,21 @@
+/* Highlight the current tab more clearly */
+
+.vp-code-group .tabs {
+    padding: 0;
+    margin: 0;
+}
+
+.vp-code-group .tabs label {
+    transition:
+        all 0.3s,
+        background-color 0.7s;
+    border-radius: 10px;
+    margin: 4px;
+    line-height: unset;
+    padding: 5px 15px;
+}
+
+.vp-code-group .tabs input:checked + label {
+    background-color: var(--vp-c-bg);
+    padding: 5px 20px;
+}

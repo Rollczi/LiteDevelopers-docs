@@ -1,0 +1,12 @@
+/* Add transparency and blur to the logo background */
+
+.curtain {
+    background-color: transparent !important;
+    backdrop-filter: blur(3px);
+}
+
+/* Remove bottom line under the logo */
+
+.title {
+    border-bottom: 0 !important;
+}

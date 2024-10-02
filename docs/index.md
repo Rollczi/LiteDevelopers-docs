@@ -5,40 +5,41 @@ title: LiteDevelopers
 titleTemplate: Docs
 
 hero:
-  image: https://i.ibb.co/dWTNW8q/bitmapa.png
-  name: LiteDevelopers
-  text: projects documentation
-  actions:
-    - theme: brand
-      text: Get Started
-      link: /documentation/introduction/projects
-    - theme: alt
-      text: Visit our Github
-      link: https://github.com/Rollczi/
+    image: litedevelopers.svg
+    name: LiteDevelopers
+    text: projects documentation
+    actions:
+        - theme: brand
+          text: Get Started
+          link: /documentation/introduction/projects
+        - theme: alt
+          text: Visit our Github
+          link: https://github.com/Rollczi/
 
 features:
-- icon: ☄️
-  title: LiteCommands
-  details: Annotation based Command framework for Velocity, Bukkit, Paper, BungeeCord and your other implementations.
-  link: /documentation/litecommands/getting-started
-- icon: 💜
-  title: LiteSkullAPI
-  details: Fast and extensive skull library for Bukkit/Spigot/Paper plugins.
-  link: /documentation/liteskullapi/getting-started
-- icon: 🌃
-  title: LiteChairs
-  details: Simple bukkit / spigot plugin for adding chairs to your server.
-  link: /documentation/litechairs/getting-started
-- icon: 👮🏻
-  title: Lite-AntiLegs
-  details: Anti-legs plugin for Minecraft spigot server.
-- icon: 👑
-  title: LiteSandBoy
-  details: Simple bukkit / spigot plugin for custom "SandFarmers", "BoyFarmers" etc.
-- icon: ☁️
-  title: SkyMob
-  details: Simple Extension for SuperiorSkyblock2 plugin. After creating the island, a custom mob will spawn.
+    - icon: ☄️
+      title: LiteCommands
+      details: Annotation based Command framework for Velocity, Bukkit, Paper, BungeeCord and your other implementations.
+      link: /documentation/litecommands/what-is-litecommands
+    - icon: 💜
+      title: LiteSkullAPI
+      details: Fast and extensive skull library for Bukkit/Spigot/Paper plugins.
+      link: /documentation/liteskullapi/getting-started
+    - icon: 🌃
+      title: LiteChairs
+      details: Simple bukkit / spigot plugin for adding chairs to your server.
+      link: /documentation/litechairs/getting-started
+    - icon: 👮🏻
+      title: Lite-AntiLegs
+      details: Anti-legs plugin for Minecraft spigot server.
+    - icon: 👑
+      title: LiteSandBoy
+      details: Simple bukkit / spigot plugin for custom "SandFarmers", "BoyFarmers" etc.
+    - icon: ☁️
+      title: SkyMob
+      details: Simple Extension for SuperiorSkyblock2 plugin. After creating the island, a custom mob will spawn.
 ---
+
 <script setup>
 import {
   VPTeamPage,
@@ -78,7 +79,6 @@ const members = [
 ]
 </script>
 
-
 <VPTeamPage style='padding-bottom: 0'>
   <VPTeamPageTitle>
     <template is #title>
@@ -95,5 +95,3 @@ const members = [
     </template>
   </VPTeamPageTitle>
 </VPTeamPage>
-
-

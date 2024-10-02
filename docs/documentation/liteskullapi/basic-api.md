@@ -4,7 +4,7 @@ Get skull item stack
 
 ```java
 skullAPI.acceptSyncSkull("Rollczi", itemStack -> {
-    
+
 });
 ```
 

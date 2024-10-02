@@ -4,21 +4,21 @@ A simple example of LiteSkullAPI initialization
 
 ```java
 public class SkullPlugin extends JavaPlugin {
-    
+
     private SkullAPI skullAPI;
-    
+
     @Override
     public void onEnable() {
         this.skullAPI = LiteSkullFactory.builder()
                 .bukkitScheduler(this)
                 .build();
     }
-    
+
     @Override
     public void onDisable() {
         this.skullAPI.shutdown();
     }
-    
+
 }
 ```
 
@@ -31,7 +31,7 @@ You can configure LiteSkullAPI according to your preferences.
 ```java
 /* Set custom logger */
 .logger(Logger)
-        
+
 /* Set default skull */
 .defaultSkull(SkullData)
 .defaultSkull(SkullDataDefault)
@@ -46,10 +46,10 @@ Default skull is used if LiteSkullAPI can't extract texture from database, playe
 ```java
 // Set scheduler to execute synchronized tasks */
 .scheduler(SynchronizedExecutor)
-        
+
 /* Set standard bukkit scheduler to execute synchronized tasks */
 .bukkitScheduler(Plugin)
-    
+
 /* Set count of thread for asynchronous executor service */
 .threadPool(int)
 ```
@@ -61,7 +61,7 @@ LiteSkullAPI cache skulls to ensure efficiency. Changing these options may have 
 ```java
 /* Set expiration of skull cache after write */
 .cacheExpireAfterWrite(Duration)
-    
+
 /* Set expiration of skull cache after access */
 .cacheExpireAfterAccess(Duration)
 ```
@@ -73,7 +73,7 @@ LiteSkullAPI can save skulls automatically to your database.
 ```java
 /* Set implementation of database for skull */
 .database(SkullDatabase)
-    
+
 /* Set expiration of skull data after saving to database. */
 .dataBaseSaveExpire(Duration)
 ```
@@ -94,10 +94,10 @@ public class SkullDatabaseImpl implements SkullDatabase {
 ```java
 /* Set custom api skull extractor */
 .apiExtractor(SkullDataAPIExtractor)
-    
+
 /* Set custom skull online player extractor */
 .playerExtractor(SkullDataPlayerExtractor)
-    
+
 /* Set custom skull item creator */
 .creator(SkullCreator)
 ```
