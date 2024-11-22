@@ -12,7 +12,7 @@
 
 ```java Example.java
 @Execute(route = "player-arg")
-public void executePlayer(@Contenxt Player player, @Arg Player target) {
+public void executePlayer(@Context Player player, @Arg Player target) {
     // ...
 }
 ```

@@ -27,6 +27,7 @@ const vitepressSidebarOptions: VitePressSidebarOptions[] = [
         "bukkit-types.md",
         "adventure-types.md",
         "minestom-types.md",
+        "jda-types.md",
         "arg-optional.md",
         "quoted.md",
         "flag.md",
