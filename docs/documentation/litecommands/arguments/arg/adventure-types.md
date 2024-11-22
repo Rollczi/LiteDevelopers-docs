@@ -12,7 +12,7 @@
 
 ```java Example.java
 @Execute(route = "component-arg")
-public void executeBoolean(@Contenxt Player player, @Arg Component component) {
+public void executeBoolean(@Context Player player, @Arg Component component) {
     // ...
 }
 
