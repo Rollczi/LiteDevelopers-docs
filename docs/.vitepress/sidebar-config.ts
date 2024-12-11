@@ -31,11 +31,13 @@ const vitepressSidebarOptions: VitePressSidebarOptions[] = [
         "arg-optional.md",
         "quoted.md",
         "flag.md",
+        "varargs.md",
         "join.md",
 
         "features",
         "async-annotation.md",
         "root-command.md",
+        "priority.md",
         "shortcut.md",
 
         "extensions",
