@@ -31,7 +31,7 @@ public class GamemodeCommand {
         player.setGameMode(gameMode);
     }
     
-    @Executor
+    @Execute
     @Permission("gamemode.other") // [!code focus]
     void list(@Context CommandSender sender, @Arg GameMode mode, @Arg Player target) {
         target.setGameMode(mode);

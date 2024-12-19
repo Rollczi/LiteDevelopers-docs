@@ -1,6 +1,6 @@
-# @Command & @Executor 
+# @Command & @Execute 
 
-To define basic structure of a <mark>command</mark> and <mark>subcommands</mark>, use the `@Command` and `@Executor` annotations.
+To define basic structure of a <mark>command</mark> and <mark>subcommands</mark>, use the `@Command` and `@Execute` annotations.
 
 ## Command
 
@@ -10,7 +10,7 @@ For example, `/hello`:
 ```java 
 @Command(name = "hello") // [!code focus]
 public class HelloCommand {
-    @Executor // [!code focus]
+    @Execute // [!code focus]
     void execute() {
         // /hello
     }
@@ -25,17 +25,17 @@ For example, `/time set <time>`, where `time` is an integer, and subcommands `/t
 ```java
 @Command(name = "time set") // [!code focus]
 public class TimeSetCommand {
-    @Executor // [!code focus]
+    @Execute // [!code focus]
     void execute(@Arg int time) {
         // /time set <time>
     }
 
-    @Executor(name = "day") // [!code focus]
+    @Execute(name = "day") // [!code focus]
     void day() {
         // /time set day
     }
 
-    @Executor(name = "night") // [!code focus]
+    @Execute(name = "night") // [!code focus]
     void night() {
         // /time set night
     }
@@ -52,17 +52,17 @@ For example, `/time add <time>`, `/time set <time>`, and `/time set day`:
 ```java
 @Command(name = "time") // [!code focus]
 public class TimeCommand {
-    @Executor(name = "add") // [!code focus]
+    @Execute(name = "add") // [!code focus]
     void addTime(@Arg int time) {
         // /time add
     }
 
-    @Executor(name = "set") // [!code focus]
+    @Execute(name = "set") // [!code focus]
     void setTime(@Arg int time) {
         // /time set
     }
 
-    @Executor(name = "set day") // [!code focus]
+    @Execute(name = "set day") // [!code focus]
     void setDay() {
         // /time set day
     }
