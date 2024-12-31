@@ -1,4 +1,4 @@
-# Custom @Context
+# Custom Types
 
 You can create custom context providers for objects like `User`, `Account`, `Member`, `Guild`, or `Party`, 
 eliminating the need to first retrieve data from the Player object and then use a service or manager. 

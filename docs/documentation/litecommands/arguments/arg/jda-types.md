@@ -1,6 +1,6 @@
 # JDA Types
 
-`@Arg` - Use Basic Types to easily validate, parse, and get arguments!
+`@Arg` - Use <mark>JDA Types</mark> to easily validate, parse, and get arguments!
 
 # Supported Types JDA
 

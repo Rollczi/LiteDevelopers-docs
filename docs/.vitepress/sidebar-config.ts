@@ -19,6 +19,7 @@ const vitepressSidebarOptions: VitePressSidebarOptions[] = [
 
         "command-and-executor.md",
         "context",
+        "supported-context-types.md",
         "permission",
 
         "arguments",
