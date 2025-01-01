@@ -11,12 +11,12 @@ To create command `/command`
 @RootCommand
 public class MessageCommands {
 
-    @Execute(route = "msg")
+    @Execute(name = "msg")
     void executedMethod() {
         // -> /msg
     }
 
-    @Execute(route = "reply", aliases = {"r"})
+    @Execute(name = "reply", aliases = {"r"})
     void executedMethod() {
         // -> /reply or /r
     }
@@ -29,17 +29,17 @@ public class MessageCommands {
 @RootCommand
 public class MessageCommands {
 
-    @Execute(route = "msg")
+    @Execute(name = "msg")
     void executedMethod() {
         // -> /msg
     }
 
-    @Execute(route = "reply", aliases = {"r"})
+    @Execute(name = "reply", aliases = {"r"})
     void executedMethod() {
         // -> /reply or /r
     }
 
-    @Execute(route = "chat info")
+    @Execute(name = "chat info")
     void chatInfo() {
         // -> /chat info
     }
@@ -52,12 +52,12 @@ public class MessageCommands {
             // -> /spy
         }
 
-        @Execute(route = "off")
+        @Execute(name = "off")
         void spyOff() {
             // -> /spy off
         }
 
-        @Execute(route = "on")
+        @Execute(name = "on")
         void spyOn() {
             // -> /spy on
         }

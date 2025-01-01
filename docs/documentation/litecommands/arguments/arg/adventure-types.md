@@ -11,7 +11,7 @@
 ## Example:
 
 ```java Example.java
-@Execute(route = "component-arg")
+@Execute(name = "component-arg")
 public void executeBoolean(@Context Player player, @Arg Component component) {
     // ...
 }

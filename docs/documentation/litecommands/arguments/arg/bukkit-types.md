@@ -16,28 +16,28 @@
 ::: code-group
 
 ```java [Player]
-@Execute(route = "player-arg")
+@Execute(name = "player-arg")
 public void executePlayer(@Context SENDER sender, @Arg Player player) {
     System.out.println(player);
 }
 ```
 
 ```java [OfflinePlayer]
-@Execute(route = "player-arg")
+@Execute(name = "player-arg")
 public void executePlayer(@Context SENDER sender, @Async @Arg OfflinePlayer player) {
     System.out.println(player);
 }
 ```
 
 ```java [World]
-@Execute(route = "world-arg")
+@Execute(name = "world-arg")
 public void executeWorld(@Context SENDER sender, @Arg World world) {
     System.out.println(world);
 }
 ```
 
 ```java [Location]
-@Execute(route = "location-arg")
+@Execute(name = "location-arg")
 public void executeLocation(@Context SENDER sender, @Arg Location location) {
     System.out.println(location);
 }

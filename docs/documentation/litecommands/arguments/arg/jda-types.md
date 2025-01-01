@@ -18,7 +18,7 @@
 ## Example:
 
 ```java Example.java
-@Execute(route = "member-arg")
+@Execute(name = "member-arg")
 public void executeMember(@Context SlashCommandInteractionEvent event, @Arg Member member) {
     // ...
 }

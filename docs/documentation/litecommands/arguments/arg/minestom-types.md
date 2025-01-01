@@ -11,7 +11,7 @@
 ## Example:
 
 ```java Example.java
-@Execute(route = "player-arg")
+@Execute(name = "player-arg")
 public void executePlayer(@Context Player player, @Arg Player target) {
     // ...
 }
