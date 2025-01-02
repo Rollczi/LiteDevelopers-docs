@@ -1,11 +1,7 @@
 # @ExecuteDefault
 
-The `@ExecuteDefault` annotation in LiteCommands allows you to catch any command execution, if no method is matching 
-the given arguments. 
-
-The `StrictMode` checks the length of the arguments of the command and decides if the method of 
-the annotation gets executed. If it's disabled, the method will always get executed. If it's enabled, 
-LiteCommands will fail the execution with `InvalidUsage.Cause.TOO_MANY_ARGUMENTS`.
+The `@ExecuteDefault` annotation in LiteCommands allows you to catch any command execution, if no other method is 
+matching the given arguments. 
 
 ## Example Implementation
 
