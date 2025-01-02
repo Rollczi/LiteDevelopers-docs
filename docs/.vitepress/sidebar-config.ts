@@ -40,6 +40,8 @@ const vitepressSidebarOptions: VitePressSidebarOptions[] = [
         "root-command.md",
         "priority.md",
         "shortcut.md",
+        "execute-default.md",
+        "strict-mode.md",
 
         "extensions",
 
