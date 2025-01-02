@@ -20,3 +20,17 @@ These types are supported by default and represent context information for the c
 
 ## How to use
 
+```java BalanceCommand.java
+@Command(name = "balance")
+public class BalanceCommand {
+    @Execute(name = "world")
+    void balance(@Context Player sender, @Context World world) { // [!code focus]
+        // ...
+    }
+    
+    @Execute
+    void balance(@Sender Player sender) { // You can also use @Sender alias // [!code focus]
+        // ...
+    }
+}
+```

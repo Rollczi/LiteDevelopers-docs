@@ -158,9 +158,13 @@ public class ExampleJDA {
             .build();
 
         LiteJDAFactory.builder(jda)
+            .settings(settings -> settings
+                // If you want to update commands instantly, you can specify the id of your guild
+                .guilds("GUILD_ID")
+            )
             .commands(
                 new EmbedCommand(),
-                new MessageCommand(),
+                new MessageCommand()
                 // your other commands
             )
             .build();
