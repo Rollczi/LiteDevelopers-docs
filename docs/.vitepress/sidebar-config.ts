@@ -25,10 +25,8 @@ const vitepressSidebarOptions: VitePressSidebarOptions[] = [
         "arguments",
         "arg",
         "java-types.md",
-        "bukkit-types.md",
-        "adventure-types.md",
-        "minestom-types.md",
-        "jda-types.md",
+        "platform-types.md",
+
         "arg-optional.md",
         "quoted.md",
         "flag.md",
@@ -38,9 +36,9 @@ const vitepressSidebarOptions: VitePressSidebarOptions[] = [
         "features",
         "async-annotation.md",
         "root-command.md",
+        "execute-default.md",
         "priority.md",
         "shortcut.md",
-        "execute-default.md",
         "strict-mode.md",
 
         "extensions",
