@@ -40,6 +40,7 @@ const vitepressSidebarOptions: VitePressSidebarOptions[] = [
         "priority.md",
         "shortcut.md",
         "strict-mode.md",
+        "cooldown.md",
 
         "extensions",
 
