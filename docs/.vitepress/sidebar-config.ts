@@ -34,12 +34,15 @@ const vitepressSidebarOptions: VitePressSidebarOptions[] = [
         "join.md",
 
         "features",
-        "async-annotation.md",
-        "root-command.md",
+        "cooldown.md",
         "execute-default.md",
-        "priority.md",
         "shortcut.md",
+        "root-command.md",
+
+        "asynchronous",
+        "async-annotation.md",
         "strict-mode.md",
+        "priority.md",
 
         "extensions",
 
