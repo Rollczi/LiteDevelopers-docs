@@ -13,6 +13,7 @@ List all supported `@Context` types for platforms:
 | Fabric (client)    | `FabricClientCommandSource`, `ClientPlayerEntity`,                                                            |
 | Fabric (server)    | `ServerCommandSource`, `ServerPlayerEntity`,                                                                  |
 | JDA                | `User`, `Guild`, `Member`, `MessageChannelUnion`, `MessageChannel`, `Channel`, `SlashCommandInteractionEvent` |
+| TelegramBots       | `User`, `Update`, `Message`                                                                                   |
 
 ::: tip
 These types are supported by default and represent context information for the command execution. Also, you can create a custom context provider for your types! Check out the [Custom Context](custom-context.md).
