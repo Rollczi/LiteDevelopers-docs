@@ -4,7 +4,7 @@ LiteCommands supports multiple platforms. You can find all of them in the table 
 
 | Platform Name             | Compatible with                  | Compatible version  |
 |---------------------------|----------------------------------|---------------------|
-| `litecommands-bukkit`     | Bukkit / Spigot / Paper / Purpur | 1.8.8 - 1.21.1      |
+| `litecommands-bukkit`     | Bukkit / Spigot / Paper / Purpur | 1.8.8 - 1.21.5      |
 | `litecommands-velocity`   | Velocity                         | 3.2.0               |
 | `litecommands-bungeecord` | BungeeCord / Waterfall           | 1.20-R0.1           |
 | `litecommands-minestom`   | Minestom                         | 1.20.6              |

@@ -4,11 +4,11 @@
 
 ## Supported Platforms
 
-LiteSkullAPI currently supports only Bukkit / Spigot / PaperMC.
+LiteSkullAPI currently supports only Bukkit / Spigot / PaperMc.
 
 | Platform                  | Version       |
-| ------------------------- | ------------- |
-| Bukkit / Spigot / PaperMc | 1.8 - 1.19.2  |
+| ------------------------- |---------------|
+| Bukkit / Spigot / PaperMc | 1.8 - 1.21.5  |
 | _MineStom (Coming soon)_  | (Coming soon) |
 
 ## Add <u>EternalCode</u> to repositories & <u>LiteSkullAPI</u> to dependencies

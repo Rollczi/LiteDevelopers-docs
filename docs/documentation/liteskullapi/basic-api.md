@@ -3,7 +3,7 @@
 Get skull item stack
 
 ```java
-skullAPI.acceptSyncSkull("Rollczi", itemStack -> {
+skullAPI.acceptSkull("Rollczi", itemStack -> {
 
 });
 ```
@@ -11,7 +11,7 @@ skullAPI.acceptSyncSkull("Rollczi", itemStack -> {
 Get skull signature and texture
 
 ```java
-skullAPI.acceptAsyncSkullData("Rollczi", skullData -> {
+skullAPI.acceptSkullData("Rollczi", skullData -> {
     String signature = skullData.getSignature();
     String texture = skullData.getValue();
 });
