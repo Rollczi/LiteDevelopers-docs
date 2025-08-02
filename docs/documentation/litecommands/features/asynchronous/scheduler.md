@@ -25,6 +25,6 @@ You can change a scheduler in LiteCommands builder:
 | Fabric (client) | [FabricClientScheduler](https://github.com/Rollczi/LiteCommands/blob/master/litecommands-fabric/src/main/java/dev/rollczi/litecommands/fabric/client/FabricClientScheduler.java) |
 | Sponge          | [SpongeScheduler](https://github.com/Rollczi/LiteCommands/blob/master/litecommands-sponge/src/dev/rollczi/litecommands/sponge/SpongeScheduler.java)                              |
 | JDA             | `default`                                                                                                                                                                        |
-| Folia           | Coming Soon...                                                                                                                                                                   |
+| Folia           | [FoliaScheduler](https://github.com/Rollczi/LiteCommands/blob/master/litecommands-folia/src/dev/rollczi/litecommands/folia/FoliaScheduler.java)                                  |
 
 `default` - [SchedulerExecutorPoolImpl](https://github.com/Rollczi/LiteCommands/blob/master/litecommands-core/src/dev/rollczi/litecommands/scheduler/SchedulerExecutorPoolImpl.java)

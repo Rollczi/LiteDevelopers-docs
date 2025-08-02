@@ -2,17 +2,17 @@
 
 LiteCommands supports multiple platforms. You can find all of them in the table below.
 
-| Platform Name               | Compatible with                  | Compatible version  |
-|-----------------------------|----------------------------------|---------------------|
-| `litecommands-bukkit`       | Bukkit / Spigot / Paper / Purpur | 1.8.8 - 1.21.5      |
-| `litecommands-velocity`     | Velocity                         | 3.2.0               |
-| `litecommands-bungeecord`   | BungeeCord / Waterfall           | 1.20-R0.1           |
-| `litecommands-minestom`     | Minestom                         | 1.20.6              |
-| `litecommands-sponge`       | Sponge                           | 8.2.0               |
-| `litecommands-fabric`       | Fabric                           | See current version |
-| `litecommands-jda`          | JDA                              | 5.0.2               |
-| `litecommands-telegrambots` | TelegramBots                     | 8.2.0               |
-| -                           | Folia                            | -                   |
+| Platform Name                                          | Compatible with                  | Compatible version  |
+|--------------------------------------------------------|----------------------------------|---------------------|
+| `litecommands-bukkit`                                  | Bukkit / Spigot / Paper / Purpur | 1.8.8 - 1.21.8      |
+| `litecommands-folia` [(extension)](./extensions/folia) | Folia                            | 1.20 - 1.21.6       |
+| `litecommands-velocity`                                | Velocity                         | 3.4.0               |
+| `litecommands-bungeecord`                              | BungeeCord / Waterfall           | 1.21-R0.3           |
+| `litecommands-minestom`                                | Minestom                         | 1.21.8              |
+| `litecommands-sponge`                                  | Sponge                           | 13.0.0              |
+| `litecommands-fabric`                                  | Fabric                           | See current version |
+| `litecommands-jda`                                     | JDA                              | 5.6.1               |
+| `litecommands-telegrambots`                            | TelegramBots                     | 9.0.0               |
 
 ::: tip How to use it?
 To use LiteCommands with a specific platform, you need to add the platform dependency to your project.
@@ -34,5 +34,4 @@ You can find the sender type for each platform in the table below:
 | Fabric                           | `ServerCommandSource` |
 | JDA                              | `User`                |
 | TelegramBots                     | `User`                |
-| Folia                            | -                     |
 
