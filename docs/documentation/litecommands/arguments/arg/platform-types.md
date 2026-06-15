@@ -8,7 +8,7 @@ There you can find the list of available types for each platform. (List can be o
 |---------------|---------------------|-----------------------|----------------------------------------------------------------------------|
 | **Bukkit**    |                     |                       |                                                                            |
 |               | `Player`            | Online player         | `Rollczi`                                                                  |
-|               | `OfflinePLayer`     | Offline/Online player | `Rollczi`, `Mike`, `Lucky`                                                 |
+|               | `OfflinePlayer`     | Offline/Online player | `Rollczi`, `Mike`, `Lucky`                                                 |
 |               | `World`             | World                 | `world`, `world_nether`, `world_the_end`                                   |
 |               | `Location`          | Location              | `10 100 20`, `~ ~ ~`, `~ 100 ~`                                            |
 | **Minestom**  |                     |                       |                                                                            |
