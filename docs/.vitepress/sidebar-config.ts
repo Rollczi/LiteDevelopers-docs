@@ -28,6 +28,7 @@ const vitepressSidebarOptions: VitePressSidebarOptions[] = [
         "platform-types.md",
 
         "arg-optional.md",
+        "arg-case-insensitive.md",
         "quoted.md",
         "flag.md",
         "varargs.md",
