@@ -26,6 +26,8 @@ input="/color red"
 output="Resolved colors as RED"
 />
 
+### Without the `@CaseInsensitive`
+
 Without the `@CaseInsensitive` annotation, the `/color` command accepts only exact enum values (e.g. `RED, GREEN`). Any other casing will result in an error.
 
 <Console
